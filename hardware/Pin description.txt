@@ -1,0 +1,63 @@
+# Wemos D1 Mini
+# -------------
+
+TX: X           RST: D0
+RX: X           A0 : X
+D1: DCL         D0 : RST
+D2: SDA         D5 : X
+D3: X           D6 : Sensor_PWR (UV_PWR, BME_PWR, SND_PWR)
+D4: X           D7 : X
+G               D8 : X
+5V              3V3
+
+
+# ADS1115
+# -------
+
+VDD: 5V (WEMOS_5V, PWR_5V)
+GND
+SCL: WEMOS_D1
+SDA: WEMOS_D2
+X
+X
+A0 : UV_Out
+A1 : Batt_Out
+A2 : SND_Out
+A3 : X
+
+
+
+# UV
+# ---
+
+SIG: ADS1115_A0
+GND
+3V3: Wemos_D6
+
+
+
+# BME280
+# ------
+
+SDA: WEMOS_D1
+SCL: WEMOS_D2
+GND
+3V3: Wemos_D6
+
+
+
+# SND
+# ---
+
+SIG: ADS1115_A2
+GND
+3V3: Wemos_D6
+
+
+
+# PWR
+# ---
+
+SIG: ADS1115_A1
+GND
+5V : WEMOS_5V, ADS1115_VDD

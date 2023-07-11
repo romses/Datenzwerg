@@ -1,0 +1,139 @@
+substitutions:
+  name: happy
+  wake_time: 30s
+  sleep_time: 10min
+
+esphome:
+  name: "datenzwerg-${name}"
+  platform: ESP8266
+  board: d1_mini
+  on_boot:
+    then:
+      - switch.turn_on: en_sens
+  on_shutdown:
+    then:
+      - switch.turn_off: en_sens
+
+external_components:
+  - source: github://JeroenvdV/esphome-influxdb2
+    components: [ influxdb2 ]
+
+influxdb2:
+  host: !secret influxdb_host
+  port: !secret influxdb_port
+  orgid: !secret influxdb_orgid
+  bucket: !secret influxdb_bucket
+  token: !secret influxdb_token
+  device: "${name}"
+
+logger:
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_psk
+
+mdns:
+  disabled: true
+
+i2c:
+  scl: D1
+  sda: D2
+  id: bus_a
+
+switch:
+  - platform: gpio
+    pin: D6
+    id: en_sens
+
+  - platform: restart
+    name: "Restart"
+
+ads1115:
+  - address: 0x48
+
+deep_sleep:
+  run_duration: ${wake_time}
+  sleep_duration: ${sleep_time}
+
+sensor:
+  - platform: wifi_signal
+    name: "WiFi Signal"
+    update_interval: 1s
+
+  - platform: bme280
+    temperature:
+      name: "Temperature"
+      oversampling: 16x
+    pressure:
+      name: "Pressure"
+    humidity:
+      name: "Humidity"
+    address: 0x76
+    update_interval: 1s
+
+  - platform: ads1115
+    gain: 6.144
+    multiplexer: 'A0_GND'
+    name: 'UV Voltage'
+    id: uv_voltage
+    update_interval: 1s
+
+  - platform: ads1115
+    gain: 6.144
+    multiplexer: 'A1_GND'
+    name: 'Battery Voltage'
+    id: battery_voltage
+    update_interval: 1s
+
+  - platform: ads1115
+    gain: 6.144
+    multiplexer: 'A2_GND'
+    name: 'Sound Voltage'
+    id: sound_voltage
+    update_interval: 1s
+  
+  - platform: template
+    name: "UV Index"
+    update_interval: 1s
+    lambda: |-
+      float value = id(uv_voltage).state;
+      ESP_LOGD("uv_index", "The UV voltage is: %f", value);
+      if (value >= 1.170) {
+        return 11.0;
+      } else if (value >= 1.079) {
+        return 10.0;
+      } else if (value >= 0.976) {
+        return 9.0;
+      } else if (value >= 0.881) {
+        return 8.0;
+      } else if (value >= 0.795) {
+        return 7.0;
+      } else if (value >= 0.696) {
+        return 6.0;
+      } else if (value >= 0.606) {
+        return 5.0;
+      } else if (value >= 0.503) {
+        return 4.0;
+      } else if (value >= 0.408) {
+        return 3.0;
+      } else if (value >= 0.318) {
+        return 2.0;
+      } else if (value >= 0.227) {
+        return 1.0;
+      } else {
+        return 0.0;
+      }
+
+text_sensor:
+  - platform: version
+    hide_timestamp: true
+    name: "ESPHome Version"
+
+  - platform: wifi_info
+    ip_address:
+      name: "IP"
+      icon: mdi:wifi
+    ssid:
+      name: "SSID"
+      icon: mdi:wifi-strength-2
+

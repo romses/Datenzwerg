@@ -1,0 +1,75 @@
+version: '3.9'
+services:
+  traefik:
+    image: "traefik:v2.10"
+    container_name: "traefik"
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+    networks:
+      - proxy
+
+  apache:
+    image: httpd:latest
+    container_name: frontend
+    networks:
+      - proxy
+    volumes:
+    - ./www-data:/usr/local/apache2/htdocs
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.datagnome.rule=Host(`datagnome.de`) # && Path=`/`
+      - traefik.http.routers.datagnome.entrypoints=web
+    networks:
+      - proxy
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    volumes:
+      - ./grafana/:/var/lib/grafana
+      - ./grafana.ini:/etc/grafana/grafana.ini
+    env_file: .env
+    restart: always
+    user: "1000"
+    networks:
+      - proxy
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=proxy
+      - traefik.http.routers.grafana.entrypoints=web
+      - traefik.http.routers.grafana.rule=Host(`grafana.datagnome.de`)
+      - traefik.http.routers.grafana.middlewares=grafana-strip
+      - traefik.http.middlewares.grafana-strip.stripprefix.prefixes=/grafana
+      - traefik.http.routers.grafana.service=grafana-service
+      - traefik.http.services.grafana-service.loadbalancer.server.port=3000
+
+  influxdb:
+    image: influxdb:2.6-alpine
+    volumes:
+      - ./influx-data:/var/lib/influxdb2:rw
+    env_file: .env
+    ports:
+      - "8086:8086"
+    networks:
+      - proxy
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=proxy
+      - traefik.http.routers.influxdb.entrypoints=web
+      - traefik.http.routers.influxdb.rule=Host(`influxdb.datagnome.de`)
+      - traefik.http.routers.influxdb.middlewares=influxdb-strip
+      - traefik.http.middlewares.influxdb-strip.stripprefix.prefixes=/influxdb
+      - traefik.http.routers.influxdb.service=influxdb-service
+      - traefik.http.services.influxdb-service.loadbalancer.server.port=8086
+
+networks:
+  proxy:
+    external: true

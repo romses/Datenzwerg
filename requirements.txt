@@ -1,0 +1,7 @@
+esphome
+mkdocs
+mkdocs-material
+mkdocs-static-i18n
+mkdocs-awesome-pages-plugin
+mkdocs-literate-nav
+markdown-grid-tables
