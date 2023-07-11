@@ -1,5 +1,5 @@
 site_name: Datenzwerg
-site_dir: docker/www-data/
+#site_dir: docker/www-data/
 repo_name: romses/Datenzwerg
 repo_url: https://github.com/romses/Datenzwerg
 
