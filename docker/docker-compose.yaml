@@ -8,25 +8,16 @@ services:
       - "--providers.docker=true"
       - "--providers.docker.exposedbydefault=false"
       - "--entrypoints.web.address=:80"
+      - "--providers.file.directory=/etc/traefik/dynamic"
+      - "--log.level=DEBUG"
+      - "--providers.file.watch=true"
+      - "--providers.file=true"
     ports:
       - "80:80"
       - "8080:8080"
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
-    networks:
-      - proxy
-
-  apache:
-    image: httpd:latest
-    container_name: frontend
-    networks:
-      - proxy
-    volumes:
-    - ./www-data:/usr/local/apache2/htdocs
-    labels:
-      - traefik.enable=true
-      - traefik.http.routers.datagnome.rule=Host(`datagnome.de`) # && Path=`/`
-      - traefik.http.routers.datagnome.entrypoints=web
+      - ./traefik.yml:/etc/traefik/dynamic/traefik.yml
     networks:
       - proxy
 

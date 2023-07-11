@@ -1,0 +1,21 @@
+http:
+  routers:
+    github:
+      rule: Host(`datagnome.de`)
+      service: github
+      middlewares:
+        - github_add_prefix
+        - github_rewrite_host
+  middlewares:
+    github_add_prefix:
+      addPrefix:
+        prefix: "/Datenzwerg"
+    github_rewrite_host:
+      headers:
+        customrequestheaders:
+          Host: "romses.github.io"
+  services:
+    github:
+      loadBalancer:
+        servers:
+          - url: "https://romses.github.io"
