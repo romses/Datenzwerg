@@ -20,10 +20,3 @@
 
     <iframe src="http://grafana.datagnome.de/grafana/d-solo/f17a6449-84ed-4733-b982-21c0d480c42a/datenzwerg-dashboard?orgId=1&from=1689008400813&to=1689181200813&panelId=9" width="450" height="200" frameborder="0"></iframe>
 
-=== "Battery status"
-
-    <iframe src="http://grafana.datagnome.de/grafana/d-solo/f17a6449-84ed-4733-b982-21c0d480c42a/datenzwerg-dashboard?orgId=1&from=1689008413176&to=1689181213176&panelId=1" width="450" height="200" frameborder="0"></iframe>
-
-=== "Wifi signal"
-
-    <iframe src="http://grafana.datagnome.de/grafana/d-solo/f17a6449-84ed-4733-b982-21c0d480c42a/datenzwerg-dashboard?orgId=1&from=1689008441111&to=1689181241111&panelId=5" width="450" height="200" frameborder="0"></iframe>
