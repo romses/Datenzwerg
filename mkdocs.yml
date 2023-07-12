@@ -40,7 +40,7 @@ extra:
 nav:
   - Home: index.md
   - how_to_build.md
-  - weather.md
+  - sensors.md
 
 markdown_extensions:
   - abbr

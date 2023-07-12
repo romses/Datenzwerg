@@ -64,10 +64,13 @@ sensor:
     temperature:
       name: "Temperature"
       oversampling: 16x
+      id: bme280_temperature
     pressure:
       name: "Pressure"
+      id: bme280_pressure
     humidity:
       name: "Humidity"
+      id: bme280_humidity
     address: 0x76
     update_interval: 1s
 
@@ -91,7 +94,7 @@ sensor:
     name: 'Sound Voltage'
     id: sound_voltage
     update_interval: 1s
-  
+
   - platform: template
     name: "UV Index"
     update_interval: 1s
@@ -123,6 +126,19 @@ sensor:
       } else {
         return 0.0;
       }
+  - platform: absolute_humidity
+    name: "Absolute Humidity"
+    temperature: bme280_temperature
+    humidity: bme280_humidity
+  - platform: template
+    name: "Dew Point"
+    lambda: |-
+      return (243.5*(log(id(bme280_humidity).state/100)+((17.67*id(bme280_temperature).state)/
+      (243.5+id(bme280_temperature).state)))/(17.67-log(id(bme280_humidity).state/100)-
+      ((17.67*id(bme280_temperature).state)/(243.5+id(bme280_temperature).state))));
+    unit_of_measurement: °C
+    icon: 'mdi:thermometer-alert'
+
 
 text_sensor:
   - platform: version
