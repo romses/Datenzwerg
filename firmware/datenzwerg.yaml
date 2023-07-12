@@ -141,7 +141,6 @@ sensor:
     name: "Absolute Humidity"
     temperature: bme280_temperature
     humidity: bme280_humidity
-    update_interval: 5s
 
   - platform: template
     name: "Dew Point"
