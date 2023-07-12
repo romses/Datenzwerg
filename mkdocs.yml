@@ -1,5 +1,4 @@
 site_name: Datenzwerg
-#site_dir: docker/www-data/
 repo_name: romses/Datenzwerg
 repo_url: https://github.com/romses/Datenzwerg
 
@@ -41,6 +40,7 @@ extra:
 nav:
   - Home: index.md
   - how_to_build.md
+  - weather.md
 
 markdown_extensions:
   - abbr
