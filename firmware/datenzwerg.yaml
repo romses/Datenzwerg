@@ -58,7 +58,7 @@ deep_sleep:
 sensor:
   - platform: wifi_signal
     name: "WiFi Signal"
-    update_interval: 1s
+    update_interval: 5s
 
   - platform: bme280
     temperature:
@@ -72,32 +72,32 @@ sensor:
       name: "Humidity"
       id: bme280_humidity
     address: 0x76
-    update_interval: 1s
+    update_interval: 5s
 
   - platform: ads1115
     gain: 6.144
     multiplexer: 'A0_GND'
     name: 'UV Voltage'
     id: uv_voltage
-    update_interval: 1s
+    update_interval: 5s
 
   - platform: ads1115
     gain: 6.144
     multiplexer: 'A1_GND'
     name: 'Battery Voltage'
     id: battery_voltage
-    update_interval: 1s
+    update_interval: 5s
 
   - platform: ads1115
     gain: 6.144
     multiplexer: 'A2_GND'
     name: 'Sound Voltage'
     id: sound_voltage
-    update_interval: 1s
+    update_interval: 5s
 
   - platform: template
     name: "UV Index"
-    update_interval: 1s
+    update_interval: 5s
     lambda: |-
       float value = id(uv_voltage).state;
       ESP_LOGD("uv_index", "The UV voltage is: %f", value);
@@ -133,7 +133,7 @@ sensor:
       const float STANDARD_SEA_LEVEL_PRESSURE = 1013.25; //in hPa, see note
       return ((id(bme280_temperature).state + 273.15) / 0.0065) *
         (powf((STANDARD_SEA_LEVEL_PRESSURE / id(bme280_pressure).state), 0.190234) - 1); // in meter
-    update_interval: 15s
+    update_interval: 5s
     icon: 'mdi:signal'
     unit_of_measurement: 'm'
 
@@ -141,6 +141,7 @@ sensor:
     name: "Absolute Humidity"
     temperature: bme280_temperature
     humidity: bme280_humidity
+    update_interval: 5s
 
   - platform: template
     name: "Dew Point"
@@ -150,6 +151,7 @@ sensor:
       ((17.67*id(bme280_temperature).state)/(243.5+id(bme280_temperature).state))));
     unit_of_measurement: °C
     icon: 'mdi:thermometer-alert'
+    update_interval: 5s
 
 text_sensor:
   - platform: version
