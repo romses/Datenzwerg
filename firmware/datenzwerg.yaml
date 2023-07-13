@@ -144,6 +144,7 @@ sensor:
 
   - platform: template
     name: "Dew Point"
+    update_interval: 15s
     lambda: |-
       return (243.5*(log(id(bme280_humidity).state/100)+((17.67*id(bme280_temperature).state)/
       (243.5+id(bme280_temperature).state)))/(17.67-log(id(bme280_humidity).state/100)-
