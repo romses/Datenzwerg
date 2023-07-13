@@ -61,6 +61,14 @@ extra:
           en: Noise
           de: Lautstärke
         panel: datenzwerg-dashboard?orgId=1&panelId=9
+      - name: 
+          en: Dew Point
+          de: Taupunkt
+        panel: datenzwerg-dashboard?orgId=1&panelId=14
+      - name: 
+          en: Absolute Humidity
+          de: Absolute Luftfeuchte
+        panel: datenzwerg-dashboard?orgId=1&panelId=16
     internal:
       - name: 
           en: Battery voltage
@@ -69,6 +77,10 @@ extra:
       - name: 
           en: Wifi signal
           de: Wifisignal
+        panel: datenzwerg-dashboard?orgId=1&panelId=5
+      - name: 
+          en: Uptime
+          de: Uptime
         panel: datenzwerg-dashboard?orgId=1&panelId=5
 
 extra_css:

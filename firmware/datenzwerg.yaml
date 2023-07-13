@@ -73,6 +73,10 @@ sensor:
       id: bme280_humidity
     address: 0x76
     update_interval: 5s
+  - platform: uptime
+    name: Uptime Sensor
+    update_interval: 5s
+
 
   - platform: ads1115
     gain: 6.144
@@ -144,7 +148,6 @@ sensor:
 
   - platform: template
     name: "Dew Point"
-    update_interval: 15s
     lambda: |-
       return (243.5*(log(id(bme280_humidity).state/100)+((17.67*id(bme280_temperature).state)/
       (243.5+id(bme280_temperature).state)))/(17.67-log(id(bme280_humidity).state/100)-

@@ -14,3 +14,4 @@
     <iframe src="{{ grafana.base_url }}{{ env.panel }}" class="grafana-iframe"></iframe>
 {% endfor %}
 
+Mehr Dashboards sind unter <a href="grafana.datahnome.de">grafana.datagnome.de</a> verfügbar
