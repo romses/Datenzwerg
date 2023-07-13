@@ -20,3 +20,5 @@
 
     <iframe src="http://grafana.datagnome.de/grafana/d-solo/f17a6449-84ed-4733-b982-21c0d480c42a/datenzwerg-dashboard?orgId=1&from=1689008400813&to=1689181200813&panelId=9" width="450" height="200" frameborder="0"></iframe>
 
+
+The full set of grafana dashboards are available at <a href="grafana.datahnome.de">grafana.datagnome.de</a>
