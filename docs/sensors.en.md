@@ -15,4 +15,4 @@
 {% endfor %}
 
 
-The full set of grafana dashboards are available at <a href="grafana.datahnome.de">grafana.datagnome.de</a>
+The full set of grafana dashboards are available at <a href="https://grafana.datagnome.de">grafana.datagnome.de</a>
