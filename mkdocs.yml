@@ -1,4 +1,5 @@
 site_name: Datenzwerg
+site_url: !ENV [SITE_URL, "http://127.0.0.1:8000"]
 repo_name: romses/Datenzwerg
 repo_url: https://github.com/romses/Datenzwerg
 
@@ -32,14 +33,14 @@ theme:
 extra:
   alternate:
     - name: English
-      link: /en/
+      link: !ENV [I18N_EN, "/en/"]
       lang: en
     - name: Deutsch
-      link: /de/
+      link: !ENV [I18N_DE, "/de/"]
       lang: de
   
   grafana:
-    base_url: http://grafana.datagnome.de/grafana/d-solo/f17a6449-84ed-4733-b982-21c0d480c42a/
+    base_url: !ENV [GRAFANA_BASE, "http://grafana.datagnome.de/grafana/d-solo/f17a6449-84ed-4733-b982-21c0d480c42a/" ]
     environment:
       - name:
           en: Temperature

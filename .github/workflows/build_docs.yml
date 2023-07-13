@@ -35,6 +35,8 @@ jobs:
           mkdocs build
         env:
           SITE_URL: https://romses.github.io/Datenzwerg
+          I18N_EN: "/Datenzwerg/en/"
+          I18N_DE: "/Datenzwerg/de/"
 
       - name: ⬆ Upload pages artifact
         uses: actions/upload-pages-artifact@v1
