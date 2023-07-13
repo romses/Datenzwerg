@@ -33,10 +33,10 @@ theme:
 extra:
   alternate:
     - name: English
-      link: /en/
+      link: !ENV [I18N_EN, "/en/"]
       lang: en
     - name: Deutsch
-      link: /de/
+      link: !ENV [I18N_DE, "/de/"]
       lang: de
   
   grafana:
