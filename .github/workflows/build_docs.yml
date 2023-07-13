@@ -33,6 +33,8 @@ jobs:
       - name: 🏗 Build docs
         run: |
           mkdocs build
+        env:
+          SITE_URL: https://romses.github.io/Datenzwerg
 
       - name: ⬆ Upload pages artifact
         uses: actions/upload-pages-artifact@v1
