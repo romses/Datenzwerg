@@ -37,6 +37,39 @@ extra:
     - name: Deutsch
       link: /de/
       lang: de
+  
+  grafana:
+    base_url: http://grafana.datagnome.de/grafana/d-solo/f17a6449-84ed-4733-b982-21c0d480c42a/
+    environment:
+      - name:
+          en: Temperature
+          de: Temperatur
+        panel: datenzwerg-dashboard?orgId=1&panelId=3
+      - name: 
+          en: Humidity
+          de: Luftfeuchtigkeit
+        panel: datenzwerg-dashboard?orgId=1&panelId=2
+      - name: 
+          en: Air pressure
+          de: Luftdruck
+        panel: datenzwerg-dashboard?orgId=1&panelId=4
+      - name:
+          en: UV Index
+          de: UV Index
+        panel: datenzwerg-dashboard?orgId=1&panelId=6
+      - name: 
+          en: Noise
+          de: Lautstärke
+        panel: datenzwerg-dashboard?orgId=1&panelId=9
+    internal:
+      - name: 
+          en: Wifi signal
+          de: Wifisignal
+        panel: datenzwerg-dashboard?orgId=1&panelId=1
+      - name: 
+          en: Battery voltage
+          de: Batteriespannung
+        panel: datenzwerg-dashboard?orgId=1&panelId=5
 
 extra_css:
   - assets/css/extras.css
@@ -80,6 +113,7 @@ markdown_extensions:
 
 plugins:
   - search:
+  - macros:
   - i18n:
       default_language: en
       languages:
