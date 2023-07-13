@@ -28,6 +28,7 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
+
 extra:
   alternate:
     - name: English
@@ -37,11 +38,13 @@ extra:
       link: /de/
       lang: de
 
+extra_css:
+  - assets/css/extras.css
+
 nav:
   - Home: index.md
-  - how_to_build.md
   - sensors.md
-  - metadata.md
+  - how_to_build.md
 
 markdown_extensions:
   - abbr
