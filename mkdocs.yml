@@ -63,12 +63,12 @@ extra:
         panel: datenzwerg-dashboard?orgId=1&panelId=9
     internal:
       - name: 
-          en: Wifi signal
-          de: Wifisignal
-        panel: datenzwerg-dashboard?orgId=1&panelId=1
-      - name: 
           en: Battery voltage
           de: Batteriespannung
+        panel: datenzwerg-dashboard?orgId=1&panelId=1
+      - name: 
+          en: Wifi signal
+          de: Wifisignal
         panel: datenzwerg-dashboard?orgId=1&panelId=5
 
 extra_css:
