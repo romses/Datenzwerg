@@ -73,10 +73,6 @@ sensor:
       id: bme280_humidity
     address: 0x76
     update_interval: 5s
-  - platform: uptime
-    name: Uptime Sensor
-    update_interval: 5s
-
 
   - platform: ads1115
     gain: 6.144
