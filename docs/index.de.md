@@ -2,6 +2,10 @@
 
 ## Willkommen beim Datenzwerg!
 
+!!! info
+    ChatGPT: Schreibe mir einen Text für eine Website, die einen Überblick über den "Datenzwerg" gibt. Der Datenzwerg ist ein Gartenzwerg, der Umweltdaten sammelt, und öffentlich verfügbar macht. Der Datenzwerg wird auf dem Chaos Communication Camp vorgestellt.
+
+
 Der Datenzwerg ist kein gewöhnlicher Gartenzwerg - er ist ein Pionier in der Welt der Umweltdatenerfassung und 
 -freigabe. Als eine bezaubernde Verbindung von Technologie und Natur hat der Datenzwerg eine Mission: 
 Informationen über unsere Umwelt zu sammeln und für alle frei zugänglich zu machen.
@@ -34,9 +38,8 @@ Der Datenzwerg lädt Sie ein, Teil dieser Bewegung zu werden - einer Bewegung, d
 Transparenz zu fördern und die Welt zu einem nachhaltigeren und besseren Ort zu machen. 
 Zusammen können wir die Macht der Daten nutzen, um positive Veränderungen in unserer Umwelt zu bewirken.
 
-Schließen Sie sich dem Datenzwerg an und entdecken Sie eine neue Dimension des Umweltbewusstseins! [^1]
+Schließen Sie sich dem Datenzwerg an und entdecken Sie eine neue Dimension des Umweltbewusstseins!
 
-[^1]: ChatGPT: Schreibe mir einen Text für eine Website, die einen Überblick über den "Datenzwerg" gibt. Der Datenzwerg ist ein Gartenzwerg, der Umweltdaten sammelt, und öffentlich verfügbar macht. Der Datenzwerg wird auf dem Chaos Communication Camp vorgestellt.
 
 ## Eine kurze Geschichte des Datenzwergs
 

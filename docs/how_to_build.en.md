@@ -33,7 +33,7 @@ To build your own Datenzwerg, you will need the following parts:
 | 1 | female 4-pin JST cable | I2C cable | (WIP) | (WIP) |
 | 1 | male 2-pin JST cable | Battery cable | (WIP) | (WIP) |
 | 1 | female 2-pin JST cable | Battery cable | (WIP) | (WIP) |
-| 1 | perfboard | Soldering board | - | (on hand) |
+| 1 | perfboard | Soldering board | [Amazon](https://www.amazon.de/gp/product/B085WJCRX8/) | ~0,80€ |
 
 Additionally you'll need a soldering iron, solder and some wires.
 

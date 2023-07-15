@@ -1,6 +1,10 @@
 # The Datenzwerg
 
 ## Welcome to the Data gnome!
+
+!!! info
+    ChatGPT: Write me a text for a website that gives an overview of the "data gnome". The data gnome is a garden gnome that collects environmental data, and makes it publicly available. The data gnome will be presented at the Chaos Communication Camp.
+
 Welcome to the world of the Data Gnome, an enchanting garden gnome with a technological twist! 
 This delightful little creature may look like your average garden decoration, 
 but it harbors a secret mission that is as intriguing as it is important. 
@@ -36,9 +40,7 @@ Together, let's harness the power of data and contribute to a more sustainable a
 
 Note: The Data Gnome is a fictional character created for the purpose of this text. 
 However, it highlights the growing importance of citizen science and the role of technology 
-in monitoring and protecting our environment. [^1]
-
-[^1]: ChatGPT: Write me a text for a website that gives an overview of the "data gnome". The data gnome is a garden gnome that collects environmental data, and makes it publicly available. The data gnome will be presented at the Chaos Communication Camp.
+in monitoring and protecting our environment.
 
 ## A short history of the Datenzwerg
 
