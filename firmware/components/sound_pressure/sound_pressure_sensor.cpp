@@ -16,12 +16,13 @@ void SoundPressureSensor::dump_config() {
   ESP_LOGCONFIG(TAG, "  Sensitivity: %.2f", this->mic_sensitivity_);
   ESP_LOGCONFIG(TAG, "  Amplifier Gain: %.2f", this->amp_gain_);
   ESP_LOGCONFIG(TAG, "  DC Bias: %.2f", this->dc_bias_);
+  ESP_LOGCONFIG(TAG, "  Refernce Voltage: '%s'", this->reference_voltage_);
   LOG_UPDATE_INTERVAL(this);
 }
 
 void SoundPressureSensor::setup() {
-  // Calculate transfer factor from mic sensitivity
-  this->transfer_factor_ = pow(10, this->mic_sensitivity_ / 20);
+  // Calculate reference voltage from mic sensitivity
+  this->reference_voltage_ = pow(10, this->mic_sensitivity_ / 20);
 }
 
 void SoundPressureSensor::update() {
@@ -41,7 +42,7 @@ void SoundPressureSensor::update() {
     }
 
     const float rms = sqrt(this->squared_sum_ / this->num_samples_);
-    const float result = 20 * log10(rms / this->transfer_factor_)
+    const float result = 20 * log10(rms / this->reference_voltage_)
       + REFERENCE_SOUND_PRESSURE 
       //- this->mic_sensitivity_ 
       - this->amp_gain_;

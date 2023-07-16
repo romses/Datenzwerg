@@ -45,7 +45,7 @@ class SoundPressureSensor : public sensor::Sensor, public PollingComponent {
   int num_samples_ = 0;
   float squared_sum_ = 0.0f;
 
-  float transfer_factor_;
+  float reference_voltage_;
 };
 
 }  // namespace sound_pressure
