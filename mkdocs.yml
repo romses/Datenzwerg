@@ -2,6 +2,7 @@ site_name: Datenzwerg
 site_url: !ENV [SITE_URL, "http://127.0.0.1:8000"]
 repo_name: romses/Datenzwerg
 repo_url: https://github.com/romses/Datenzwerg
+dev_addr: 0.0.0.0:8008
 
 theme:
   name: material
