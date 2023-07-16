@@ -76,15 +76,57 @@ For assembly you'll also need superglue and UV resin.
 
 ### Mainboard
 
-TODO
+The Mainboard is the hardest part to assemble. We recommend to first wire the I2C BUS first, followed by the 3V3 (Orange in the fritzing drawing) power trail.
+Those are the most complex traces.
+
+![The Datagnome Mainboard as a PCB](assets/images/Datenzwerg-pcb.svg)
+![The Datagnome Mainboard](assets/images/Datenzwerg-Komplett-Fritzing.png)
+
+!!! note
+    The Fritzing schematics shows the ESP in its original orientation. However, we decided to mount the ESP flipped over.
+    The Diagram also shows the ADS1115 in a rotated orientation. This makes the fritzing diagram much easier to understanf.
+
+!!! note
+    the PCB schematics shows the ESP in the correct orientation as well as the ADS1115. This schematic is much closer to our hand soldered boards than shown in the Fritzing diagram.
+
+![The Datagnome Mainboard assembled](assets/images/Datenzwerg-komplett.png)
+
+!!! note
+    We used a special kind of perfboard. The grouping of three pin holes makes organising the wires so much easier.
+    ![Perfboard](assets/images/perfboard.png)
 
 ### Sensors
 
-TODO
+#### UV and sound sensor
+The UV and sound sensors are soldered to jst connector cables to make the sensors replacable. If you like, you can solder the sensors directly to the PCB.
+
+![UV-module](assets/images/UV-module.png)
+![UV_module-fritzing](assets/images/UV-module-fritzing.png)
+
+!!! note
+    keep in mind, that the temperature inside the data gnome can become much warmer than the outside temperature.
+    Consider wires long enough, to have the BMP280 stick outside the gnome body.
+
+#### BME280
+The BME280 sensor is soldered to a 4 pin jst header. 
+
+![BME280](assets/images/BME280.png)
+![BME280-fritzing](assets/images/BME280-fritzing.png)
+
 
 ### Power supply
 
-TODO
+The Power supply ts the second complex component of the data gnome.
+In our original design it was intended to charge the lipos directly via the TP4056 modules. However, tests have shown that these modules become very hot during charging.
+Therefore, we charge the lipos externally, but keep the modules to prevent deep discharge of the lipos.
+
+The BAT+ and BAT- terminals are connected to Boost converters. Both the ADS1115 and the ESP8266 could be operated with 3V3. However, the TP4056 module supplies battery voltage. Therefore, the easiest way was to boost the voltage to 5V using a boost converter to power both the ESO8266 and the ADS1115.
+
+![power supply](assets/images/Power-Module.png)
+![Power supply-fritzing](assets/images/Power-Module-fritzing.png)
+
+!!! note
+    Note that we include the battery voltage from the input of the buck converter to the JST header. This enables the ADS1115 to measure the battery voltage.
 
 ### Gnome body
 
