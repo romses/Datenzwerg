@@ -22,6 +22,7 @@ class SoundPressureSensor : public sensor::Sensor, public PollingComponent {
   void set_sample_duration(uint32_t sample_duration) { sample_duration_ = sample_duration; }
   void set_source(voltage_sampler::VoltageSampler *source) { source_ = source; }
   void set_amp_gain(float amp_gain) { amp_gain_ = amp_gain; }
+  void set_dc_bias(float dc_bias) { dc_bias_ = dc_bias; }
   void set_mic_sensitivity(int mic_sensitivity) { mic_sensitivity_ = mic_sensitivity; }
 
  protected:
@@ -34,13 +35,15 @@ class SoundPressureSensor : public sensor::Sensor, public PollingComponent {
   voltage_sampler::VoltageSampler *source_;
   /// The gain applied to the source.
   float amp_gain_;
+  /// The DC bias applied to the source.
+  float dc_bias_;
   /// The sensitivity of the microphone in dBV/Pa.
   int mic_sensitivity_;
 
   float last_value_ = 0.0f;
-  float min_value_ = 1000.0f;
-  float max_value_ = -1000.0f;
   bool is_sampling_ = false;
+  int num_samples_ = 0;
+  float squared_sum_ = 0.0f;
 
   float transfer_factor_;
 };

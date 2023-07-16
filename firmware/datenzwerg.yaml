@@ -17,7 +17,9 @@ esphome:
 external_components:
   - source: github://JeroenvdV/esphome-influxdb2
     components: [ influxdb2 ]
-  - source: ./components/
+  - source:
+      type: local
+      path: components
     components: [ sound_pressure ]
 
 influxdb2:
@@ -92,7 +94,7 @@ sensor:
     update_interval: 5s
 
   - platform: ads1115
-    gain: 6.144
+    gain: 4.096
     multiplexer: 'A2_GND'
     name: 'Sound Voltage'
     id: sound_voltage
@@ -158,16 +160,11 @@ sensor:
   - platform: sound_pressure
     sensor: sound_voltage
     name: "Sound Pressure"
-    sample_duration: 250ms
-    update_interval: 500ms
+    sample_duration: 50ms
+    update_interval: 1s
     mic_sensitivity: -44
-    amp_gain: 125
-
-  - platform: ct_clamp
-    sensor: sound_voltage
-    name: "Sound CT Clamp"
-    sample_duration: 250ms
-    update_interval: 500ms
+    amp_gain: 27.96 # 20 * log10(25)
+    dc_bias: 1.65 # Vcc of 3.3V / 2
 
 text_sensor:
   - platform: version

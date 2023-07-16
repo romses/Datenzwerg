@@ -13,7 +13,10 @@ CODEOWNERS = ["@foosel"]
 
 CONF_SAMPLE_DURATION = "sample_duration"
 CONF_AMP_GAIN = "amp_gain"
+CONF_DC_BIAS = "dc_bias"
 CONF_MIC_SENSITIVITY = "mic_sensitivity"
+CONF_SOUND_PRESSURE = "sound_pressure"
+CONF_RMS = "rms"
 
 sound_pressure_ns = cg.esphome_ns.namespace("sound_pressure")
 SoundPressureSensor = sound_pressure_ns.class_(
@@ -41,6 +44,9 @@ CONFIG_SCHEMA = (
                 CONF_AMP_GAIN, default=0.0
             ): cv.float_range(min=0.0),
             cv.Optional(
+                CONF_DC_BIAS, default=0.0
+            ): cv.float_range(min=0.0),
+            cv.Optional(
                 CONF_MIC_SENSITIVITY, default=0
             ): cv.int_range(max=0),
         }
@@ -57,6 +63,7 @@ async def to_code(config):
     cg.add(var.set_source(sens))
     cg.add(var.set_sample_duration(config[CONF_SAMPLE_DURATION]))
     cg.add(var.set_amp_gain(config[CONF_AMP_GAIN]))
+    cg.add(var.set_dc_bias(config[CONF_DC_BIAS]))
     cg.add(var.set_mic_sensitivity(config[CONF_MIC_SENSITIVITY]))
 
     cg.add_global(sound_pressure_ns.using)
