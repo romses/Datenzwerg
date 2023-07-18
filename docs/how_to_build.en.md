@@ -47,16 +47,12 @@ If you want to put the Datenzwerg into its gnome body, you will also need:
 
 | Count | Item | Function | Link | Price |
 | ----- | ---- | -------- | ---- | ----- |
-| 1 | 3D printed gnome body top | Gnome body | [Download](https://raw.githubusercontent.com/romses/Datenzwerg/main/models/datenzwerg_40p_1.2mm_top.stl) | (WIP) |
-| 1 | 3D printed gnome body bottom | Gnome body | [Download](https://raw.githubusercontent.com/romses/Datenzwerg/main/models/datenzwerg_40p_1.2mm_bottom_filled.stl) | (WIP) |
+| 1 | 3D printed gnome body top | Gnome body | [Download](https://raw.githubusercontent.com/romses/Datenzwerg/main/models/datenzwerg_40p_1.2mm_top.stl) | ~3€[^2] |
+| 1 | 3D printed gnome body bottom | Gnome body | [Download](https://raw.githubusercontent.com/romses/Datenzwerg/main/models/datenzwerg_40p_1.2mm_bottom.stl) | ~0.80€[^2] |
 | 6 | 6x1mm neodymium disc magnets | Connecting the top and bottom of the gnome body | [Amazon](https://www.amazon.de/dp/B007JTKX3Y) | ~1.85€ |
 | 1 | ~3mm thick sanded and polished cut-off of a 5mm rod of 0A070GT Plexiglas XT | UV transmissive rain cover for the UV sensor | [Sample from the manufacturer](https://www.plexiglas-shop.com/en-de/products/plexiglas-xt/sr0a070gt.html) | ~0.09€ |
-| 2 | 8mm OD/4mm ID silicone O-rings | Sealing the UV sensor mount | [Amazon](https://www.amazon.de/dp/B07NQFP5V8) | ~0.50€ |
-| 1 | M3x10mm screw | Mounting the UV sensor | - | (on hand) |
-| 1 | M3 nut | Mounting the UV sensor | - | (on hand) |
-| 2 | M3 washers | Mounting the UV sensor | - | (on hand) |
 
-For assembly you'll also need superglue and UV resin.
+For assembly you'll also need hotglue, superglue and UV resin.
 
 !!! note
 
@@ -66,11 +62,7 @@ For assembly you'll also need superglue and UV resin.
 
 !!! hint
 
-    We got a 100mm sample rod of the Plexiglas XT from the manufacturer for 3€. We cut it to length with a Dremel and [this 3d printed cutting jig](https://www.printables.com/model/113887-rod-and-tube-cutter-for-dremel-with-limiter), then sanded the cut-off smooth with 400 grit sandpaper and polished it with a general polishing compound ("Elsterglanz")[^2].
-
-!!! hint
-
-    The o-rings we used are often sold as silencer rings for mechanical keyboards. You might just have some lying around if you're into that kind of thing (that's where we got ours from 😅).
+    We got a 100mm sample rod of the Plexiglas XT from the manufacturer for 3€. We cut it to length with a Dremel and [this 3d printed cutting jig](https://www.printables.com/model/113887-rod-and-tube-cutter-for-dremel-with-limiter), then sanded the cut-off smooth with 400 grit sandpaper and polished it with a general polishing compound ("Elsterglanz")[^3].
 
 ## Assembly
 
@@ -83,54 +75,58 @@ Those are the most complex traces.
 ![The Datagnome Mainboard](assets/images/Datenzwerg-Komplett-Fritzing.png)
 
 !!! note
+
     The Fritzing schematics shows the ESP in its original orientation. However, we decided to mount the ESP flipped over.
     The Diagram also shows the ADS1115 in a rotated orientation. This makes the fritzing diagram much easier to understanf.
 
 !!! note
-    the PCB schematics shows the ESP in the correct orientation as well as the ADS1115. This schematic is much closer to our hand soldered boards than shown in the Fritzing diagram.
+
+    The PCB schematics shows the ESP in the correct orientation as well as the ADS1115. This schematic is much closer to our hand soldered boards than shown in the Fritzing diagram.
 
 ![The Datagnome Mainboard assembled](assets/images/Datenzwerg-komplett.png)
 
 !!! note
+    
     We used a special kind of perfboard. The grouping of three pin holes makes organising the wires so much easier.
     ![Perfboard](assets/images/perfboard.png)
 
 ### Sensors
 
 #### UV and sound sensor
+
 The UV and sound sensors are soldered to jst connector cables to make the sensors replacable. If you like, you can solder the sensors directly to the PCB.
 
 ![UV-module](assets/images/UV-module.png)
 ![UV_module-fritzing](assets/images/UV-module-fritzing.png)
 
 !!! note
-    keep in mind, that the temperature inside the data gnome can become much warmer than the outside temperature.
-    Consider wires long enough, to have the BMP280 stick outside the gnome body.
+    
+    The temperature inside the Datenzwerg can become much warmer than the outside temperature. We found that even sticking the BME280 outside of the Datenzwerg, by pushing it through the slot on the bottom of the top of the Datenzwerg case, the temperature readings were still extremely high when the Datenzwerg was in direct sunlight, possibly due to radiation of the heated up plastic of the Datenzwerg body. We decided to live with this issue and just note it in the documentation. A different case design could possibly solve this issue.
 
 #### BME280
-The BME280 sensor is soldered to a 4 pin jst header. 
+
+The BME280 sensor is soldered to a 4-pin JST header. 
 
 ![BME280](assets/images/BME280.png)
 ![BME280-fritzing](assets/images/BME280-fritzing.png)
 
-
 ### Power supply
 
-The Power supply ts the second complex component of the data gnome.
-In our original design it was intended to charge the lipos directly via the TP4056 modules. However, tests have shown that these modules become very hot during charging.
-Therefore, we charge the lipos externally, but keep the modules to prevent deep discharge of the lipos.
+The Power supply is the second complex component of the Datenzwerg.
 
-The BAT+ and BAT- terminals are connected to Boost converters. Both the ADS1115 and the ESP8266 could be operated with 3V3. However, the TP4056 module supplies battery voltage. Therefore, the easiest way was to boost the voltage to 5V using a boost converter to power both the ESO8266 and the ADS1115.
+In our original design it was intended to charge the LiPos directly via the TP4056 modules. However, tests have shown that these modules become very hot during charging - we measured up to 86°C, and that was too high for us to
+feel good about charging them this way on the possibly very dry field of the CCCamp.
+
+Therefore, we charge the LiPos externally. We however kept the modules to prevent deep discharge.
+
+The BAT+ and BAT- terminals are connected to VIN+ and VIN- of boost converters set to 5V output voltage. Both the ADS1115 and the ESP8266 could be operated with 3V3. However, the TP4056 module supplies battery voltage. Therefore, the easiest way was to boost the voltage to 5V using a boost converter to power both the ESP8266 and the ADS1115. This has also the added advantage of allowing us to measure the battery voltage using the ADS1115, which is able to measure voltages up to Vcc + 0.3V. We therefore connected the third wire of the 3-pin JST header used for the connection to the mainboard to VIN+, with the other two wires connected to VOUT+ and VOUT-.
 
 ![power supply](assets/images/Power-Module.png)
 ![Power supply-fritzing](assets/images/Power-Module-fritzing.png)
 
-!!! note
-    Note that we include the battery voltage from the input of the buck converter to the JST header. This enables the ADS1115 to measure the battery voltage.
-
 ### Gnome body
 
-Using superglue, glue the magnets into the holes in the gnome body bottom. Make sure the polarity is correct, i.e. the magnets attract each other when the gnome body top is placed on the bottom. The magnets should be flush with the surface of the gnome body bottom.
+Using superglue, glue the magnets into the holes in the gnome body - there are three each on the mating surfaces of top and bottom part. Make sure the polarity is correct, i.e. the magnets attract each other when the gnome body top is placed on the bottom. The magnets should be flush with the surface.
 
 Fit the acrylic rain cover into the upper of the two holes, holding it in place from behind with your finger. If it won't fit right away, carefully send the print until it does. It should be flush with the inner surface of the gnome body, it's ok if it protrudes a bit on the front. Carefully - making *really* sure to not get any on the surface of the acrylic disc - apply UV resin around the edges of the rain cover. Then cure it with a UV lamp. 
 
@@ -138,7 +134,7 @@ Fit the acrylic rain cover into the upper of the two holes, holding it in place 
 
     Make sure to not get any UV resin on the surface of the acrylic disc. If you do, it will be permanently fogged up.
 
-Screw the UV sensor into the mount. To do this, first put a washer on the nut, then the sensor, then one of the o-rings. Then push the screw through the mounting hole from the inside. Apply another o-ring, another washer, then the nut. Finger tighten it. Don't overtighten it, as this might damage the sensor.
+Use a small screwdriver or other tool to hold the UV sensor in place with its shrink tubing. Apply hot glue on the shrink tubing and then press the sensor into its final position so that the sensor is centered inside the acrylic window.
 
 ## Flashing the firmware
 
@@ -155,12 +151,13 @@ This will install all dependencies needed to build the firmware and the document
 Then, navigate to the `firmware` directory. Copy `secrets-template.yaml` to `secrets.yaml` and fill in your WiFi and InfluxDB2 credentials. Then run
 
 ```
-esphome -s name <gnome> datenzwerg.yaml run
+esphome -s name <gnome> run datenzwerg.yaml
 ```
 
-to compile and flash the firmware for your gnome named `<gnome>` (e.g. if you want to flash the firmware for the gnome named `zwerg`, run `esphome -s name zwerg datenzwerg.yaml run`).
+to compile and flash the firmware for your Datenzwerg named `<gnome>` (e.g. if you want to flash the firmware for the gnome named `zwerg`, run `esphome -s name zwerg run datenzwerg.yaml`).
 
 Plug the D1 mini back into the mainboard and reconnect the power. It should connect to your WiFi and start sending data to the configured InfluxDB.
 
 [^1]: We sourced our LiPo batteries from some old USB power banks we happened to have.
-[^2]: This is easiest done by holding the disc with pliers. For sanding, press it against an orbital sander on the lowest setting, with the right grit. For polishing, rub it manually again and again on a microfibre cloth with the polishing compound applied. Don't forget to do both sides!
+[^2]: Assuming a cost of 20€ per kg filament and the suggested print settings, which resulted in around 150g of filament for the top and around 40g for the bottom, the cost of the gnome body is around 4€.
+[^3]: This is easiest done by holding the disc with pliers. For sanding, press it against an orbital sander on the lowest setting, with the right grit. For polishing, rub it manually again and again on a microfibre cloth with the polishing compound applied. Don't forget to do both sides!

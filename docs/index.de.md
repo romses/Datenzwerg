@@ -1,5 +1,9 @@
 # Der Datenzwerg
 
+!!! todo
+
+    Updaten wenn die englische Version fertig ist.
+
 ## Willkommen beim Datenzwerg!
 
 !!! info

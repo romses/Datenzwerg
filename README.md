@@ -17,7 +17,7 @@ The Datenzwerg firmware is based on [esphome](https://esphome.io/) which gets in
 To flash your own Datenzwerg, navigate to the `firmware` directory, then
 
 1. Copy `secrets-template.yaml` to `secrets.yaml` and fill in your WiFi and InfluxDB2 credentials.
-2. Run `esphome -s name <gnome> firmware.yaml run` to compile and flash the firmware for your gnome named `<gnome>`.
+2. Run `esphome -s name <gnome> run firmware.yaml` to compile and flash the firmware for your gnome named `<gnome>`.
 
 ### Models
 
@@ -28,7 +28,6 @@ In the `models` directory, you will find the following files:
 - `datenzwerg_40p_1.2mm.blend`: Main design file, edit with [Blender](https://blender.org)
 - `datenzwerg_40p_1.2mm_top.stl`: Upper body, electronics compartment
 - `datenzwerg_40p_1.2mm_bottom.stl`: Lower body, feet, mount point
-- `datenzwerg_40p_1.2mm_bottom_filled.stl`: Lower body, feet, mount point, fully filled
 
 ### Documentation
 

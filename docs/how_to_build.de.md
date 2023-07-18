@@ -1,5 +1,9 @@
 # How to build a Datenzwerg
 
+!!! todo
+
+    Updaten wenn die englische Version fertig ist.
+
 !!! warning
     
     Der Datenzwerg wurde für das [CCCamp23](https://events.ccc.de/camp/2023/infos/) entwickelt. Hardware, Firmware und Modelle wurden für einen bestimmten Zweck und eine bestimmte Nutzungsdauer entwickelt und sind möglicherweise nicht für andere Anwendungsfälle geeignet. Der Datenzwerg wird wie er ist ohne jegliche Garantie, Pläne zur Verbesserung oder Behebung oder andere Unterstützung bereitgestellt. Wenn du deinen eigenen Datenzwerg bauen möchtest, bist du auf dich allein gestellt.
@@ -50,10 +54,6 @@ Wenn du die Elektronik in einen Zwergenkörper bauen willst, benötigst du filge
 | 1 | 3D printed gnome body bottom | Gnome body | [Download](https://raw.githubusercontent.com/romses/Datenzwerg/main/models/datenzwerg_40p_1.2mm_bottom_filled.stl) | (WIP) |
 | 6 | 6x1mm neodymium disc magnets | Connecting the top and bottom of the gnome body | [Amazon](https://www.amazon.de/dp/B007JTKX3Y) | ~1.85€ |
 | 1 | ~3mm dickes und polierter 5mm Abschnitt eines 0A070GT Plexiglas XT Plexiglasstabes| UV transmissive rain cover for the UV sensor | [Sample from the manufacturer](https://www.plexiglas-shop.com/en-de/products/plexiglas-xt/sr0a070gt.html) | ~0.09€ |
-| 2 | 8mm OD/4mm ID silicone O-rings | Sealing the UV sensor mount | [Amazon](https://www.amazon.de/dp/B07NQFP5V8) | ~0.50€ |
-| 1 | M3x10mm screw | Mounting the UV sensor | - | (on hand) |
-| 1 | M3 nut | Mounting the UV sensor | - | (on hand) |
-| 2 | M3 washers | Mounting the UV sensor | - | (on hand) |
 
 Für den Zusammenbau benötigst du Sekundenkleber und/oder UV resin zum kleben und versiegeln.
 
@@ -122,7 +122,7 @@ Dadurch werden alle Abhängigkeiten, die zum Erstellen der Firmware und der Doku
 Wechsel dann in das Verzeichnis `firmware`. Kopieren die secrets-template.yaml nach secrets.yaml und gib Deine WiFi- und InfluxDB2-Anmeldedaten ein. Führedann
 
 ```
-esphome -s name <gnome> datenzwerg.yaml run
+esphome -s name <gnome> run datenzwerg.yaml
 ```
 
 um die Firmware für den Datenzwerg mit dem Namen <gnome> zu kompilieren und zu flashen (wenn z.B. die Firmware für den Zwerg mit dem Namen `zwerg` geflashet werden soll, führe `esphome -s name zwerg datenzwerg.yaml` run aus).
@@ -130,4 +130,4 @@ um die Firmware für den Datenzwerg mit dem Namen <gnome> zu kompilieren und zu 
 Stecke den D1 mini wieder in die Hauptplatine und schließe ihn wieder an die Stromversorgung an. Es sollte sich mit dem WiFi verbinden und Daten an die konfigurierte InfluxDB senden.
 
 [^1]: Wir haben die Lipos aus alten Powerbanks recycled
-[^2]: Das geht am einfachsten, indem die Scheibe mit einer Zange festhalten wird. Zum Schleifen drücke die Scheibe gegen einen Schwingschleifer auf der niedrigsten Stufe und mit der richtigen Körnung. Zum Polieren reiben die Scheibe immer wieder von Hand auf einem Mikrofasertuch mit aufgetragener Polierpaste ab. Vergiss nicht, beide Seiten zu bearbeiten!
+[^2]: Das geht am einfachsten, indem die Scheibe mit einer Zange festhalten wird. Zum Schleifen drücke die Scheibe gegen einen Schwingschleifer auf der niedrigsten Stufe und mit der richtigen Körnung. Zum Polieren reibe die Scheibe immer wieder von Hand auf einem Mikrofasertuch mit aufgetragener Polierpaste ab. Vergiss nicht, beide Seiten zu bearbeiten!

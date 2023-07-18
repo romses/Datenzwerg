@@ -1,46 +1,34 @@
 # The Datenzwerg
 
-## Welcome to the Data gnome!
+## What is the Datenzwerg?
 
-!!! info
-    ChatGPT: Write me a text for a website that gives an overview of the "data gnome". The data gnome is a garden gnome that collects environmental data, and makes it publicly available. The data gnome will be presented at the Chaos Communication Camp.
+The Datenzwerg is a garden gnome with a mission: To collect environmental data and make it publicly available. 
 
-Welcome to the world of the Data Gnome, an enchanting garden gnome with a technological twist! 
-This delightful little creature may look like your average garden decoration, 
-but it harbors a secret mission that is as intriguing as it is important. 
-The Data Gnome is on a quest to collect environmental data and make it publicly available for the benefit of all.
+It was originally developed for the [Chaos Communication Camp 2023](https://events.ccc.de/camp/2023/infos/) where we ([@romses](https://chaos.social/@romses) and [@foosel](https://chaos.social/@foosel)) plan to deploy a small army of 10 Datenzwerge across the camp grounds: Happy, Doc, Grumpy, Dopey, Bashful, Sleepy, Sneezy, Nerdy, Kinky and Hefty.
 
-Imagine a world where ordinary objects become extraordinary tools for environmental monitoring. 
-The Data Gnome does exactly that by combining the charm of a classic garden gnome with the power of modern technology. 
-Equipped with an array of sensors, this whimsical gnome ventures into gardens, parks, 
-and natural landscapes to gather valuable information about our environment.
+The Datenzwerg consists of a 3D printed gnome body, a custom PCB with an ESP8266 D1 Mini microcontroller board, a BME280, UV and sound sensor and an 18650 battery. It's powered by [ESPHome](https://esphome.io/) and sends its data to an [InfluxDB](https://www.influxdata.com/) instance. The firmware currently logs temperature, relative and absolute humidity, air pressure, dew point and UV index. The goal is to also have it log sound pressure by the time of the camp.
 
-From monitoring air quality to measuring temperature and humidity, 
-the Data Gnome works tirelessly to capture a wide range of environmental parameters. 
-It collects data on weather patterns, air conditions, and much more. 
-By leveraging its unique vantage point in gardens and outdoor spaces, 
-the Data Gnome provides an unparalleled perspective on the environment around us.
+We asked ChatGPT to describe the Datenzwerg for us[^1] and this is what it came up with:
 
-But the true magic happens when the Data Gnome shares its findings with the world. 
-All the data collected by these pint-sized environmental guardians is made freely 
-available to the public through an intuitive online platform. 
-Researchers, environmentalists, educators, and curious individuals can access this wealth of information 
-to gain insights, monitor trends, and make informed decisions regarding our planet's well-being.
-
-At the upcoming Chaos Communication Camp, we are excited to introduce the Data Gnome to a 
-wider audience of tech enthusiasts, hackers, and environmental advocates. 
-This extraordinary convergence of nature and technology showcases the potential for 
-citizen-driven environmental monitoring. 
-The Data Gnome's presence at this renowned event will ignite conversations and inspire innovative 
-solutions to address pressing environmental challenges.
-
-Join us in discovering the fascinating world of the Data Gnome. 
-Unleash your curiosity, explore the data, and embark on a journey that transcends the ordinary. 
-Together, let's harness the power of data and contribute to a more sustainable and resilient future.
-
-Note: The Data Gnome is a fictional character created for the purpose of this text. 
-However, it highlights the growing importance of citizen science and the role of technology 
-in monitoring and protecting our environment.
+> Welcome to the world of the Datenzwerg, an enchanting garden gnome with a technological twist! 
+> This delightful little creature may look like your average garden decoration, 
+> but it harbors a secret mission that is as intriguing as it is important. 
+> The Datenzwerg is on a quest to collect environmental data and make it publicly available for the benefit of all.
+> 
+> [...]
+> 
+> By leveraging its unique vantage point in gardens and outdoor spaces, 
+> the Datenzwerg provides an unparalleled perspective on the environment around us.
+> 
+> All the data collected by these pint-sized environmental guardians is made freely 
+> available to the public through an intuitive online platform. 
+> 
+> [...]
+> 
+> At the upcoming Chaos Communication Camp, we are excited to introduce the Data Gnome to a 
+> wider audience of tech enthusiasts, hackers, and environmental advocates. 
+> This extraordinary convergence of nature and technology showcases the potential for 
+> citizen-driven environmental monitoring. 
 
 ## A short history of the Datenzwerg
 
@@ -56,3 +44,5 @@ in monitoring and protecting our environment.
 
 2023-08-15 - 2023-08-19
 : Planned Datenzwerg deployment at [CCCamp23](https://events.ccc.de/camp/2023/infos/).
+
+[^1]: "Write me a text for a website that gives an overview of the "Datenzwerg". The Datenzwerg is a garden gnome that collects environmental data, and makes it publicly available. The Datenzwerg will be presented at the Chaos Communication Camp."
