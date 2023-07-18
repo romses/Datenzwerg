@@ -4,3 +4,4 @@ docker/grafana/*
 docker/influx-data/*
 docker/www-data/*
 .env
+*.blend1
