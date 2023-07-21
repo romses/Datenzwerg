@@ -42,7 +42,7 @@ void SoundPressureSensor::update() {
     }
 
     const float rms = sqrt(this->squared_sum_ / this->num_samples_);
-    const float result = 20 * log10(rms / this->reference_voltage_)
+    const float result = 20 * log10(rms /*/ this->reference_voltage_*/)
       + REFERENCE_SOUND_PRESSURE 
       //- this->mic_sensitivity_ 
       - this->amp_gain_;

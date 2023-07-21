@@ -20,7 +20,7 @@ external_components:
   - source:
       type: local
       path: components
-    components: [ rms ]
+    components: [ sound_pressure, rms ]
 
 influxdb2:
   host: !secret influxdb_host
@@ -54,7 +54,6 @@ switch:
 
 ads1115:
   - address: 0x48
-    #continuous_mode: true
 
 deep_sleep:
   run_duration: ${wake_time}
@@ -93,12 +92,13 @@ sensor:
     id: battery_voltage
     update_interval: 5s
 
-  - platform: ads1115
-    gain: 4.096
-    multiplexer: 'A2_GND'
-    name: 'Sound Voltage'
+  - platform: adc
+    pin: A0
+    name: "Sound Voltage"
     id: sound_voltage
     update_interval: 5s
+    filters:
+    - multiply: 3.3
 
   - platform: template
     name: "UV Index"
@@ -157,14 +157,14 @@ sensor:
     icon: 'mdi:thermometer-alert'
     update_interval: 5s
   
-  #- platform: sound_pressure
-  #  sensor: sound_voltage
-  #  name: "Sound Pressure"
-  #  sample_duration: 50ms
-  #  update_interval: 1s
-  #  mic_sensitivity: -44
-  #  amp_gain: 27.96 # 20 * log10(25)
-  #  dc_bias: 1.65 # Vcc of 3.3V / 2
+  - platform: sound_pressure
+    sensor: sound_voltage
+    name: "Sound Pressure"
+    sample_duration: 50ms
+    update_interval: 1s
+    mic_sensitivity: -44
+    amp_gain: 27.96 # 20 * log10(25)
+    dc_bias: 0.5 # Value range of 1.0V / 2
 
   - platform: rms
     sensor: sound_voltage
@@ -172,7 +172,7 @@ sensor:
     sample_duration: 500ms
     update_interval: 1s
     accuracy_decimals: 6
-    dc_bias: 1.65 # Vcc of 3.3V / 2
+    dc_bias: 0.5 # Value range of 1.0V / 2
 
 text_sensor:
   - platform: version
