@@ -1,50 +1,47 @@
-version: '3.9'
+version: "3.3"
 services:
   traefik:
-    image: "traefik:v2.10"
-    container_name: "traefik"
-    command:
-      - "--api.insecure=true"
-      - "--providers.docker=true"
-      - "--providers.docker.exposedbydefault=false"
-      - "--entrypoints.web.address=:80"
-      - "--entrypoints.ssl.address=:443"
-      - "--providers.file.directory=/etc/traefik/dynamic"
-      - "--log.level=DEBUG"
-      - "--providers.file.watch=true"
-      - "--providers.file=true"
+    image: "traefik:latest"
     ports:
       - "80:80"
       - "443:443"
-      - "8080:8080"
     volumes:
-      - "/var/run/docker.sock:/var/run/docker.sock:ro"
-      - ./traefik.yml:/etc/traefik/dynamic/traefik.yml
-    networks:
-      - proxy
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./traefik/acme.json:/acme.json
+      - ./traefik/traefik.yml:/etc/traefik/traefik.yml
+      - ./traefik/dynamic/:/etc/traefik/dynamic/
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.traefik.rule=Host(`traefik.datagnome.de`)"
+      - "traefik.http.routers.traefik.service=api@internal"
+      - "traefik.http.routers.traefik.tls=true"
+      - "traefik.http.routers.traefik.tls.certresolver=le"
+      - "traefik.http.routers.traefik.entrypoints=websecure"
+      - "traefik.http.routers.traefik.middlewares=authtraefik"
+      - "traefik.http.middlewares.authtraefik.basicauth.users=devAdmin:$$2y$$05$$h9OxLeY20/5uiXjfPgdRxuFlrfqBf2QifYDgrwsR6rAEgX3/dpOGq" # user:devAdmin, password:devto
+      - "traefik.http.routers.http-catchall.rule=hostregexp(`{host:.+}`)"
+      - "traefik.http.routers.http-catchall.entrypoints=web"
+      - "traefik.http.routers.http-catchall.middlewares=redirect-to-https"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+    restart: unless-stopped
 
   grafana:
     image: grafana/grafana:latest
-    container_name: grafana
+    restart: unless-stopped
     volumes:
       - ./grafana/:/var/lib/grafana
       - ./grafana.ini:/etc/grafana/grafana.ini
-    env_file: .env
-    restart: always
     ports:
       - 3000:3000
+    env_file: .env
     user: "1000"
-    networks:
-      - proxy
     labels:
       - traefik.enable=true
-      - traefik.docker.network=proxy
-      - traefik.http.routers.grafana.entrypoints=web
       - traefik.http.routers.grafana.rule=Host(`grafana.datagnome.de`)
-      - traefik.http.routers.grafana.middlewares=grafana-strip
-      - traefik.http.middlewares.grafana-strip.stripprefix.prefixes=/grafana
-      - traefik.http.routers.grafana.service=grafana-service
-      - traefik.http.services.grafana-service.loadbalancer.server.port=3000
+      - traefik.http.routers.grafana.entrypoints=websecure
+      - traefik.http.routers.grafana.tls=true
+      - traefik.http.routers.grafana.tls.certresolver=le
+      - traefik.http.services.grafana.loadbalancer.server.port=3000
 
   influxdb:
     image: influxdb:2.6-alpine
@@ -53,18 +50,10 @@ services:
     env_file: .env
     ports:
       - "8086:8086"
-    networks:
-      - proxy
     labels:
       - traefik.enable=true
-      - traefik.docker.network=proxy
-      - traefik.http.routers.influxdb.entrypoints=web
       - traefik.http.routers.influxdb.rule=Host(`influxdb.datagnome.de`)
-      - traefik.http.routers.influxdb.middlewares=influxdb-strip
-      - traefik.http.middlewares.influxdb-strip.stripprefix.prefixes=/influxdb
-      - traefik.http.routers.influxdb.service=influxdb-service
-      - traefik.http.services.influxdb-service.loadbalancer.server.port=8086
-
-networks:
-  proxy:
-    external: true
+      - traefik.http.routers.influxdb.entrypoints=websecure
+      - traefik.http.routers.influxdb.tls=true
+      - traefik.http.routers.influxdb.tls.certresolver=le
+      - traefik.http.services.influxdb.loadbalancer.server.port=8086

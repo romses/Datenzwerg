@@ -4,8 +4,11 @@ http:
       rule: Host(`datagnome.de`)
       service: github
       middlewares:
-        - github_add_prefix
         - github_rewrite_host
+        - github_add_prefix
+      tls:
+        certResolver: le
+
   middlewares:
     github_add_prefix:
       addPrefix:
@@ -14,6 +17,7 @@ http:
       headers:
         customrequestheaders:
           Host: "romses.github.io"
+
   services:
     github:
       loadBalancer:
