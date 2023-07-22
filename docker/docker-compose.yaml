@@ -10,19 +10,6 @@ services:
       - ./traefik/acme.json:/acme.json
       - ./traefik/traefik.yml:/etc/traefik/traefik.yml
       - ./traefik/dynamic/:/etc/traefik/dynamic/
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.traefik.rule=Host(`traefik.datagnome.de`)"
-      - "traefik.http.routers.traefik.service=api@internal"
-      - "traefik.http.routers.traefik.tls=true"
-      - "traefik.http.routers.traefik.tls.certresolver=le"
-      - "traefik.http.routers.traefik.entrypoints=websecure"
-      - "traefik.http.routers.traefik.middlewares=authtraefik"
-      - "traefik.http.middlewares.authtraefik.basicauth.users=devAdmin:$$2y$$05$$h9OxLeY20/5uiXjfPgdRxuFlrfqBf2QifYDgrwsR6rAEgX3/dpOGq" # user:devAdmin, password:devto
-      - "traefik.http.routers.http-catchall.rule=hostregexp(`{host:.+}`)"
-      - "traefik.http.routers.http-catchall.entrypoints=web"
-      - "traefik.http.routers.http-catchall.middlewares=redirect-to-https"
-      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
     restart: unless-stopped
 
   grafana:
