@@ -1,21 +1,20 @@
-#include "rms_sensor.h"
+#include "peak_to_peak_sensor.h"
 
 #include "esphome.h"
 #include <cmath>
 
 namespace esphome {
-namespace rms {
+namespace peak_to_peak {
 
-static const char *const TAG = "rms";
+static const char *const TAG = "peak_to_peak";
 
-void RMSSensor::dump_config() {
-  LOG_SENSOR("", "RMS Sensor", this);
+void PeakToPeakSensor::dump_config() {
+  LOG_SENSOR("", "PeakToPeak Sensor", this);
   ESP_LOGCONFIG(TAG, "  Sample Duration: %.2fs", this->sample_duration_ / 1e3f);
-  ESP_LOGCONFIG(TAG, "  DC Bias: %.2f", this->dc_bias_);
   LOG_UPDATE_INTERVAL(this);
 }
 
-void RMSSensor::update() {
+void PeakToPeakSensor::update() {
   // Update only starts the sampling phase, in loop() the actual sampling is happening.
 
   // Request a high loop() execution interval during sampling phase.
@@ -26,21 +25,20 @@ void RMSSensor::update() {
     this->is_sampling_ = false;
     this->high_freq_.stop();
 
-    if (this->num_samples_ == 0 || this->squared_sum_ == 0.0f) {
+    if (this->min_value_ == 1000.0f || this->max_value_ == -1000.0f) {
       ESP_LOGW(TAG, "'%s' - No valid samples found", this->name_.c_str());
       return;
     }
 
-    const float rms = sqrt(this->squared_sum_ / this->num_samples_);
-    this->publish_state(rms);
+    this->publish_state(this->max_value_ - this->min_value_);
   });
 
   this->is_sampling_ = true;
-  this->num_samples_ = 0;
-  this->squared_sum_ = 0.0f;
+  this->min_value_ = 1000.0f;
+  this->max_value_ = -1000.0f;
 }
 
-void RMSSensor::loop() {
+void PeakToPeakSensor::loop() {
   if (!this->is_sampling_)
     return;
 
@@ -49,11 +47,14 @@ void RMSSensor::loop() {
   if (std::isnan(value))
     return;
 
-  this->num_samples_++;
-  
-  float volts = value - this->dc_bias_;
-  this->squared_sum_ += volts * volts;
+  if (value < this->min_value_) {
+    this->min_value_ = value;
+  }
+
+  if (value > this->max_value_) {
+    this->max_value_ = value;
+  }
 }
 
-}  // namespace sound_pressure
+}  // namespace peak_to_peak
 }  // namespace esphome
