@@ -29,6 +29,7 @@ services:
       - traefik.http.routers.grafana.tls=true
       - traefik.http.routers.grafana.tls.certresolver=le
       - traefik.http.services.grafana.loadbalancer.server.port=3000
+    restart: unless-stopped
 
   influxdb:
     image: influxdb:2.6-alpine
@@ -44,3 +45,4 @@ services:
       - traefik.http.routers.influxdb.tls=true
       - traefik.http.routers.influxdb.tls.certresolver=le
       - traefik.http.services.influxdb.loadbalancer.server.port=8086
+    restart: unless-stopped
