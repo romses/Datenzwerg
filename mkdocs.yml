@@ -70,7 +70,7 @@ extra:
       - name: 
           en: Absolute Humidity
           de: Absolute Luftfeuchte
-        panel: datenzwerg-dashboard?orgId=1&panelId=16
+        panel: datenzwerg-dashboard?orgId=1&panelId=15
     internal:
       - name: 
           en: Battery voltage
