@@ -41,7 +41,7 @@ extra:
       lang: de
   
   grafana:
-    base_url: !ENV [GRAFANA_BASE, "http://grafana.datagnome.de/grafana/d-solo/f17a6449-84ed-4733-b982-21c0d480c42a/" ]
+    base_url: !ENV [GRAFANA_BASE, "http://grafana.datagnome.de/d-solo/f17a6449-84ed-4733-b982-21c0d480c42a/" ]
     environment:
       - name:
           en: Temperature
