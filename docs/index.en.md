@@ -42,7 +42,11 @@ We asked ChatGPT to describe the Datenzwerg for us[^1] and this is what it came 
 2023-07-08
 : Another joint tinkering session takes place. Another 8 mainboards are built. The Datenzwerg army is growing!
 
+2023-07-23
+: The basic infrastructure went live. Sensors started to report to the official servers.
+
 2023-08-15 - 2023-08-19
 : Planned Datenzwerg deployment at [CCCamp23](https://events.ccc.de/camp/2023/infos/).
+
 
 [^1]: "Write me a text for a website that gives an overview of the "Datenzwerg". The Datenzwerg is a garden gnome that collects environmental data, and makes it publicly available. The Datenzwerg will be presented at the Chaos Communication Camp."
