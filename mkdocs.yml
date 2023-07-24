@@ -56,19 +56,19 @@ extra:
           de: Luftdruck
         panel: datenzwerg-dashboard?orgId=1&panelId=4
       - name:
-          en: UV Index
+          en: UV index
           de: UV Index
-        panel: datenzwerg-dashboard?orgId=1&panelId=6
+        panel: datenzwerg-dashboard?orgId=1&panelId=18
       - name: 
-          en: Noise
-          de: Lautstärke
-        panel: datenzwerg-dashboard?orgId=1&panelId=9
+          en: Sound pressure
+          de: Schalldruck
+        panel: datenzwerg-dashboard?orgId=1&panelId=17
       - name: 
-          en: Dew Point
+          en: Dew point
           de: Taupunkt
         panel: datenzwerg-dashboard?orgId=1&panelId=14
       - name: 
-          en: Absolute Humidity
+          en: Absolute humidity
           de: Absolute Luftfeuchte
         panel: datenzwerg-dashboard?orgId=1&panelId=15
     internal:
@@ -80,6 +80,14 @@ extra:
           en: Wifi signal
           de: Wifisignal
         panel: datenzwerg-dashboard?orgId=1&panelId=5
+      - name:
+          en: UV sensor voltage
+          de: UV-Sensorspannung
+        panel: datenzwerg-dashboard?orgId=1&panelId=6
+      - name:
+          en: Sound sensor RMS voltage
+          de: Schallsensor-RMS-Spannung
+        panel: datenzwerg-dashboard?orgId=1&panelId=16
 
 extra_css:
   - assets/css/extras.css
