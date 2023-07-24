@@ -46,48 +46,48 @@ extra:
       - name:
           en: Temperature
           de: Temperatur
-        panel: datenzwerg-dashboard?orgId=1&panelId=3
+        panel: overview?orgId=1&panelId=3
       - name: 
           en: Humidity
           de: Luftfeuchtigkeit
-        panel: datenzwerg-dashboard?orgId=1&panelId=2
+        panel: overview?orgId=1&panelId=2
       - name: 
           en: Air pressure
           de: Luftdruck
-        panel: datenzwerg-dashboard?orgId=1&panelId=4
+        panel: overview?orgId=1&panelId=4
       - name:
           en: UV index
           de: UV Index
-        panel: datenzwerg-dashboard?orgId=1&panelId=18
+        panel: overview?orgId=1&panelId=18
       - name: 
           en: Sound pressure
           de: Schalldruck
-        panel: datenzwerg-dashboard?orgId=1&panelId=17
+        panel: overview?orgId=1&panelId=17
       - name: 
           en: Dew point
           de: Taupunkt
-        panel: datenzwerg-dashboard?orgId=1&panelId=14
+        panel: overview?orgId=1&panelId=14
       - name: 
           en: Absolute humidity
           de: Absolute Luftfeuchte
-        panel: datenzwerg-dashboard?orgId=1&panelId=15
+        panel: overview?orgId=1&panelId=15
     internal:
       - name: 
           en: Battery voltage
           de: Batteriespannung
-        panel: datenzwerg-dashboard?orgId=1&panelId=1
+        panel: overview?orgId=1&panelId=1
       - name: 
           en: Wifi signal
           de: Wifisignal
-        panel: datenzwerg-dashboard?orgId=1&panelId=5
+        panel: overview?orgId=1&panelId=5
       - name:
           en: UV sensor voltage
           de: UV-Sensorspannung
-        panel: datenzwerg-dashboard?orgId=1&panelId=6
+        panel: overview?orgId=1&panelId=6
       - name:
           en: Sound sensor RMS voltage
           de: Schallsensor-RMS-Spannung
-        panel: datenzwerg-dashboard?orgId=1&panelId=16
+        panel: overview?orgId=1&panelId=16
 
 extra_css:
   - assets/css/extras.css
