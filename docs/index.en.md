@@ -50,6 +50,14 @@ We asked ChatGPT to describe the Datenzwerg for us[^2] and this is what it came 
 2023-08-15 - 2023-08-19
 : Planned Datenzwerg deployment at [CCCamp23](https://events.ccc.de/camp/2023/infos/).
 
+## Credits & Thanks
+
+The Datenzwerg was created by [@romses](https://chaos.social/@romses) and [@foosel](https://chaos.social/@foosel).
+
+The Datenzwerg logo was created by D.B.
+
+The Datenzwerg model files are based on [this "Garden Gnome" model](https://www.printables.com/model/260908-garden-gnome) by [Sci3D](https://www.printables.com/@Sci3D), released under CC-BY.
+
 
 [^1]: Yes, the last three are not canon, and one of them even is a smurf - so what, chaos ftw!
 [^2]: Prompt: 'Write me a text for a website that gives an overview of the "Datenzwerg". The Datenzwerg is a garden gnome that collects environmental data, and makes it publicly available. The Datenzwerg will be presented at the Chaos Communication Camp.'
