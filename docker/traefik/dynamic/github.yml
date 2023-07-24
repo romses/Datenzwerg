@@ -2,24 +2,45 @@ http:
   routers:
     github:
       rule: Host(`datagnome.de`)
-      service: github
+      service: page
       middlewares:
-        - github_rewrite_host
-        - github_add_prefix
+        - datagnome_rewrite_host
+        - datagnome_add_prefix
+      tls:
+        certResolver: le
+
+    mastodon:
+      rule: Host(`mastodon.datagnome.de`)
+      service: mastodon
+      middlewares:
+        - mastodon_rewrite_host
+        - mastodon_add_prefix
       tls:
         certResolver: le
 
   middlewares:
-    github_add_prefix:
+    datagnome_add_prefix:
       addPrefix:
         prefix: "/Datenzwerg"
-    github_rewrite_host:
+    datagnome_rewrite_host:
       headers:
         customrequestheaders:
           Host: "romses.github.io"
 
+    mastodon_add_prefix:
+      addPrefix:
+        prefix: "/mastowall"
+    mastodon_rewrite_host:
+      headers:
+        customrequestheaders:
+          Host: "foosel.github.io"
+
   services:
-    github:
+    page:
       loadBalancer:
         servers:
           - url: "https://romses.github.io"
+    mastodon:
+      loadBalancer:
+        servers:
+          - url: "https://foosel.github.io"

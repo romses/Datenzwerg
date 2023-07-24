@@ -148,7 +148,7 @@ sensor:
     unit_of_measurement: °C
     icon: 'mdi:thermometer-alert'
     update_interval: 5s
-  
+
   - platform: adc
     pin: A0
     name: "Sound Voltage"
@@ -167,7 +167,7 @@ sensor:
     filters:
     - multiply: 3.3 # 1.0V to 3.3V
     - multiply: 0.7071 # Peak to Peak to RMS
-  
+
   - platform: template
     name: "Sound Pressure"
     lambda: |-
@@ -179,7 +179,6 @@ sensor:
     accuracy_decimals: 6
     update_interval: 5s
 
-text_sensor:
   - platform: version
     hide_timestamp: true
     name: "ESPHome Version"
