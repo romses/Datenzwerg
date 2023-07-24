@@ -17,8 +17,10 @@ esphome:
 external_components:
   - source: github://JeroenvdV/esphome-influxdb2
     components: [ influxdb2 ]
-  - source: ./components/
-    components: [ sound_pressure ]
+  - source:
+      type: local
+      path: components
+    components: [ peak_to_peak ]
 
 influxdb2:
   host: !secret influxdb_host
@@ -52,7 +54,6 @@ switch:
 
 ads1115:
   - address: 0x48
-    continuous_mode: true
 
 deep_sleep:
   run_duration: ${wake_time}
@@ -89,13 +90,6 @@ sensor:
     multiplexer: 'A1_GND'
     name: 'Battery Voltage'
     id: battery_voltage
-    update_interval: 5s
-
-  - platform: ads1115
-    gain: 6.144
-    multiplexer: 'A2_GND'
-    name: 'Sound Voltage'
-    id: sound_voltage
     update_interval: 5s
 
   - platform: template
@@ -155,19 +149,35 @@ sensor:
     icon: 'mdi:thermometer-alert'
     update_interval: 5s
   
-  - platform: sound_pressure
-    sensor: sound_voltage
-    name: "Sound Pressure"
-    sample_duration: 250ms
-    update_interval: 500ms
-    mic_sensitivity: -44
-    amp_gain: 125
+  - platform: adc
+    pin: A0
+    name: "Sound Voltage"
+    id: sound_voltage
+    update_interval: 5s
+    filters:
+    - multiply: 3.3
 
-  - platform: ct_clamp
+  - platform: peak_to_peak
     sensor: sound_voltage
-    name: "Sound CT Clamp"
-    sample_duration: 250ms
-    update_interval: 500ms
+    name: "Sound Voltage Peak to Peak"
+    id: sound_voltage_peak_to_peak
+    update_interval: 5s
+    accuracy_decimals: 6
+    sample_duration: 1s
+    filters:
+    - multiply: 3.3 # 1.0V to 3.3V
+    - multiply: 0.7071 # Peak to Peak to RMS
+  
+  - platform: template
+    name: "Sound Pressure"
+    lambda: |-
+      const float reference = 94;
+      const float amp_gain = 20 * log10(25);
+      const float mic_sensitivity = -44;
+      return log10(id(sound_voltage_peak_to_peak).state) * 20 + reference - amp_gain - mic_sensitivity;
+    unit_of_measurement: "dB"
+    accuracy_decimals: 6
+    update_interval: 5s
 
 text_sensor:
   - platform: version
