@@ -95,6 +95,7 @@ extra_css:
 nav:
   - Home: index.md
   - sensors.md
+  - mastowall.md
   - how_to_build.md
 
 markdown_extensions:
