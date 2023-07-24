@@ -56,7 +56,7 @@ The Datenzwerg was created by [@romses](https://chaos.social/@romses) and [@foos
 
 The Datenzwerg logo was created by D.B.
 
-The Datenzwerg model files are based on [this "Garden Gnome" model](https://www.printables.com/model/260908-garden-gnome) by [Sci3D](https://www.printables.com/@Sci3D), released under CC-BY.
+The Datenzwerg model files are based on [this "Garden Gnome" model](https://www.printables.com/model/260908-garden-gnome) by [Sci3D](https://www.printables.com/@Sci3D), released under CC-BY. Our remix can be found [here](https://www.printables.com/model/534875-datenzwerg-enclosure) and of course also [in the GitHub repository](https://github.com/romses/Datenzwerg/tree/main/models).
 
 
 [^1]: Yes, the last three are not canon, and one of them even is a smurf - so what, chaos ftw!
