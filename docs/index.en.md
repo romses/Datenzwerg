@@ -44,8 +44,17 @@ We asked ChatGPT to describe the Datenzwerg for us[^2] and this is what it came 
 2023-07-08
 : Another joint tinkering session takes place. Another 8 mainboards are built. The Datenzwerg army is growing!
 
+2023-07-19
+: After finalizing the model and followed by 60+ hours of collective print time, all 10 Datenzwerg bodies are printed.
+
 2023-07-23
 : The basic infrastructure goes live. Sensors start to report to the official servers at [datagnome.de](https://datagnome.de).
+
+2023-07-24
+: All Datenzwerg bodies are prepared for getting their electronics installed: Magnets are glued in, the UV transmissive discs are installed and any holes filled with milliput.
+
+2023-07-25
+: The firmware reaches a first feature complete state.
 
 2023-08-15 - 2023-08-19
 : Planned Datenzwerg deployment at [CCCamp23](https://events.ccc.de/camp/2023/infos/).
