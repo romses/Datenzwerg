@@ -50,10 +50,9 @@ We asked ChatGPT to describe the Datenzwerg for us[^2] and this is what it came 
 2023-07-23
 : The basic infrastructure goes live. Sensors start to report to the official servers at [datagnome.de](https://datagnome.de).
 
-2023-07-24
 : All Datenzwerg bodies are prepared for getting their electronics installed: Magnets are glued in, the UV transmissive discs are installed and any holes filled with milliput.
 
-2023-07-25
+2023-07-24
 : The firmware reaches a first feature complete state.
 
 2023-08-15 - 2023-08-19
