@@ -179,6 +179,7 @@ sensor:
     accuracy_decimals: 6
     update_interval: 5s
 
+text_sensor:
   - platform: version
     hide_timestamp: true
     name: "ESPHome Version"
