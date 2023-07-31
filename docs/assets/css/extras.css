@@ -4,3 +4,21 @@
     aspect-ratio: 16/9;
     border: none;
 }
+
+.mastowall-iframe {
+    background: none transparent;
+}
+
+@media (max-width: 1000px) {
+    .mastowall-iframe,
+    .grafana-iframe {
+        aspect-ratio: 1;
+    }
+}
+
+@media (max-width: 500px) {
+    .mastowall-iframe,
+    .grafana-iframe {
+        aspect-ratio: 0.65;
+    }
+}
