@@ -6,7 +6,7 @@
 
 ## Willkommen beim Datenzwerg!
 
-![Datenzwerg Logo](assets/images/logo.png){: style="width:33%;float:right" :}
+![Datenzwerg Logo](assets/images/logo.png){: class="logo" :}
 
 !!! info
     ChatGPT: Schreibe mir einen Text für eine Website, die einen Überblick über den "Datenzwerg" gibt. Der Datenzwerg ist ein Gartenzwerg, der Umweltdaten sammelt, und öffentlich verfügbar macht. Der Datenzwerg wird auf dem Chaos Communication Camp vorgestellt.

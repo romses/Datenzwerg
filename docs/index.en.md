@@ -1,6 +1,6 @@
 # The Datenzwerg
 
-![Datenzwerg logo](assets/images/logo.png){: style="width:33%;float:right" :}
+![Datenzwerg logo](assets/images/logo.png){: class="logo" :}
 
 ## What is the Datenzwerg?
 

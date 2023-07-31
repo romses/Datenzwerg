@@ -1,3 +1,8 @@
+.logo {
+    width:33%;
+    float:right;
+}
+
 .mastowall-iframe,
 .grafana-iframe {
     width: 100%;
@@ -10,6 +15,10 @@
 }
 
 @media (max-width: 1000px) {
+    .logo {
+        width: 50%;
+    }
+
     .mastowall-iframe,
     .grafana-iframe {
         aspect-ratio: 1;
@@ -17,6 +26,11 @@
 }
 
 @media (max-width: 500px) {
+    .logo {
+        width: 100%;
+        float: none;
+    }
+
     .mastowall-iframe,
     .grafana-iframe {
         aspect-ratio: 0.65;
