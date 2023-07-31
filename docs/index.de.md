@@ -1,57 +1,46 @@
 # Der Datenzwerg
 
-!!! todo
-
-    Updaten wenn die englische Version fertig ist.
-
-## Willkommen beim Datenzwerg!
+## Was ist der Datenzwerg?
 
 ![Datenzwerg Logo](assets/images/logo.png){: class="logo" :}
 
-!!! info
-    ChatGPT: Schreibe mir einen Text für eine Website, die einen Überblick über den "Datenzwerg" gibt. Der Datenzwerg ist ein Gartenzwerg, der Umweltdaten sammelt, und öffentlich verfügbar macht. Der Datenzwerg wird auf dem Chaos Communication Camp vorgestellt.
+Der Datenzwerg ist ein Gartenzwerg mit einer Mission: Umweltdaten zu sammeln und öffentlich zugänglich zu machen.
 
+Ursprünglich wurde er für das [Chaos Communication Camp 2023](https://events.ccc.de/camp/2023/infos/) entwickelt, 
+wo wir ([@romses](https://chaos.social/@romses) und [@foosel](https://chaos.social/@foosel)) eine kleine Armee 
+von 10 Datenzwergen über das Camp-Gelände verteilen wollen: Happy, Doc, Grumpy, Dopey, Bashful, Sleepy, Sneezy, 
+Nerdy, Kinky und Hefty[^1].
 
-Der Datenzwerg ist kein gewöhnlicher Gartenzwerg - er ist ein Pionier in der Welt der Umweltdatenerfassung und 
--freigabe. Als eine bezaubernde Verbindung von Technologie und Natur hat der Datenzwerg eine Mission: 
-Informationen über unsere Umwelt zu sammeln und für alle frei zugänglich zu machen.
+Der Datenzwerg besteht aus einem 3D-gedruckten Gartenzwerg, einer eigenen Platine mit einem ESP8266 D1 Mini Mikrocontroller, einem BME280, UV- und Schallsensor und einer 18650 Batterie. Er wird von [ESPHome](https://esphome.io/) betrieben und sendet seine Daten an eine [InfluxDB](https://www.influxdata.com/) Instanz. Die Firmware zeichnet derzeit Temperatur, relative und absolute Luftfeuchtigkeit, Luftdruck, Taupunkt, UV-Index und Schalldruck auf.
 
-Auf dem prestigeträchtigen Chaos Communication Camp stellen wir stolz unseren neuesten Zuwachs in der Welt der 
-Datenwissenschaft vor. Der Datenzwerg ist mehr als nur eine charmante Gartendekoration. 
-Er ist ein Datenbotschafter, der sich leidenschaftlich dafür einsetzt, Umweltdaten zu sammeln, 
-zu speichern und zu teilen.
+Wir haben ChatGPT gebeten, den Datenzwerg für uns zu beschreiben[^2] und das ist dabei herausgekommen:
 
-Aber wie genau funktioniert der Datenzwerg? Nun, in seinem Inneren verbergen sich hochmoderne Sensoren, 
-die verschiedene Umweltfaktoren wie Temperatur, Luftfeuchtigkeit, Luftqualität und Lärmpegel messen können. 
-Mit diesen Daten kann der Datenzwerg Trends und Veränderungen in der Umwelt erkennen und wichtige 
-Informationen über unsere natürliche Umgebung liefern.
-
-Was macht den Datenzwerg jedoch wirklich einzigartig? Nun, alle von ihm gesammelten Daten werden in Echtzeit 
-erfasst und über eine benutzerfreundliche Plattform öffentlich zugänglich gemacht. 
-Jeder kann auf die Daten des Datenzwergs zugreifen, visualisieren und analysieren. 
-Dies ermöglicht es Forschern, Aktivisten und Bürgern gleichermaßen, wertvolle Erkenntnisse zu gewinnen 
-und informierte Entscheidungen im Hinblick auf unsere Umwelt zu treffen.
-
-Der Datenzwerg ist ein Symbol für den Einsatz von Technologie, um die Welt um uns herum besser zu verstehen. 
-Er erinnert uns daran, dass Daten nicht nur in den Händen von Unternehmen und Institutionen bleiben sollten, 
-sondern dass sie allen gehören und für das Wohl der Gemeinschaft genutzt werden können.
-
-Besuchen Sie unseren Stand auf dem Chaos Communication Camp, um den Datenzwerg persönlich kennenzulernen. 
-Erfahren Sie mehr über seine Funktionen, stellen Sie Fragen und lassen Sie sich von der Kraft der 
-Dateninspiration begeistern.
-
-Der Datenzwerg lädt Sie ein, Teil dieser Bewegung zu werden - einer Bewegung, die darauf abzielt, Wissen und 
-Transparenz zu fördern und die Welt zu einem nachhaltigeren und besseren Ort zu machen. 
-Zusammen können wir die Macht der Daten nutzen, um positive Veränderungen in unserer Umwelt zu bewirken.
-
-Schließen Sie sich dem Datenzwerg an und entdecken Sie eine neue Dimension des Umweltbewusstseins!
-
+> Willkommen in der Welt des Datenzwergs, einem bezaubernden Gartenzwerg mit einem technologischen Twist!
+> Diese entzückende kleine Kreatur mag wie eine gewöhnliche Gartendekoration aussehen,
+> aber sie birgt eine geheime Mission, die so faszinierend wie wichtig ist.
+> Der Datenzwerg ist auf einer Mission, Umweltdaten zu sammeln und sie für das Wohl aller öffentlich zugänglich zu machen.
+>
+> [...]
+>
+> Durch die Nutzung seines einzigartigen Standpunktes in Gärten und Außenbereichen
+> bietet der Datenzwerg eine beispiellose Perspektive auf die Umwelt um uns herum.
+>
+> Alle von diesen umweltfreundlichen Wächtern gesammelten Daten werden frei
+> über eine intuitive Online-Plattform zur Verfügung gestellt.
+>
+> [...]
+>
+> Auf dem kommenden Chaos Communication Camp freuen wir uns, den Datenzwerg einer
+> breiteren Öffentlichkeit von Technikbegeisterten, Hackern und Umweltaktivisten vorzustellen.
+> Diese außergewöhnliche Verbindung von Natur und Technologie zeigt das Potenzial für
+> bürgerschaftliches Umweltmonitoring auf.
 
 ## Eine kurze Geschichte des Datenzwergs
 
 2023-06-11
-: Die Idee des Datenzwergs wird gebohren am letzten Tag der [GPN21](https://entropia.de/GPN21), kurz vor der gemeinsamen Barschicht von [@romses](https://chaos.social/@romses) 
-  und [@foosel](https://chaos.social/@foosel). Die ruhigeren Momente der Barschicht sowie die Rückfahrt ins Rhein-Main-Gebiet werden für die Diskussion der Idee genutzt. Romses
+: Die Idee des Datenzwergs wird am letzten Tag der [GPN21](https://entropia.de/GPN21) geboren, kurz vor der gemeinsamen 
+  Barschicht von [@romses](https://chaos.social/@romses) und [@foosel](https://chaos.social/@foosel). Die ruhigeren 
+  Momente der Barschicht sowie die Rückfahrt ins Rhein-Main-Gebiet werden für die Diskussion der Idee genutzt. Romses 
   registriert eine Domain.
 
 2023-06-30
@@ -60,5 +49,27 @@ Schließen Sie sich dem Datenzwerg an und entdecken Sie eine neue Dimension des 
 2023-07-08
 : Eine weitere gemeinsame Bastelsession. Weitere 8 Mainboards werden gebaut. Die Datenzwerg-Armee wächst!
 
+2023-07-19
+: Nachdem das Modell fertiggestellt und 60+ Stunden gemeinsame Druckzeit vergangen sind, sind alle 10 Datenzwerg-Körper gedruckt.
+
+2023-07-23
+: Die Grundinfrastruktur geht live. Sensoren beginnen, an die offiziellen Server unter [datagnome.de](https://datagnome.de) zu berichten.
+
+: Alle Datenzwerg-Körper werden für die Installation ihrer Elektronik vorbereitet: Magnete werden eingeklebt, die UV-durchlässigen Scheiben werden installiert und alle Löcher mit Milliput gefüllt.
+
+2023-07-24
+: Die Firmware erreicht einen ersten funktionsfähigen Zustand.
+
 2023-08-15 - 2023-08-19
 : Geplanter Datenzwerg Einsatz auf dem [CCCamp23](https://events.ccc.de/camp/2023/infos/).
+
+## Credits & Danksagung
+
+Der Datenzwerg ist ein Gemeinschaftsprojekt von [@romses](https://chaos.social/@romses) und [@foosel](https://chaos.social/@foosel).
+
+Das Datenzwerg-Logo wurde von D.B. entworfen.
+
+Das Datenzwerg-Modell basiert auf [diesem "Garden Gnome" Modell](https://www.printables.com/model/260908-garden-gnome) von [Sci3D](https://www.printables.com/@Sci3D), das unter CC-BY veröffentlicht ist. Unser Remix kann [hier](https://www.printables.com/model/534875-datenzwerg-enclosure) und natürlich auch [im GitHub Repository](https://github.com/romses/Datenzwerg/tree/main/models) gefunden werden.
+
+[^1]: Ja, die letzten drei genannten Namen sind nicht canon, und einer von ihnen gehört sogar einem Schlumpf - na und, Chaos ftw!
+[^2]: Prompt: 'Write me a text for a website that gives an overview of the "Datenzwerg". The Datenzwerg is a garden gnome that collects environmental data, and makes it publicly available. The Datenzwerg will be presented at the Chaos Communication Camp.'

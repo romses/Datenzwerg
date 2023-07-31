@@ -16,21 +16,21 @@ The firmware provided with the Datenzwerg requires you to provide it with creden
 
 To build your own Datenzwerg, you will need the following parts:
 
-| Count | Required | Item | Function | Link | Price |
-| ----- | -------- | ---- | -------- | ---- | ----- |
-| 1     | ✅ | Wemos D1 Mini | MCU | [AliExpress](https://aliexpress.com/item/1005004967205772.html) | ~1.70€ |
-| 1     | ✅ | BME280 | Environment Sensor | [AliExpress](https://aliexpress.com/item/1005003676342598.html) | ~2.30€ |
-| 1     | ❎ | TP4056 | Lipo Charger | [AliExpress](https://aliexpress.com/item/32624444293.html) | ~0.50€ |
-| 1     | ✅ | VEML6075 | UV Sensor | [AliExpress](https://aliexpress.com/item/1005004653958045.html) | ~3.00€ |
-| 1     | ✅ | ADS1115 | 4 Port ADC | [AliExpress](https://aliexpress.com/item/32817162654.html) | ~1.70€ |
-| 1     | ✅ | GY-MAX4466 | Sound sensor | [Amazon](https://www.amazon.de/dp/B07YDG3VZF) | ~1.90€ |
-| 1     | ✅ | 5V mt3608 boost converter | Power supply | [AliExpress](https://de.aliexpress.com/item/4001066566291.html) | ~0,40€ |
-| 1     | ✅ | 18650 LiPo battery | Power source | (WIP) | (on hand)[^1] |
-| 1     | ❎ | 18650 LiPo battery holder | Battery holder | [Amazon](https://www.amazon.de/dp/B08Y5R63YB) | ~0.64€ |
-| 3     | ❎ | male 3-pin JST connectors + cables | Sensor & power connectors | [Amazon](https://www.amazon.de/gp/product/B08ZJ6JGB5) | ~0,30€ |
-| 1     | ❎ | male 4-pin JST connectors + cables | I2C connector | [Amazon](https://www.amazon.de/gp/product/B09LCRCTQG) | ~0,20€ |
-| 1     | ❎ | male 2-pin JST cable male + JST cable female | Battery cable | [Amazon](https://www.amazon.de/GTIWUNG-Steckverbinder-Pin-Verbindungsstecker-Connector-Kabeldraht/dp/B07VYR7J49) | ~0,59€ |
-| 1     | ✅ | perfboard | Soldering board | [Amazon](https://www.amazon.de/gp/product/B085WJCRX8/) | ~0,80€ |
+| Count | Item | Function | Link | Price |
+| ----- | ---- | -------- | ---- | ----- |
+| 1     | Wemos D1 Mini | MCU | [AliExpress](https://aliexpress.com/item/1005004967205772.html) | ~1.70€ |
+| 1     | BME280 | Environment Sensor | [AliExpress](https://aliexpress.com/item/1005003676342598.html) | ~2.30€ |
+| 1     | TP4056 | Lipo Charger | [AliExpress](https://aliexpress.com/item/32624444293.html) | ~0.50€ |
+| 1     | VEML6075 | UV Sensor | [AliExpress](https://aliexpress.com/item/1005004653958045.html) | ~3.00€ |
+| 1     | ADS1115 | 4 Port ADC | [AliExpress](https://aliexpress.com/item/32817162654.html) | ~1.70€ |
+| 1     | GY-MAX4466 | Sound sensor | [Amazon](https://www.amazon.de/dp/B07YDG3VZF) | ~1.90€ |
+| 1     | 5V MT3608 boost converter | Power supply | [AliExpress](https://de.aliexpress.com/item/4001066566291.html) | ~0,40€ |
+| 1     | 18650 LiPo battery | Power source | (WIP) | (on hand)[^1] |
+| 1     | 18650 LiPo battery holder | Battery holder | [Amazon](https://www.amazon.de/dp/B08Y5R63YB) | ~0.64€ |
+| 3     | male 3-pin JST connectors + cables | Sensor & power connectors | [Amazon](https://www.amazon.de/gp/product/B08ZJ6JGB5) | ~0,30€ |
+| 1     | male 4-pin JST connectors + cables | I2C connector | [Amazon](https://www.amazon.de/gp/product/B09LCRCTQG) | ~0,20€ |
+| 1     | male 2-pin JST cable male + JST cable female | Battery cable | [Amazon](https://www.amazon.de/GTIWUNG-Steckverbinder-Pin-Verbindungsstecker-Connector-Kabeldraht/dp/B07VYR7J49) | ~0,59€ |
+| 1     | perfboard | Soldering board | [Amazon](https://www.amazon.de/gp/product/B085WJCRX8/) | ~0,80€ |
 
 Additionally you'll need a soldering iron, solder, some wires and shrink tubing.
 
@@ -41,7 +41,7 @@ Additionally you'll need a soldering iron, solder, some wires and shrink tubing.
 
 !!! note
 
-    We recommend all parts from the BOM. However, if you want to save money, you can directly solder the sensors to the board and save a little bit on the 
+    We recommend using all parts from the BOM. However, if you want to save money, you can directly solder the sensors to the board and save a little bit on the 
     connectors. You can also save a little bit by skipping the TP4056 and soldering the wires directly to the LiPo. Be warned though that this module provides 
     undervoltage protection to the LiPos.
 
@@ -114,16 +114,16 @@ The UV and sound sensors are soldered to jst connector cables to make the sensor
 ![The UV module](assets/images/UV-module.png)
 ![The UV module as a Fritzing schematic, showing how to connect the JST header](assets/images/UV-module-fritzing.png)
 
-!!! note
-    
-    The temperature inside the Datenzwerg can become much warmer than the outside temperature. We found that even sticking the BME280 outside of the Datenzwerg, by pushing it through the slot on the bottom of the top of the Datenzwerg case, the temperature readings were still extremely high when the Datenzwerg was in direct sunlight, possibly due to radiation of the heated up plastic of the Datenzwerg body. We decided to live with this issue and just note it in the documentation. A different case design could possibly solve this issue.
-
 #### BME280
 
 The BME280 sensor is soldered to a 4-pin JST header. Apply shrink tube to protect the soldering joints and reduce the likelihood of shorts. 
 
 ![The BME module](assets/images/BME280.png)
 ![The BME module as a Fritzing schematic, showing how to connect the JST header](assets/images/BME280-fritzing.png)
+
+!!! note
+    
+    The temperature inside the Datenzwerg can become much warmer than the outside temperature. We found that even sticking the BME280 outside of the Datenzwerg, by pushing it through the slot on the bottom of the top of the Datenzwerg case, the temperature readings were still extremely high when the Datenzwerg was in direct sunlight, possibly due to radiation of the heated up plastic of the Datenzwerg body. We decided to live with this issue and just note it in the documentation. A different case design could possibly solve this issue.
 
 ### Power supply
 
@@ -145,7 +145,7 @@ Shrink tube is applied to protect the soldering joints and reduce the likelihood
 
 Using superglue, glue the magnets into the holes in the gnome body - there are three each on the mating surfaces of top and bottom part. Make sure the polarity is correct, i.e. the magnets attract each other when the gnome body top is placed on the bottom. The magnets should be flush with the surface.
 
-Fit the acrylic rain cover into the upper of the two holes, holding it in place from behind with your finger. If it won't fit right away, carefully send the print until it does. It should be flush with the inner surface of the gnome body, it's ok if it protrudes a bit on the front. Carefully - making *really* sure to not get any on the central surface of the acrylic disc - apply UV resin around the edges of the rain cover. Then cure it with a UV lamp. 
+Fit the acrylic rain cover into the hole in the hat. If it won't fit right away, carefully sand the print until it does. It should be flush with the inner surface of the gnome body, it's ok if it protrudes a bit on the front. Carefully - making *really* sure to not get any on the central surface of the acrylic disc - apply UV resin around the edges of the rain cover. Then cure it with a UV lamp. 
 
 !!! warning
 
