@@ -1,6 +1,6 @@
-# How to build a Datenzwerg
+# Wie man einen Datenzwerg baut
 
-!!! warning
+!!! warning "Warnung"
     
     Der Datenzwerg wurde für das [CCCamp23](https://events.ccc.de/camp/2023/infos/) entwickelt. Hardware, Firmware und Modelle wurden für einen bestimmten Zweck und eine bestimmte Nutzungsdauer entwickelt und sind möglicherweise nicht für andere Anwendungsfälle geeignet. Der Datenzwerg wird wie er ist ohne jegliche Garantie, Pläne zur Verbesserung oder Behebung oder andere Unterstützung bereitgestellt. Wenn du deinen eigenen Datenzwerg bauen möchtest, bist du auf dich allein gestellt.
 
@@ -34,11 +34,11 @@ Um deinen eigenen Datenzwerg zu bauen, benötigst du folgende Teile:
 
 Zusätzlich benötigst du einen Lötkolben, Lötzinn, Litze und Schrumpfschlauch.
 
-!!! warning
+!!! warning "Warnung"
     
     Wir benutzen einen BM**E** sensor. Diese werden oft mit den BM**P** sensoren verwechselt. Diesen fehlt aber der Sensor für Luftfeuchte. Du kannst dein Modul mit der Hilfe [dieser Seite](https://homematic-forum.de/forum/viewtopic.php?t=68558) identifizieren.
 
-!!! note
+!!! note "Hinweis"
 
     Wir empfehlen, alle Teile der BOM zu verwenden. Wenn du jedoch etwas Geld sparen möchtest, kannst du die Sensoren direkt an das Board löten, und so das Geld für die JST Verbinder sparen. Du kannst auch den TP4056 weg lassen und die Kabel direkt an den LiPo löten. Sei jedoch gewarnt, dass das Modul Undervoltage-Schutz für den LiPo bereit stellt.
 
@@ -55,13 +55,13 @@ Wenn du die Elektronik in einen Zwergenkörper bauen willst, benötigst du folge
 
 Für den Zusammenbau benötigst du Heißkleber, Sekundenkleber und UV reaktives Harz.
 
-!!! note
+!!! note "Hinweis"
 
     Es wird dringend empfohlen, den Zwergenkörper mit einer 0.6mm Düse und einer Schichthöhe von 0.4mm zu drucken. Das Modell wurde speziell für diese Parameter entworfen und möglicherweise kommt es zu unerwünschten Ergebnissen, wenn eine andere Düsengröße oder Schichthöhe verwendet wird.
 
     Mit diesem Setup werden die Modelle mit 3 Wänden und 3 Top/Bottom-Layers sowie 20% Infill gedruckt und Tree-Supports gedruckt. Das Drucken des Oberteils sollte ca. 5 Stunden dauernd, das Unterteil etwa eine Stunde.
 
-!!! note
+!!! note "Hinweis"
 
     Wir konnten ein 100mm Sample des XT Plexiglasstabes für etwa 3€ bekommen. Wir haben einen Dremel und [dieses 3D-gedruckte Schneidetool](https://www.printables.com/model/113887-rod-and-tube-cutter-for-dremel-with-limiter) genutzt, um den Stab zuzuschneiden, dann wurde der Abschnitt mit 240er und 400er Körnung glatt geschmirgelt und mit einer Universalpoliturpaste poliert ("Elsterglanz")[^3].
 
@@ -70,10 +70,6 @@ Für den Zusammenbau benötigst du Heißkleber, Sekundenkleber und UV reaktives 
 ## Zusammenbau
 
 ### Mainboard
-
-!!! todo
-
-    Übersetzen
 
 Das Mainboard ist der schwierigste Teil des Zusammenbaus. Wir empfehlen, zuerst die 3V3 Stromversorgung (orange im Fritzing-Schaltplan) und die GND Verbindungen (schwarz) zu verdrahten, dann die I2C Verbindung (grün und gelb).
 
@@ -89,7 +85,7 @@ Die PCB-Skizze zeigt den ESP und den ADS1115 in der korrekten Orientierung. Dies
 
 ![Das Datenzwerg-Mainboard auf Lochraster](assets/images/Datenzwerg-komplett.png)
 
-!!! note
+!!! note "Hinweis"
     
     Wir haben eine spezielle Art von Lochraster verwendet. Die Gruppierung von jeweils drei Löchern erleichtert die Organisation der Kabel erheblich.
     
@@ -97,7 +93,7 @@ Die PCB-Skizze zeigt den ESP und den ADS1115 in der korrekten Orientierung. Dies
 
 Sobald du das Mainboard verlötet hast, empfehlen wir, die Unterseite in breiten Streifen mit Kaptonband abzudecken, um Kurzschlüsse zu vermeiden. Alternativ kannst du auch Isolierband verwenden.
 
-!!! note
+!!! note "Hinweis"
 
     Dinge, die nach dem Löten zu überprüfen sind:
 
@@ -113,16 +109,16 @@ Sobald du das Mainboard verlötet hast, empfehlen wir, die Unterseite in breiten
 Die UV- und Schallsensoren werden an JST Verbindungskabel gelötet, um die Sensoren austauschbar zu machen. Stelle das Potentiometer auf der Rückseite des Schallsensors (vorsichtig!) auf die linke (im Uhrzeigersinn) Position ein, das setzt den Verstärkungsfaktor auf 25x, was der Firmware entspricht. Verpacke die Lötstellen in  Schrumpfschlauch, um sie zu schützen und die Wahrscheinlichkeit von Kurzschlüssen zu verringern.
 
 ![Das UV-Modul](assets/images/UV-module.png)
-![Das UV-Modul als Fritzing-Zeichnung, die zeigt, wie der JST Verbinder anzubringen ist](assets/images/UV-module-fritzing.png)
+![Das UV-Modul als Fritzing-Zeichnung, die zeigt, wie der JST Verbinder anzubringen ist. Orange an VCC, Schwarz an GND, Gelb an Signal](assets/images/UV-module-fritzing.png)
 
 #### BME280
 
 Der BME280 Sensor wird an einen 4-poligen JST Verbinder gelötet. Verwende Schrumpfschlauch, um die Lötstellen zu schützen und die Wahrscheinlichkeit von Kurzschlüssen zu verringern.
 
 ![Das BME Modul](assets/images/BME280.png)
-![Das BME module als Fritzing-Schaltplan, worauf zu sehen ist, wie der JST Header zu verbinden ist](assets/images/BME280-fritzing.png)
+![Das BME module als Fritzing-Schaltplan, worauf zu sehen ist, wie der JST Header zu verbinden ist. Orange an Vin, Schwarz an GND, Gelb an SCL, Grün an SDA](assets/images/BME280-fritzing.png)
 
-!!! note
+!!! note "Hinweis"
 
     Die Temperatur im Inneren des Datenzwergs kann sehr viel wärmer werden als die Außentemperatur. Wir haben festgestellt, dass die Temperaturmessungen bei direkter Sonneneinstrahlung selbst dann noch erhöht waren, wenn wir den Sensor durch den Schlitz im Datenzwerggehäuse nach außen verlegt haben, möglicherweise aufgrund der Abwärme des erhitzten Gehäuses selbst. Wir haben uns entschieden, mit diesem Problem zu leben und es einfach in der Dokumentation zu erwähnen. Ein anderes Gehäusedesign könnte dieses Problem möglicherweise lösen.
 
@@ -139,8 +135,7 @@ Die BAT+ und BAT- Anschlüsse sind mit VIN+ und VIN- von Boost-Konvertern verbun
 Verwende Schrumpfschlauch, um die Lötstellen zu schützen und die Wahrscheinlichkeit von Kurzschlüssen zu verringern.
 
 ![Das zusammengebaute Stromversorgungsmodul](assets/images/Power-Module.png)
-![Die Stromversorung als Fritzing-Schaltplan](assets/images/Power-Module-fritzing.png)
-
+![Die Stromversorung als Fritzing-Schaltplan, Verbindungen wie im Text beschrieben.](assets/images/Power-Module-fritzing.png)
 
 ### Zwergenkörper
 
@@ -148,7 +143,7 @@ Klebe die Magnete mit Sekundenkleber in die Löcher im Boden des Zwergenkörpers
 
 Stecke den Acryl-Regenschutz in das obere der beiden Löcher und halte ihn von hinten mit dem Finger fest. Wenn sie nicht sofort passt, sleife das Loch im Druck vorsichtig größer, bis er passt. Er sollte bündig mit der Innenseite des Zwergenkörpers abschließen, es ist in Ordnung, wenn er auf der Vorderseite ein wenig übersteht. Achte unbedingt darauf auf, dass kein UV-Resin auf die Oberfläche der Acrylscheibe gelangt. Das UV-Resin darf nur auf die Ränder kommen. Härte es dann mit einer UV-Lampe aus.
 
-!!! warning
+!!! warning "Warnung"
 
     Achte darauf, dass kein UV-Resin auf die Oberfläche der Acrylscheibe gelangt. Wenn das passiert, wird sie dauerhaft getrübt sein.
 
@@ -160,8 +155,9 @@ Klebe Heißkleber auf den Schrumpfschlauch des BME Sensors und klebe diesen an s
 
 Vergewissere Dich, dass die Stromzufuhr zur Hauptplatine des Datenzwergs unterbrochen ist. Ziehe den D1 mini von der Hauptplatine ab und schließe ihn über USB an den Computer an.
 
-!!! warning
-    Das Mainboard verbinder D0 mit RST. So Lange diese beiden Pins miteinander verbunden sind, lässt sich der ESP nicht flashen.
+!!! note "Hinweis"
+
+    Das Mainboard verbindet D0 mit RST. Solange diese beiden Pins miteinander verbunden sind, lässt sich der ESP nicht flashen.
  
 Installiere Python 3.11. Clone das [GitHub repository](https://github.com/romses/Datenzwerg) und führe folgende Schritte aus:
 
