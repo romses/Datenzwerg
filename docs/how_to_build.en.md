@@ -109,17 +109,17 @@ Once you are done soldering up the mainboard, we recommend covering the undersid
 
 #### UV and sound sensor
 
-The UV and sound sensors are soldered to jst connector cables to make the sensors replacable. Make sure to (carefully!) rotate the potentiometer on the back of the sound sensor to the left-most (clockwise) position, that will set the correct gain of 25x that matches the firmware. Apply shrink tube to protect the soldering joints and reduce the likelihood of shorts.
+The UV and sound sensors are soldered to JST connector cables to make the sensors replaceable. They share their wiring. Make sure to (carefully!) rotate the potentiometer on the back of the sound sensor to the left-most (clockwise) position, that will set the correct gain of 25x that matches the firmware. Apply shrink tube to protect the soldering joints and reduce the likelihood of shorts.
 
 ![The UV module](assets/images/UV-module.png)
-![The UV module as a Fritzing schematic, showing how to connect the JST header](assets/images/UV-module-fritzing.png)
+![The UV module as a Fritzing schematic, showing how to connect the JST header. Orange to Vcc, Black to GND, Yellow to Signal](assets/images/UV-module-fritzing.png)
 
 #### BME280
 
 The BME280 sensor is soldered to a 4-pin JST header. Apply shrink tube to protect the soldering joints and reduce the likelihood of shorts. 
 
 ![The BME module](assets/images/BME280.png)
-![The BME module as a Fritzing schematic, showing how to connect the JST header](assets/images/BME280-fritzing.png)
+![The BME module as a Fritzing schematic, showing how to connect the JST header. Orange to Vin, Black to GND, Yellow to SCL, Green to SDA](assets/images/BME280-fritzing.png)
 
 !!! note
     
@@ -139,7 +139,7 @@ The BAT+ and BAT- terminals are connected to VIN+ and VIN- of boost converters s
 Shrink tube is applied to protect the soldering joints and reduce the likelihood of shorts.
 
 ![The assembled power module](assets/images/Power-Module.png)
-![The power module as a Fritzing schematic](assets/images/Power-Module-fritzing.png)
+![The power module as a Fritzing schematic, connections as written above](assets/images/Power-Module-fritzing.png)
 
 ### Gnome body
 
