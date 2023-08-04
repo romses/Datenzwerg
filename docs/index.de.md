@@ -85,6 +85,9 @@ Wir haben ChatGPT gebeten, den Datenzwerg für uns zu beschreiben[^2] und das is
 2023-07-24
 : Die Firmware erreicht einen ersten funktionsfähigen Zustand.
 
+2023-08-04
+: Die Webseite erreicht einen ersten vollständigen Zustand in Deutsch und Englisch.
+
 2023-08-15 - 2023-08-19
 : Geplanter Datenzwerg Einsatz auf dem [CCCamp23](https://events.ccc.de/camp/2023/infos/).
 

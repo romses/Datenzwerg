@@ -80,6 +80,9 @@ We asked ChatGPT to describe the Datenzwerg for us[^2] and this is what it came 
 2023-07-24
 : The firmware reaches a first feature complete state.
 
+2023-08-04
+: The website reaches a first complete state in both German and English.
+
 2023-08-15 - 2023-08-19
 : Planned Datenzwerg deployment at [CCCamp23](https://events.ccc.de/camp/2023/infos/).
 
