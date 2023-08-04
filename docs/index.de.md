@@ -117,7 +117,7 @@ In unseren Tests hält ein Datenzwerg zwischen drei und vier Tagen mit einer ein
 
 ### Wo kann ich die Daten sehen?
 
-Jeder Datenzwerg sendet seine Daten an eine zentrale, selbst gehostete InfluxDB-Instanz. Die Daten werden dann mit Grafana visualisiert. Die Grafana-Dashboards findet Ihr [hier](https://grafana.datagnome.de/).### 
+Jeder Datenzwerg sendet seine Daten an eine zentrale, selbst gehostete InfluxDB-Instanz. Die Daten werden dann mit Grafana visualisiert. Die Grafana-Dashboards findet Ihr [hier](https://grafana.datagnome.de/). 
 
 ### Wo finde ich den Sourcecode?
 
