@@ -2,6 +2,31 @@
 
 ![Datenzwerg logo](assets/images/logo.png){: class="logo" :}
 
+<!--
+!!! tip "Datenzwerg @ CCCamp23"
+
+    You are at CCCamp and came across one of the Datenzwerge? Awesome! Here's some quick links for you:
+
+    - [What is the Datenzwerg?](#what-is-the-datenzwerg)
+    - [FAQ](#faq)
+    - [Fancy dashboards at grafana.datagnome.de](https://grafana.datagnome.de)
+
+    And if you are wondering where each Datenzwerg is located, here's a quick overview. Clicking on the name will take you to the respective dashboard, clicking on the location to the respective map grid:
+
+    | Datenzwerg | Location | Status |
+    | ---------- | -------- | ------ |
+    | [Bashful](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Bashful&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | not deployed |
+    | [Doc](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Doc&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | not deployed |
+    | [Dopey](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Dopey&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | not deployed |
+    | [Grumpy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Grumpy&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | not deployed |
+    | [Happy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Happy&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | not deployed |
+    | [Hefty](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Hefty&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | not deployed |
+    | [Kinky](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Kinky&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | not deployed |
+    | [Nerdy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Nerdy&theme=dark)  | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | not deployed |
+    | [Sleepy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sleepy&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | not deployed |
+    | [Sneezy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sneezy&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | not deployed |
+-->
+
 ## What is the Datenzwerg?
 
 The Datenzwerg is a garden gnome with a mission: To collect environmental data and make it publicly available. 
@@ -57,6 +82,42 @@ We asked ChatGPT to describe the Datenzwerg for us[^2] and this is what it came 
 
 2023-08-15 - 2023-08-19
 : Planned Datenzwerg deployment at [CCCamp23](https://events.ccc.de/camp/2023/infos/).
+
+## FAQ
+
+### What kind of data does the Datenzwerg collect?
+
+The Datenzwerg contains sensors to collect the following data:
+
+- Temperature
+- Relative humidity
+- Air pressure
+- UV sensor voltage
+- Microphone voltage
+- Battery voltage
+- WiFi signal strength
+
+We calculate dew point and absolute humidity from the temperature and relative humidity values, UV index from the UV sensor's voltage and sound pressure (noise level) from the microphone voltage. The calculations are done in firmware.
+
+### Do you record audio?
+
+No. While there is a microphone inside each Datenzwerg hooked up to the ESP's ADC, we only use it to sample 1s of audio every 5s during the Datenzwerg's 30s wake cycle every 10min, from which we calculate the peak-to-peak voltage and from that the sound pressure on the Datenzwerg itself. The sample rate is way too low and irregular to record any meaningful audio, and the noise on the line vs the 10-bit ADC would make for a bad experience as well if that was our intention. We are not interested in audio, we are interested in noise levels.
+
+### What's the battery life?
+
+In our tests, a Datenzwerg seems to last between three to four days on a single charge of our 18650 LiPos that range from 1600mAh to 2800 mAh. This obviously depends on the cell capacity but also temperature and other environmental factors.
+
+### Where can I find the data?
+
+Each Datenzwerg sends its data to a central self-hosted InfluxDB instance. The data is then visualized using Grafana. You can find the Grafana dashboards [here](https://grafana.datagnome.de/).
+
+### Where can I find the source?
+
+Everything can be found in this GitHub repository: [romses/Datenzwerg](https://github.com/romses/Datenzwerg).
+
+### Can I adopt a Datenzwerg after Camp?
+
+We are not sure yet if we want to part with any Datenzwerg. If so we'll announce this here. Should we go forward with adoptions however, we'd like to to have the material costs covered by the new owner (around 20€ per Datenzwerg without batteries).
 
 ## Credits & Thanks
 

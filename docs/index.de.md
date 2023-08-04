@@ -1,8 +1,33 @@
 # Der Datenzwerg
 
-## Was ist der Datenzwerg?
-
 ![Datenzwerg Logo](assets/images/logo.png){: class="logo" :}
+
+<!--
+!!! tip "Datenzwerg @ CCCamp23"
+
+    Du bist auf dem CCCamp und über einen der Datenzwerge gestolpert? Super! Hier sind ein paar Links für dich:
+
+    - [Was ist der Datenzwerg?](#was-ist-der-datenzwerg)
+    - [FAQ](#faq)
+    - [Schicke Dashboards auf grafana.datagnome.de](https://grafana.datagnome.de)
+
+    Und falls du dich wunderst, wo sich welcher Datenzwerg befindet, hier eine kurze Übersicht. Ein Klick auf den Namen bringt dich zum jeweiligen Dashboard, ein Klick auf den Ort zur jeweiligen Kartenansicht:
+
+    | Datenzwerg | Ort      | Status |
+    | ---------- | -------- | ------ |
+    | [Bashful](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Bashful&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | nicht aufgestellt |
+    | [Doc](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Doc&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | nicht aufgestellt |
+    | [Dopey](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Dopey&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | nicht aufgestellt |
+    | [Grumpy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Grumpy&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | nicht aufgestellt |
+    | [Happy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Happy&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | nicht aufgestellt |
+    | [Hefty](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Hefty&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | nicht aufgestellt |
+    | [Kinky](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Kinky&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | nicht aufgestellt |
+    | [Nerdy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Nerdy&theme=dark)  | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | nicht aufgestellt |
+    | [Sleepy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sleepy&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | nicht aufgestellt |
+    | [Sneezy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sneezy&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | nicht aufgestellt |
+-->
+
+## Was ist der Datenzwerg?
 
 Der Datenzwerg ist ein Gartenzwerg mit einer Mission: Umweltdaten zu sammeln und öffentlich zugänglich zu machen.
 
@@ -62,6 +87,42 @@ Wir haben ChatGPT gebeten, den Datenzwerg für uns zu beschreiben[^2] und das is
 
 2023-08-15 - 2023-08-19
 : Geplanter Datenzwerg Einsatz auf dem [CCCamp23](https://events.ccc.de/camp/2023/infos/).
+
+## FAQ
+
+### Was für Daten werden vom Datenzwerg aufgezeichnet?
+
+Der Datenzwerg hat Sensoren, die die folgenden Daten aufzeichnen:
+
+- Temperatur
+- Relative Luftfeuchtigkeit
+- Luftdruck
+- UV-Sensor-Spannung
+- Mikrofon-Spannung
+- Batteriespannung
+- WiFi-Signalstärke
+
+Wir berechnet Taupunkt und absolute Luftfeuchtigkeit aus den Temperatur- und relativen Luftfeuchtigkeitswerten, UV-Index aus der Spannung des UV-Sensors und Schalldruck (Lautstärke) aus der Mikrofonspannung. Die Berechnungen werden in der Firmware durchgeführt.
+
+### Nehmt ihr Audio auf?
+
+Nein. Zwar hat jeder Datenzwerg ein Mikrofon im Inneren, das an den ADC des ESPs angeschlossen ist, wir nutzen es jedoch nur, um während der 30s Wachphase des Datenzwergs alle 5s jeweils 1s an Audiosamples zu loggen, aus denen wir dann die Peak-to-Peak-Spannung und daraus den Schalldruck auf dem Datenzwerg selbst berechnen. Die Abtastrate ist viel zu niedrig und ungleichmäßig, um irgendwelches sinnvolles Audio aufzuzeichnen, und das Rauschen auf der Leitung vs. dem 10-Bit-ADC würde auch für eine schlechte Erfahrung sorgen, wenn das unser Ziel wäre. Wir sind nicht an Audio interessiert, wir sind an Lautstärke interessiert.
+
+### Wie lange hält die Batterie?
+
+In unseren Tests hält ein Datenzwerg zwischen drei und vier Tagen mit einer einzigen Ladung unserer 18650 LiPos, die von 1600mAh bis 2800 mAh reichen. Dies hängt natürlich von der Zellkapazität ab, aber auch von der Temperatur und anderen Umweltfaktoren.
+
+### Wo kann ich die Daten sehen?
+
+Jeder Datenzwerg sendet seine Daten an eine zentrale, selbst gehostete InfluxDB-Instanz. Die Daten werden dann mit Grafana visualisiert. Die Grafana-Dashboards findet Ihr [hier](https://grafana.datagnome.de/).### 
+
+### Wo finde ich den Sourcecode?
+
+Alles kann in diesem GitHub-Repository gefunden werden: [romses/Datenzwerg](https://github.com/romses/Datenzwerg).
+
+### Kann ich nach dem Camp einen Datenzwerg adoptieren?
+
+Wir sind noch unentschlossen, ob wir uns von unseren Datenzwergen trennen wollen. Wenn wir uns dazu entschließen, werden wir das hier bekannt geben. Falls wir uns dazu entschließen hätten wir aber in einem solchen Fall gerne die Materialkosten erstattet. Diese belaufen sich auf ca. 20€ pro Zwerg ohne Akkus.
 
 ## Credits & Danksagung
 
