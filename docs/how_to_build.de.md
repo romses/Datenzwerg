@@ -75,36 +75,36 @@ Für den Zusammenbau benötigst du Heißkleber, Sekundenkleber und UV reaktives 
 
     Übersetzen
 
-The mainboard is the hardest part to assemble. We recommend to first wire up the 3V3 power trail (orange in the Fritzing drawing) and the GND connections (black), then the I2C trail (green and yellow).
-Those are the most complex traces. Next do the 5V connections (red) and finally the analogue signals (cyan).
+Das Mainboard ist der schwierigste Teil des Zusammenbaus. Wir empfehlen, zuerst die 3V3 Stromversorgung (orange im Fritzing-Schaltplan) und die GND Verbindungen (schwarz) zu verdrahten, dann die I2C Verbindung (grün und gelb).
 
-![The Datenzwerg mainboard as a Fritzing schematic](assets/images/Datenzwerg-Komplett-Fritzing.png)
+Das sind die kompliziertesten Verbindungen. Als nächstes die 5V Verbindungen (rot) und schließlich die analogen Signale (cyan).
 
-The Fritzing schematic shows the ESP in its original orientation. However, we decided to mount the ESP flipped over. The diagram also shows the ADS1115 in a rotated orientation. This makes the fritzing 
-diagram much easier to understand.
+![Der Fritzing-Schaltplan des Datenzwerg-Mainboards](assets/images/Datenzwerg-Komplett-Fritzing.png)
 
-![The Datenzwerg mainboard as a PCB schematic](assets/images/Datenzwerg-pcb.svg){: style="width:100%"}
+Der Fritzing-Schaltplan zeigt den ESP in seiner Standardorientierung. Wir haben uns jedoch entschlossen, den ESP umzuwenden. Das Diagramm zeigt auch den ADS1115 in einer gedrehten Orientierung. Dies macht das Fritzing-Diagramm viel einfacher zu verstehen.
 
-The PCB schematic shows the ESP in the correct orientation as well as the ADS1115. This schematic is much closer to our hand soldered boards than shown in the Fritzing diagram.
+![PCB-Skizze des Datenzwerg-Mainboards](assets/images/Datenzwerg-pcb.svg){: style="width:100%"}
 
-![The Datenzwerg mainboard, assembled on perfboard](assets/images/Datenzwerg-komplett.png)
+Die PCB-Skizze zeigt den ESP und den ADS1115 in der korrekten Orientierung. Diese Skizze ist viel näher an unseren handgelöteten Platinen als im Fritzing-Diagramm gezeigt.
+
+![Das Datenzwerg-Mainboard auf Lochraster](assets/images/Datenzwerg-komplett.png)
 
 !!! note
     
-    We used a special kind of perfboard. The grouping of three pin holes makes organising the wires so much easier.
+    Wir haben eine spezielle Art von Lochraster verwendet. Die Gruppierung von jeweils drei Löchern erleichtert die Organisation der Kabel erheblich.
     
-    ![Perfboard sample](assets/images/perfboard.png)
+    ![Lochrasterbeispiel](assets/images/perfboard.png)
 
-Once you are done soldering up the mainboard, we recommend covering the underside in wide strips of Kapton tape to prevent shorts. Alternatively you may use electric tape.
+Sobald du das Mainboard verlötet hast, empfehlen wir, die Unterseite in breiten Streifen mit Kaptonband abzudecken, um Kurzschlüsse zu vermeiden. Alternativ kannst du auch Isolierband verwenden.
 
 !!! note
 
-    Things to check after soldering:
+    Dinge, die nach dem Löten zu überprüfen sind:
 
-    - UV sensor, BME280 and sound sensor are powered by 3V3 coming from the ESP.
-    - ADS1115 and ESP are powered by 5V coming from the power supply module.
-    - All GNDs are connected.
-    - No shorts between any of the pins, especially between neighbouring pins bridges can quickly happen. Use a multimeter to check for shorts.
+    - UV-Sensor, BME280 und Soundsensor werden mit 3V3 vom ESP versorgt.
+    - ADS1115 und ESP sind mit 5V von der Stromversorgung versorgt.
+    - Alle GNDs sind verbunden.
+    - Keine Kurzschlüsse zwischen den Pins, insbesondere zwischen benachbarten Pins, Brücken können schnell entstehen. Verwende ein Multimeter, um Kurzschlüsse zu überprüfen.
 
 ### Sensoren
 
@@ -117,38 +117,29 @@ Die UV- und Schallsensoren werden an JST Verbindungskabel gelötet, um die Senso
 
 #### BME280
 
-!!! todo
+Der BME280 Sensor wird an einen 4-poligen JST Verbinder gelötet. Verwende Schrumpfschlauch, um die Lötstellen zu schützen und die Wahrscheinlichkeit von Kurzschlüssen zu verringern.
 
-    Übersetzen
-
-The BME280 sensor is soldered to a 4-pin JST header. Apply shrink tube to protect the soldering joints and reduce the likelihood of shorts. 
-
-![The BME module](assets/images/BME280.png)
-![The BME module as a Fritzing schematic, showing how to connect the JST header](assets/images/BME280-fritzing.png)
+![Das BME Modul](assets/images/BME280.png)
+![Das BME module als Fritzing-Schaltplan, worauf zu sehen ist, wie der JST Header zu verbinden ist](assets/images/BME280-fritzing.png)
 
 !!! note
-    
-    The temperature inside the Datenzwerg can become much warmer than the outside temperature. We found that even sticking the BME280 outside of the Datenzwerg, by pushing it through the slot on the bottom of the top of the Datenzwerg case, the temperature readings were still extremely high when the Datenzwerg was in direct sunlight, possibly due to radiation of the heated up plastic of the Datenzwerg body. We decided to live with this issue and just note it in the documentation. A different case design could possibly solve this issue.
+
+    Die Temperatur im Inneren des Datenzwergs kann sehr viel wärmer werden als die Außentemperatur. Wir haben festgestellt, dass die Temperaturmessungen bei direkter Sonneneinstrahlung selbst dann noch erhöht waren, wenn wir den Sensor durch den Schlitz im Datenzwerggehäuse nach außen verlegt haben, möglicherweise aufgrund der Abwärme des erhitzten Gehäuses selbst. Wir haben uns entschieden, mit diesem Problem zu leben und es einfach in der Dokumentation zu erwähnen. Ein anderes Gehäusedesign könnte dieses Problem möglicherweise lösen.
 
 ### Stromversorgnung
 
-!!! todo
+Die Stromversorung ist die zweite komplexe Komponente des Datenzwergs.
 
-    Übersetzen
+In unserem ursprünglichen Design war es der Plan, die LiPos direkt mittels der verbauten TP4056 Module zu laden. In unseren Tests zeigte sich jedoch, dass diese Module beim Laden sehr sehr heiß werden - wir sahen bis zu 86°C, und das war uns zu heiß, um sie auf dem möglicherweise sehr trockenen Feld des CCCamps zu laden.
 
-The Power supply is the second complex component of the Datenzwerg.
+Aus diesem Grund laden wir die LiPos extern in einem handelsüblichen LiPo Ladegerät. Wir haben die Module jedoch behalten, um eine Tiefentladung zu verhindern.
 
-In our original design it was intended to charge the LiPos directly via the TP4056 modules. However, tests have shown that these modules become very hot during charging - we measured up to 86°C, and that was too high for us to
-feel good about charging them this way on the possibly very dry field of the CCCamp.
+Die BAT+ und BAT- Anschlüsse sind mit VIN+ und VIN- von Boost-Konvertern verbunden, die auf 5V Ausgangsspannung eingestellt sind. Sowohl der ADS1115 als auch der ESP8266 können mit 3V3 betrieben werden. Der TP4056 liefert jedoch die Batteriespannung. Daher war der einfachste Weg, die Spannung auf 5V zu erhöhen, indem wir einen Boost-Konverter verwendeten, um sowohl den ESP8266 als auch den ADS1115 mit Strom zu versorgen. Dies hat auch den Vorteil, dass wir die Batteriespannung mit dem ADS1115 messen können, der Spannungen bis Vcc + 0,3V messen kann. Wir haben daher den dritten Draht des 3-poligen JST-Steckers, der für die Verbindung zum Mainboard verwendet wird, mit VIN+ verbunden, während die anderen beiden Drähte mit VOUT+ und VOUT- verbunden sind.
 
-Therefore, we charge the LiPos externally in an off-the-shelf LiPo charger. We however kept the modules to prevent deep discharge.
+Verwende Schrumpfschlauch, um die Lötstellen zu schützen und die Wahrscheinlichkeit von Kurzschlüssen zu verringern.
 
-The BAT+ and BAT- terminals are connected to VIN+ and VIN- of boost converters set to 5V output voltage. Both the ADS1115 and the ESP8266 could be operated with 3V3. However, the TP4056 module supplies battery voltage. Therefore, the easiest way was to boost the voltage to 5V using a boost converter to power both the ESP8266 and the ADS1115. This has also the added advantage of allowing us to measure the battery voltage using the ADS1115, which is able to measure voltages up to Vcc + 0.3V. We therefore connected the third wire of the 3-pin JST header used for the connection to the mainboard to VIN+, with the other two wires connected to VOUT+ and VOUT-.
-
-Shrink tube is applied to protect the soldering joints and reduce the likelihood of shorts.
-
-![The assembled power module](assets/images/Power-Module.png)
-![The power module as a Fritzing schematic](assets/images/Power-Module-fritzing.png)
+![Das zusammengebaute Stromversorgungsmodul](assets/images/Power-Module.png)
+![Die Stromversorung als Fritzing-Schaltplan](assets/images/Power-Module-fritzing.png)
 
 
 ### Zwergenkörper
