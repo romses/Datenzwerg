@@ -11,6 +11,8 @@
     - [FAQ](#faq)
     - [Fancy dashboards at grafana.datagnome.de](https://grafana.datagnome.de)
 
+    You can reach us on **DECT 3962 (DZOC)**
+
     And if you are wondering where each Datenzwerg is located, here's a quick overview. Clicking on the name will take you to the respective dashboard, clicking on the location to the respective map grid:
 
     | Datenzwerg | Location | Status |

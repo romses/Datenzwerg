@@ -10,6 +10,8 @@
     - [Was ist der Datenzwerg?](#was-ist-der-datenzwerg)
     - [FAQ](#faq)
     - [Schicke Dashboards auf grafana.datagnome.de](https://grafana.datagnome.de)
+    
+    Du kannst uns erreichen unter **DECT 3962 (DZOC)**.
 
     Und falls du dich wunderst, wo sich welcher Datenzwerg befindet, hier eine kurze Übersicht. Ein Klick auf den Namen bringt dich zum jeweiligen Dashboard, ein Klick auf den Ort zur jeweiligen Kartenansicht:
 
