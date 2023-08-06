@@ -19,5 +19,5 @@ The full set of grafana dashboards are available at <a href="https://grafana.dat
 
 If you are interested in our raw data, connect to our influxdb.
 
-| URL | influxdb.datagnome.de:80 |
+| URL        | influxdb.datagnome.de:80 |
 | Auth token | 5amv72PFZxPmnbUISjntEVxtElDYMhkeofg9Deo1ykO6Zy2XIba_iWPcyxyAp_R0dHsvHm5moE4YBCwxGIEriw== |
