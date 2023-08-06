@@ -116,17 +116,17 @@ In our tests, a Datenzwerg seems to last between three to four days on a single 
 
 Each Datenzwerg sends its data to a central self-hosted InfluxDB instance. The data is then visualized using Grafana. You can find the Grafana dashboards [here](https://grafana.datagnome.de/).
 
+We also provide read-only access to our InfluxDB:
+
+  - Host: `influxdb.datagnome.de`
+  - Port: 80
+  - Organization: `datagnome`
+  - Bucket: `datagnome`
+  - Auth token: `5amv72PFZxPmnbUISjntEVxtElDYMhkeofg9Deo1ykO6Zy2XIba_iWPcyxyAp_R0dHsvHm5moE4YBCwxGIEriw==`
+
 ### Where can I find the source?
 
 Everything can be found in this GitHub repository: [romses/Datenzwerg](https://github.com/romses/Datenzwerg).
-
-### Can I contribute to the project?
-
-We provide a read-only token to our datagnome influxdb.
-
-  - URL: influxdb.datagnome.de:80
-  - Auth token: 5amv72PFZxPmnbUISjntEVxtElDYMhkeofg9Deo1ykO6Zy2XIba_iWPcyxyAp_R0dHsvHm5moE4YBCwxGIEriw==
-  - Bucket: datagnome
 
 ### Can I adopt a Datenzwerg after Camp?
 

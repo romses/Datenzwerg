@@ -17,8 +17,10 @@
 
 The full set of grafana dashboards are available at <a href="https://grafana.datagnome.de">grafana.datagnome.de</a>
 
-If you are interested in our raw data, connect to our influxdb.
+If you are interested in the raw data, connect to our InfluxDB (read-only):
 
-  - URL: influxdb.datagnome.de:80
-  - Auth token: 5amv72PFZxPmnbUISjntEVxtElDYMhkeofg9Deo1ykO6Zy2XIba_iWPcyxyAp_R0dHsvHm5moE4YBCwxGIEriw==
-  - Bucket: datagnome
+  - Host: `influxdb.datagnome.de`
+  - Port: 80
+  - Organization: `datagnome`
+  - Bucket: `datagnome`
+  - Auth token: `5amv72PFZxPmnbUISjntEVxtElDYMhkeofg9Deo1ykO6Zy2XIba_iWPcyxyAp_R0dHsvHm5moE4YBCwxGIEriw==`
