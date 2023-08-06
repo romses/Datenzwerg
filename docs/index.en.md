@@ -120,6 +120,13 @@ Each Datenzwerg sends its data to a central self-hosted InfluxDB instance. The d
 
 Everything can be found in this GitHub repository: [romses/Datenzwerg](https://github.com/romses/Datenzwerg).
 
+### Can I contribute to the project?
+
+We provide a read-only token to our datagnome influxdb.
+  - URL: influxdb.datagnome.de:80
+  - Auth token: 5amv72PFZxPmnbUISjntEVxtElDYMhkeofg9Deo1ykO6Zy2XIba_iWPcyxyAp_R0dHsvHm5moE4YBCwxGIEriw==
+  - Bucket: datagnome
+
 ### Can I adopt a Datenzwerg after Camp?
 
 We are not sure yet if we want to part with any Datenzwerg. If so we'll announce this here. Should we go forward with adoptions however, we'd like to to have the material costs covered by the new owner (around 20€ per Datenzwerg without batteries).

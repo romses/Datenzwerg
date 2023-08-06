@@ -125,6 +125,13 @@ Jeder Datenzwerg sendet seine Daten an eine zentrale, selbst gehostete InfluxDB-
 
 Alles kann in diesem GitHub-Repository gefunden werden: [romses/Datenzwerg](https://github.com/romses/Datenzwerg).
 
+### Kann ich mitmachen?
+
+Wir stellen einen Lesezugriff aud unsere InfluxDB unter folgender URL bereit:
+  - URL: influxdb.datagnome.de:80
+  - Auth token: 5amv72PFZxPmnbUISjntEVxtElDYMhkeofg9Deo1ykO6Zy2XIba_iWPcyxyAp_R0dHsvHm5moE4YBCwxGIEriw==
+  - Bucket: datagnome
+
 ### Kann ich nach dem Camp einen Datenzwerg adoptieren?
 
 Wir sind noch unentschlossen, ob wir uns von unseren Datenzwergen trennen wollen. Wenn wir uns dazu entschließen, werden wir das hier bekannt geben. Falls wir uns dazu entschließen hätten wir aber in einem solchen Fall gerne die Materialkosten erstattet. Diese belaufen sich auf ca. 20€ pro Zwerg ohne Akkus.

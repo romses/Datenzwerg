@@ -18,5 +18,6 @@ Mehr Dashboards sind unter <a href="https://grafana.datagnome.de">grafana.datagn
 
 Wenn du an den Rohdaten interessiert bist, verbinde dich einfach auf unsere Datenbank:
 
-| URL        | influxdb.datagnome.de:80 |
-| Auth token | 5amv72PFZxPmnbUISjntEVxtElDYMhkeofg9Deo1ykO6Zy2XIba_iWPcyxyAp_R0dHsvHm5moE4YBCwxGIEriw== |
+  - URL: influxdb.datagnome.de:80
+  - Auth token: 5amv72PFZxPmnbUISjntEVxtElDYMhkeofg9Deo1ykO6Zy2XIba_iWPcyxyAp_R0dHsvHm5moE4YBCwxGIEriw==
+  - Bucket: datagnome
