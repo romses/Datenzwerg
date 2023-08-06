@@ -128,6 +128,7 @@ Alles kann in diesem GitHub-Repository gefunden werden: [romses/Datenzwerg](http
 ### Kann ich mitmachen?
 
 Wir stellen einen Lesezugriff aud unsere InfluxDB unter folgender URL bereit:
+
   - URL: influxdb.datagnome.de:80
   - Auth token: 5amv72PFZxPmnbUISjntEVxtElDYMhkeofg9Deo1ykO6Zy2XIba_iWPcyxyAp_R0dHsvHm5moE4YBCwxGIEriw==
   - Bucket: datagnome
