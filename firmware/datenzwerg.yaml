@@ -17,6 +17,8 @@ esphome:
 external_components:
   - source: github://JeroenvdV/esphome-influxdb2
     components: [ influxdb2 ]
+  - source: github://RoboMagus/esphome-gitref-sensor
+    components: [ git_ref ]
   - source:
       type: local
       path: components
@@ -205,3 +207,8 @@ text_sensor:
       name: "SSID"
       icon: mdi:wifi-strength-2
 
+  - platform: git_ref
+    name: "Git Ref"
+    long: true
+    all: true
+    dirty: "-dirty"
