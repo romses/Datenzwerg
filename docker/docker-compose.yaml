@@ -46,3 +46,13 @@ services:
       - traefik.http.routers.influxdb.tls.certresolver=le
       - traefik.http.services.influxdb.loadbalancer.server.port=8086
     restart: unless-stopped
+
+  mosquitto:
+    image: eclipse-mosquitto
+    user: 1000:1000
+    ports:
+      - 1883:8883
+    volumes:
+      - ./mosquitto/conf:/mosquitto/config
+      - ./mosquitto/data:/mosquitto/data
+      - ./mosquitto/log:/mosquitto/log
