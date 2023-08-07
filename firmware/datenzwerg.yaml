@@ -41,8 +41,13 @@ influxdb2:
 logger:
 
 wifi:
-  ssid: !secret wifi_ssid
-  password: !secret wifi_psk
+  networks:
+    - ssid: Camp2023
+      eap:
+        username: outboundonly
+        password: outboundonly
+    - ssid: !secret wifi_ssid
+      password: !secret wifi_psk
 
 mdns:
   disabled: true
