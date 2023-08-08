@@ -121,14 +121,18 @@ In unseren Tests hält ein Datenzwerg zwischen drei und vier Tagen mit einer ein
 
 Jeder Datenzwerg sendet seine Daten an eine zentrale, selbst gehostete InfluxDB-Instanz. Die Daten werden dann mit Grafana visualisiert. Die Grafana-Dashboards findet Ihr [hier](https://grafana.datagnome.de/). 
 
-Wir stellen außerdem einen Lesezugriff auf unsere InfluxDB unter folgender URL bereit:
-  
+Wir stellen außerdem einen Lesezugriff auf unseren MQTT Server und unsere InfluxDB unter folgender URL bereit:
+
   - Host: `influxdb.datagnome.de`
   - Port: 80
   - Organization: `datagnome`
   - Bucket: `datagnome`
   - Auth token: `5amv72PFZxPmnbUISjntEVxtElDYMhkeofg9Deo1ykO6Zy2XIba_iWPcyxyAp_R0dHsvHm5moE4YBCwxGIEriw==`
 
+  - Host: `datagnome.de`
+  - Port: 1883
+  - MQTT User: cccamp23
+  - MQTT Password: cccamp23
 ### Wo finde ich den Sourcecode?
 
 Alles kann in diesem GitHub-Repository gefunden werden: [romses/Datenzwerg](https://github.com/romses/Datenzwerg).

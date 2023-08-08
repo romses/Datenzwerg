@@ -116,13 +116,19 @@ In our tests, a Datenzwerg seems to last between three to four days on a single 
 
 Each Datenzwerg sends its data to a central self-hosted InfluxDB instance. The data is then visualized using Grafana. You can find the Grafana dashboards [here](https://grafana.datagnome.de/).
 
-We also provide read-only access to our InfluxDB:
+We also provide read-only access to our InfluxDB and MQTT:
 
   - Host: `influxdb.datagnome.de`
   - Port: 80
   - Organization: `datagnome`
   - Bucket: `datagnome`
   - Auth token: `5amv72PFZxPmnbUISjntEVxtElDYMhkeofg9Deo1ykO6Zy2XIba_iWPcyxyAp_R0dHsvHm5moE4YBCwxGIEriw==`
+
+  - Host: `datagnome.de`
+  - Port: 1883
+  - MQTT User: cccamp23
+  - MQTT Password: cccamp23
+
 
 ### Where can I find the source?
 
