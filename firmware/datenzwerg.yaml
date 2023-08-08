@@ -198,6 +198,7 @@ text_sensor:
   - platform: version
     hide_timestamp: true
     name: "ESPHome Version"
+    id: esphome_version_sensor
 
   - platform: wifi_info
     ip_address:
@@ -212,3 +213,16 @@ text_sensor:
     long: true
     all: true
     dirty: "-dirty"
+    id: git_ref_sensor
+
+# manually force updating the static text sensors once wifi is connected
+interval:
+  - interval: 5s
+    then:
+      - if:
+          condition: wifi.connected
+          then:
+            - lambda: |-
+                id(esphome_version_sensor).publish_state(id(esphome_version_sensor).state);
+                id(git_ref_sensor).publish_state(id(git_ref_sensor).state);
+
