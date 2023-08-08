@@ -16,10 +16,16 @@
 
 Mehr Dashboards sind unter <a href="https://grafana.datagnome.de">grafana.datagnome.de</a> verfügbar
 
-Wenn du an den Rohdaten interessiert bist, verbinde dich einfach auf unsere InfluxDB (Lesezugriff):
+Wenn du an den Rohdaten interessiert bist, verbinde dich einfach auf unsere InfluxDB oder MQTT (Lesezugriff):
 
-  - Host: `influxdb.datagnome.de`
-  - Port: 80
-  - Organization: `datagnome`
-  - Bucket: `datagnome`
-  - Auth token: `5amv72PFZxPmnbUISjntEVxtElDYMhkeofg9Deo1ykO6Zy2XIba_iWPcyxyAp_R0dHsvHm5moE4YBCwxGIEriw==`
+  - InfluxDB:
+    - Host: `influxdb.datagnome.de`
+    - Port: 80
+    - Organization: `datagnome`
+    - Bucket: `datagnome`
+    - Auth token: `5amv72PFZxPmnbUISjntEVxtElDYMhkeofg9Deo1ykO6Zy2XIba_iWPcyxyAp_R0dHsvHm5moE4YBCwxGIEriw==`
+  - MQTT:
+    - Host: `datagnome.de`
+    - Port: 1883
+    - User: `cccamp23`
+    - Password: `cccamp23`
