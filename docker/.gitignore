@@ -1,3 +1,5 @@
 grafana
 influx-data
 traefik/acme.json
+mosquitto/log/ 
+mosquitto/data/
