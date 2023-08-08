@@ -123,14 +123,15 @@ Jeder Datenzwerg sendet seine Daten an eine zentrale, selbst gehostete InfluxDB-
 
 Wir stellen außerdem einen Lesezugriff auf unseren MQTT Server und unsere InfluxDB unter folgender URL bereit:
 
-  - Host: `influxdb.datagnome.de`
-  - Port: 80
-  - Organization: `datagnome`
-  - Bucket: `datagnome`
-  - Auth token: `5amv72PFZxPmnbUISjntEVxtElDYMhkeofg9Deo1ykO6Zy2XIba_iWPcyxyAp_R0dHsvHm5moE4YBCwxGIEriw==`
+  - InfluxDB Host: `influxdb.datagnome.de`
+  - InfluxDB Port: 80
+  - InfluxDB Organization: `datagnome`
+  - InfluxDB Bucket: `datagnome`
+  - InfluxDB Auth token: `5amv72PFZxPmnbUISjntEVxtElDYMhkeofg9Deo1ykO6Zy2XIba_iWPcyxyAp_R0dHsvHm5moE4YBCwxGIEriw==`
 
-  - Host: `datagnome.de`
-  - Port: 1883
+
+  - MQTT Host: `datagnome.de`
+  - MQTT Port: 1883
   - MQTT User: `cccamp23`
   - MQTT Password: `cccamp23`
 ### Wo finde ich den Sourcecode?

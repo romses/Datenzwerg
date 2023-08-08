@@ -118,14 +118,15 @@ Each Datenzwerg sends its data to a central self-hosted InfluxDB instance. The d
 
 We also provide read-only access to our InfluxDB and MQTT:
 
-  - Host: `influxdb.datagnome.de`
-  - Port: 80
-  - Organization: `datagnome`
-  - Bucket: `datagnome`
-  - Auth token: `5amv72PFZxPmnbUISjntEVxtElDYMhkeofg9Deo1ykO6Zy2XIba_iWPcyxyAp_R0dHsvHm5moE4YBCwxGIEriw==`
+  - InfluxDB Host: `influxdb.datagnome.de`
+  - InfluxDB Port: 80
+  - InfluxDB Organization: `datagnome`
+  - InfluxDBBucket: `datagnome`
+  - InfluxDBAuth token: `5amv72PFZxPmnbUISjntEVxtElDYMhkeofg9Deo1ykO6Zy2XIba_iWPcyxyAp_R0dHsvHm5moE4YBCwxGIEriw==`
 
-  - Host: `datagnome.de`
-  - Port: 1883
+
+  - MQTT Host: `datagnome.de`
+  - MQTT Port: 1883
   - MQTT User: `cccamp23`
   - MQTT Password: `cccamp23`
 
