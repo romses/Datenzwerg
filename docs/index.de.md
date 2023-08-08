@@ -131,8 +131,8 @@ Wir stellen außerdem einen Lesezugriff auf unseren MQTT Server und unsere Influ
 
   - Host: `datagnome.de`
   - Port: 1883
-  - MQTT User: cccamp23
-  - MQTT Password: cccamp23
+  - MQTT User: `cccamp23`
+  - MQTT Password: `cccamp23`
 ### Wo finde ich den Sourcecode?
 
 Alles kann in diesem GitHub-Repository gefunden werden: [romses/Datenzwerg](https://github.com/romses/Datenzwerg).

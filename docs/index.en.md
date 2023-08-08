@@ -126,8 +126,8 @@ We also provide read-only access to our InfluxDB and MQTT:
 
   - Host: `datagnome.de`
   - Port: 1883
-  - MQTT User: cccamp23
-  - MQTT Password: cccamp23
+  - MQTT User: `cccamp23`
+  - MQTT Password: `cccamp23`
 
 
 ### Where can I find the source?
