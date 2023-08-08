@@ -32,13 +32,13 @@ influxdb2:
   token: !secret influxdb_token
   device: "${name}"
 
-#mqtt:
-#  broker: !secret mqtt_host
-#  port: !secret mqtt_port
-#  username: !secret mqtt_user
-#  password: !secret mqtt_pass
-#  topic_prefix: "datagnome/${name}"
-#  discovery: false
+mqtt:
+  broker: !secret mqtt_host
+  port: !secret mqtt_port
+  username: !secret mqtt_user
+  password: !secret mqtt_pass
+  topic_prefix: "datagnome/${name}"
+  discovery: false
 
 logger:
 
