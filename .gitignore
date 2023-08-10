@@ -5,3 +5,4 @@ docker/influx-data/*
 docker/www-data/*
 .env
 *.blend1
+.cache

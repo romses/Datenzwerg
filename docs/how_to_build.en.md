@@ -1,3 +1,7 @@
+---
+description: You want to build your own Datenzwerg? Here's a build guide!
+---
+
 # How to build a Datenzwerg
 
 !!! warning

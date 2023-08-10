@@ -1,3 +1,7 @@
+---
+description: "Ein Blick auf die aktuellen Datenzwerg-Sensordaten."
+---
+
 # Aktuelle Datenzwergdaten
 
 ## Umgebungsdaten

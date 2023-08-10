@@ -6,3 +6,5 @@ mkdocs-awesome-pages-plugin
 mkdocs-literate-nav
 mkdocs-macros-plugin
 markdown-grid-tables
+pillow
+cairosvg

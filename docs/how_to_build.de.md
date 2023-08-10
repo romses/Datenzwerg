@@ -1,3 +1,7 @@
+---
+description: Du willst selbst einen Datenzwerg bauen? Hier findest du eine Bauanleitung!
+---
+
 # Wie man einen Datenzwerg baut
 
 !!! warning "Warnung"

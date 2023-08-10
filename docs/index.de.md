@@ -1,3 +1,7 @@
+---
+description: "Der Datenzwerg ist ein Gartenzwerg mit einer Mission: Umweltdaten zu sammeln und öffentlich zugänglich zu machen."
+---
+
 # Der Datenzwerg
 
 ![Datenzwerg Logo](assets/images/logo.png){: class="logo" :}

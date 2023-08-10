@@ -1,3 +1,7 @@
+---
+description: "The Datenzwerg is a garden gnome with a mission: To collect environmental data and make it publicly available."
+---
+
 # The Datenzwerg
 
 ![Datenzwerg logo](assets/images/logo.png){: class="logo" :}

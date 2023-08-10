@@ -1,3 +1,7 @@
+---
+description: "A look at the current Datenzwerg sensor data."
+---
+
 # Current Datenzwerg data
 
 ## Environmental data

@@ -1,4 +1,4 @@
-site_name: Datenzwerg
+site_name: datagnome.de
 site_url: !ENV [SITE_URL, "http://127.0.0.1:8000"]
 repo_name: romses/Datenzwerg
 repo_url: https://github.com/romses/Datenzwerg
@@ -6,6 +6,7 @@ dev_addr: 0.0.0.0:8008
 
 theme:
   name: material
+  logo: assets/images/favicon.svg
   icon:
     repo: fontawesome/brands/github
   features:
@@ -138,3 +139,8 @@ plugins:
       languages:
         en: English
         de: Deutsch
+  - social:
+      cards_layout_options:
+        background_color: "#111111"
+        color: "#ffffff"
+
