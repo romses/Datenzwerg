@@ -86,8 +86,19 @@ We asked ChatGPT to describe the Datenzwerg for us[^2] and this is what it came 
 2023-07-24
 : The firmware reaches a first feature complete state.
 
+2023-07-28
+: All Datenzwerge are now in their bodies and are happily sending data.
+
 2023-08-04
 : The website reaches a first complete state in both German and English.
+
+2023-08-09
+: The sensor data is publicly available via InfluxDB and MQTT.
+
+: The firmware sees final adjustments in preparation for the Camp.
+
+2023-08-11
+: The Datenzwerge are offline again, temporarily. Next stop: CCCamp!
 
 2023-08-15 - 2023-08-19
 : Planned Datenzwerg deployment at [CCCamp23](https://events.ccc.de/camp/2023/infos/).

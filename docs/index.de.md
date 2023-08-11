@@ -75,13 +75,13 @@ Wir haben ChatGPT gebeten, den Datenzwerg für uns zu beschreiben[^2] und das is
   registriert eine Domain.
 
 2023-06-30
-: Romses und foosel treffen sich für eine gemeinsame Bastelsession. Die ersten zwei Mainboards werden gebaut. Der Datenzwerg lebt!
+: romses und foosel treffen sich für eine gemeinsame Bastelsession. Die ersten zwei Mainboards werden gebaut. Der Datenzwerg lebt!
 
 2023-07-08
 : Eine weitere gemeinsame Bastelsession. Weitere 8 Mainboards werden gebaut. Die Datenzwerg-Armee wächst!
 
 2023-07-19
-: Nachdem das Modell fertiggestellt und 60+ Stunden gemeinsame Druckzeit vergangen sind, sind alle 10 Datenzwerg-Körper gedruckt.
+: Nachdem das Modell fertiggestellt und 60+ Stunden gesamte Druckzeit vergangen sind, sind alle 10 Datenzwerg-Körper gedruckt.
 
 2023-07-23
 : Die Grundinfrastruktur geht live. Sensoren beginnen, an die offiziellen Server unter [datagnome.de](https://datagnome.de) zu berichten.
@@ -91,8 +91,19 @@ Wir haben ChatGPT gebeten, den Datenzwerg für uns zu beschreiben[^2] und das is
 2023-07-24
 : Die Firmware erreicht einen ersten funktionsfähigen Zustand.
 
+2023-07-28
+: Alle Zwerge stecken jetzt in ihren Körpern und senden fleißig Daten.
+
 2023-08-04
 : Die Webseite erreicht einen ersten vollständigen Zustand in Deutsch und Englisch.
+
+2023-08-09
+: Die Daten sind öffentlich via InfluxDB und MQTT zugänglich.
+
+: Es erfolgen letzte Anpassungen der Firmware für das Deployment auf dem Camp.
+
+2023-08-11
+: Die Zwerge sind vorübergehend wieder offline. Nächster Halt: CCCamp!
 
 2023-08-15 - 2023-08-19
 : Geplanter Datenzwerg Einsatz auf dem [CCCamp23](https://events.ccc.de/camp/2023/infos/).
