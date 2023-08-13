@@ -6,7 +6,6 @@ description: "Der Datenzwerg ist ein Gartenzwerg mit einer Mission: Umweltdaten 
 
 ![Datenzwerg Logo](assets/images/logo.png){: class="logo" :}
 
-<!--
 !!! tip "Datenzwerg @ CCCamp23"
 
     Du bist auf dem CCCamp und über einen der Datenzwerge gestolpert? Super! Hier sind ein paar Links für dich:
@@ -31,7 +30,6 @@ description: "Der Datenzwerg ist ein Gartenzwerg mit einer Mission: Umweltdaten 
     | [Nerdy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Nerdy&theme=dark)  | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | nicht aufgestellt |
     | [Sleepy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sleepy&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | nicht aufgestellt |
     | [Sneezy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sneezy&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | nicht aufgestellt |
--->
 
 ## Was ist der Datenzwerg?
 
