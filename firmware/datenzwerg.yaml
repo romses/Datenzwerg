@@ -44,19 +44,10 @@ logger:
 
 wifi:
   networks:
-<<<<<<< Updated upstream
     - ssid: Camp2023-open
-=======
-    - ssid: Camp2023
-      eap:
-        username: outboundonly
-        password: outboundonly
 
->>>>>>> Stashed changes
     - ssid: !secret wifi_ssid
       password: !secret wifi_psk
-
-    - ssid: Camp2023-open
 
 mdns:
   disabled: true
