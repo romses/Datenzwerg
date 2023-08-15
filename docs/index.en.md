@@ -20,16 +20,16 @@ description: "The Datenzwerg is a garden gnome with a mission: To collect enviro
 
     | Data gnome | Location | Status |
     | ---------- | -------- | ------ |
-    | [Bashful](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Bashful&theme=dark) | [Observation platform] (https://map.events.ccc.de/camp/2023/map/#16/53.031659/13.306303) | Deployed |
-    | [Doc](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Doc&theme=dark) | [CERT] (https://map.events.ccc.de/camp/2023/map/#16/53.029849/13.309139) | Deployed |
-    | [Dopey](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Dopey&theme=dark) | [N.O.r.T:x] (https://map.events.ccc.de/camp/2023/map/#16/53.030413/13.306698) | Deployed |
-    | [Grumpy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Grumpy&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | nicht aufgestellt |
-    | [Happy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Happy&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | nicht aufgestellt |
-    | [Hefty](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Hefty&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | nicht aufgestellt |
-    | [Kinky](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Kinky&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | nicht aufgestellt |
-    | [Nerdy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Nerdy&theme=dark)  | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | nicht aufgestellt |
-    | [Sleepy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sleepy&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | nicht aufgestellt |
-    | [Sneezy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sneezy&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | nicht aufgestellt |
+    | [Bashful](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Bashful&theme=dark) | [Observation platform](https://map.events.ccc.de/camp/2023/map/#16/53.031659/13.306303) | Deployed |
+    | [Doc](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Doc&theme=dark) | [CERT](https://map.events.ccc.de/camp/2023/map/#16/53.029849/13.309139) | Deployed |
+    | [Dopey](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Dopey&theme=dark) | [N.O.r.T:x](https://map.events.ccc.de/camp/2023/map/#16/53.030413/13.306698) | Deployed |
+    | [Grumpy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Grumpy&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | not deployed |
+    | [Happy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Happy&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | not deployed |
+    | [Hefty](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Hefty&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | not deployed |
+    | [Kinky](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Kinky&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | not deployed |
+    | [Nerdy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Nerdy&theme=dark)  | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | not deployed |
+    | [Sleepy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sleepy&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | not deployed |
+    | [Sneezy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sneezy&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | not deployed |
 ## What is the Datenzwerg?
 
 The Datenzwerg is a garden gnome with a mission: To collect environmental data and make it publicly available. 
