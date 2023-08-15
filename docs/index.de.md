@@ -20,9 +20,9 @@ description: "Der Datenzwerg ist ein Gartenzwerg mit einer Mission: Umweltdaten 
 
     | Datenzwerg | Location | Status |
     | ---------- | -------- | ------ |
-    | [Bashful](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Bashful&theme=dark) | Observation platform (https://map.events.ccc.de/camp/2023/map/#16/53.031659/13.306303) | Deployed |
-    | [Doc](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Doc&theme=dark) | CERT (https://map.events.ccc.de/camp/2023/map/#16/53.029849/13.309139) | Deployed |
-    | [Dopey](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Dopey&theme=dark) | N.O.r.T:x (https://map.events.ccc.de/camp/2023/map/#16/53.030413/13.306698) | Deployed |
+    | [Bashful](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Bashful&theme=dark) | [Observation platform] (https://map.events.ccc.de/camp/2023/map/#16/53.031659/13.306303) | Deployed |
+    | [Doc](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Doc&theme=dark) | [CERT] (https://map.events.ccc.de/camp/2023/map/#16/53.029849/13.309139) | Deployed |
+    | [Dopey](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Dopey&theme=dark) | [N.O.r.T:x] (https://map.events.ccc.de/camp/2023/map/#16/53.030413/13.306698) | Deployed |
     | [Grumpy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Grumpy&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | nicht aufgestellt |
     | [Happy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Happy&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | nicht aufgestellt |
     | [Hefty](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Hefty&theme=dark) | [TBD](https://map.events.ccc.de/camp/2023/map/#16/53.03136/13.30688) | nicht aufgestellt |
