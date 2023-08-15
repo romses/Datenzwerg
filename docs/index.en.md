@@ -124,6 +124,10 @@ No. While there is a microphone inside each Datenzwerg hooked up to the ESP's AD
 
 In our tests, a Datenzwerg seems to last between three to four days on a single charge of our 18650 LiPos that range from 1600mAh to 2800 mAh. This obviously depends on the cell capacity but also temperature and other environmental factors.
 
+### Why are the measured temperatures that high during the day?
+
+We need to put the gnomes into direct sunlight in order to be able to measure UV index. We tried to get enough airflow inside the gnome body, but sadly the material itself radiates off heat a lot. As such, the temperature readings are distorted under direct sun light.
+
 ### Where can I find the data?
 
 Each Datenzwerg sends its data to a central self-hosted InfluxDB instance. The data is then visualized using Grafana. You can find the Grafana dashboards [here](https://grafana.datagnome.de/).

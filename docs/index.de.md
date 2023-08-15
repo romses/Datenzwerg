@@ -130,6 +130,10 @@ Nein. Zwar hat jeder Datenzwerg ein Mikrofon im Inneren, das an den ADC des ESPs
 
 In unseren Tests hält ein Datenzwerg zwischen drei und vier Tagen mit einer einzigen Ladung unserer 18650 LiPos, die von 1600mAh bis 2800 mAh reichen. Dies hängt natürlich von der Zellkapazität ab, aber auch von der Temperatur und anderen Umweltfaktoren.
 
+### Warum sind die Temperaturdaten tagsüber so hoch?
+
+Wir müssen die Zwerge in die direkte Sonne stellen, damit der UV Sensor messen kann. Wir haben versucht, genug Luftdurchfluss im Zwerg zu erzeugen, leider strahlt das Material sehr stark ab. Von daher sind die Temperaturen bei direkter Sonneneinstrahlung leider verfälscht.
+
 ### Wo kann ich die Daten sehen?
 
 Jeder Datenzwerg sendet seine Daten an eine zentrale, selbst gehostete InfluxDB-Instanz. Die Daten werden dann mit Grafana visualisiert. Die Grafana-Dashboards findet Ihr [hier](https://grafana.datagnome.de/). 
