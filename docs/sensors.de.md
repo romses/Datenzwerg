@@ -24,7 +24,7 @@ Wenn du an den Rohdaten interessiert bist, verbinde dich einfach auf unsere Infl
 
   - InfluxDB:
     - Host: `influxdb.datagnome.de`
-    - Port: 80
+    - Port: 8068
     - Organization: `datagnome`
     - Bucket: `datagnome`
     - Auth token: `5amv72PFZxPmnbUISjntEVxtElDYMhkeofg9Deo1ykO6Zy2XIba_iWPcyxyAp_R0dHsvHm5moE4YBCwxGIEriw==`

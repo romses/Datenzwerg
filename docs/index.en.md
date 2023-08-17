@@ -137,7 +137,7 @@ We also provide read-only access to our InfluxDB and MQTT:
 
   - InfluxDB:
     - Host: `influxdb.datagnome.de`
-    - Port: 80
+    - Port: 8086
     - Organization: `datagnome`
     - Bucket: `datagnome`
     - Auth token: `5amv72PFZxPmnbUISjntEVxtElDYMhkeofg9Deo1ykO6Zy2XIba_iWPcyxyAp_R0dHsvHm5moE4YBCwxGIEriw==`

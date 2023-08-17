@@ -25,7 +25,7 @@ If you are interested in the raw data, connect to our InfluxDB or MQTT (read-onl
 
   - InfluxDB:
     - Host: `influxdb.datagnome.de`
-    - Port: 80
+    - Port: 8086
     - Organization: `datagnome`
     - Bucket: `datagnome`
     - Auth token: `5amv72PFZxPmnbUISjntEVxtElDYMhkeofg9Deo1ykO6Zy2XIba_iWPcyxyAp_R0dHsvHm5moE4YBCwxGIEriw==`
