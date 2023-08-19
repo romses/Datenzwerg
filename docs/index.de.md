@@ -6,6 +6,7 @@ description: "Der Datenzwerg ist ein Gartenzwerg mit einer Mission: Umweltdaten 
 
 ![Datenzwerg Logo](assets/images/logo.png){: class="logo" :}
 
+<!--
 !!! tip "Datenzwerg @ CCCamp23"
 
     Du bist auf dem CCCamp und über einen der Datenzwerge gestolpert? Super! Hier sind ein paar Links für dich:
@@ -30,6 +31,7 @@ description: "Der Datenzwerg ist ein Gartenzwerg mit einer Mission: Umweltdaten 
     | [Nerdy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Nerdy&theme=dark)  | - | Collected |
     | [Sleepy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sleepy&theme=dark) | - | Collected |
     | [Sneezy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sneezy&theme=dark) | - | Collected |
+-->
 
 ## Was ist der Datenzwerg?
 
@@ -105,6 +107,9 @@ Wir haben ChatGPT gebeten, den Datenzwerg für uns zu beschreiben[^2] und das is
 
 2023-08-15 - 2023-08-19
 : Geplanter Datenzwerg Einsatz auf dem [CCCamp23](https://events.ccc.de/camp/2023/infos/).
+
+2023-08-19
+: Die Zwerge haben (fast) alle das Camp verlassen und sind auf dem Weg zurück ins Rhein-Main-Gebiet. Vielen Dank für das rege Interesse!
 
 ## FAQ
 
