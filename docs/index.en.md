@@ -101,7 +101,7 @@ We asked ChatGPT to describe the Datenzwerg for us[^2] and this is what it came 
 : The Datenzwerge are offline again, temporarily. Next stop: CCCamp!
 
 2023-08-15 - 2023-08-19
-: Planned Datenzwerg deployment at [CCCamp23](https://events.ccc.de/camp/2023/infos/).
+: Datenzwerg deployment at [CCCamp23](https://events.ccc.de/camp/2023/infos/).
 
 2023-08-19
 : (Almost) all Datenzwerge have left the camp and are traveling back to the Rhein-Main-Area. Thanks everyone for the big interest!

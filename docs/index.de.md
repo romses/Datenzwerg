@@ -106,7 +106,7 @@ Wir haben ChatGPT gebeten, den Datenzwerg für uns zu beschreiben[^2] und das is
 : Die Zwerge sind vorübergehend wieder offline. Nächster Halt: CCCamp!
 
 2023-08-15 - 2023-08-19
-: Geplanter Datenzwerg Einsatz auf dem [CCCamp23](https://events.ccc.de/camp/2023/infos/).
+: Datenzwerg Einsatz auf dem [CCCamp23](https://events.ccc.de/camp/2023/infos/).
 
 2023-08-19
 : Die Zwerge haben (fast) alle das Camp verlassen und sind auf dem Weg zurück ins Rhein-Main-Gebiet. Vielen Dank für das rege Interesse!
