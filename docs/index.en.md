@@ -37,7 +37,7 @@ description: "The Datenzwerg is a garden gnome with a mission: To collect enviro
 
 The Datenzwerg is a garden gnome with a mission: To collect environmental data and make it publicly available. 
 
-It was originally developed for the [Chaos Communication Camp 2023](https://events.ccc.de/camp/2023/infos/) where we ([@romses](https://chaos.social/@romses) and [@foosel](https://chaos.social/@foosel)) plan to deploy a small army of 10 Datenzwerge across the camp grounds: Happy, Doc, Grumpy, Dopey, Bashful, Sleepy, Sneezy, Nerdy, Kinky and Hefty[^1].
+It was originally developed for the [Chaos Communication Camp 2023](https://events.ccc.de/camp/2023/infos/) where we ([@romses](https://chaos.social/@romses) and [@foosel](https://chaos.social/@foosel)) deployed a small army of 10 Datenzwerge across the camp grounds: Happy, Doc, Grumpy, Dopey, Bashful, Sleepy, Sneezy, Nerdy, Kinky and Hefty[^1].
 
 The Datenzwerg consists of a 3D printed gnome body, a custom PCB with an ESP8266 D1 Mini microcontroller board, a BME280, UV and sound sensor and an 18650 battery. It's powered by [ESPHome](https://esphome.io/) and sends its data to an [InfluxDB](https://www.influxdata.com/) instance. The firmware currently logs temperature, relative and absolute humidity, air pressure, dew point, UV index and sound pressure.
 
@@ -136,7 +136,7 @@ We need to put the gnomes into direct sunlight in order to be able to measure UV
 
 ### Where can I find the data?
 
-Each Datenzwerg sends its data to a central self-hosted InfluxDB instance. The data is then visualized using Grafana. You can find the Grafana dashboards [here](https://grafana.datagnome.de/).
+Each camp Datenzwerg sent its data to a central self-hosted InfluxDB instance. The data is then visualized using Grafana. You can find the Grafana dashboards [here](https://grafana.datagnome.de/).
 
 We also provide read-only access to our InfluxDB and MQTT:
 
@@ -155,10 +155,6 @@ We also provide read-only access to our InfluxDB and MQTT:
 ### Where can I find the source?
 
 Everything can be found in this GitHub repository: [romses/Datenzwerg](https://github.com/romses/Datenzwerg).
-
-### Can I adopt a Datenzwerg after Camp?
-
-We are not sure yet if we want to part with any Datenzwerg. If so we'll announce this here. Should we go forward with adoptions however, we'd like to to have the material costs covered by the new owner (around 20€ per Datenzwerg without batteries).
 
 ## Credits & Thanks
 

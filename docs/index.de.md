@@ -39,7 +39,7 @@ Der Datenzwerg ist ein Gartenzwerg mit einer Mission: Umweltdaten zu sammeln und
 
 Ursprünglich wurde er für das [Chaos Communication Camp 2023](https://events.ccc.de/camp/2023/infos/) entwickelt, 
 wo wir ([@romses](https://chaos.social/@romses) und [@foosel](https://chaos.social/@foosel)) eine kleine Armee 
-von 10 Datenzwergen über das Camp-Gelände verteilen wollen: Happy, Doc, Grumpy, Dopey, Bashful, Sleepy, Sneezy, 
+von 10 Datenzwergen über das Camp-Gelände verteilt hatten: Happy, Doc, Grumpy, Dopey, Bashful, Sleepy, Sneezy, 
 Nerdy, Kinky und Hefty[^1].
 
 Der Datenzwerg besteht aus einem 3D-gedruckten Gartenzwerg, einer eigenen Platine mit einem ESP8266 D1 Mini Mikrocontroller, einem BME280, UV- und Schallsensor und einer 18650 Batterie. Er wird von [ESPHome](https://esphome.io/) betrieben und sendet seine Daten an eine [InfluxDB](https://www.influxdata.com/) Instanz. Die Firmware zeichnet derzeit Temperatur, relative und absolute Luftfeuchtigkeit, Luftdruck, Taupunkt, UV-Index und Schalldruck auf.
@@ -141,7 +141,7 @@ Wir müssen die Zwerge in die direkte Sonne stellen, damit der UV Sensor messen 
 
 ### Wo kann ich die Daten sehen?
 
-Jeder Datenzwerg sendet seine Daten an eine zentrale, selbst gehostete InfluxDB-Instanz. Die Daten werden dann mit Grafana visualisiert. Die Grafana-Dashboards findet Ihr [hier](https://grafana.datagnome.de/). 
+Jeder Datenzwerg auf dem Camp sendete seine Daten an eine zentrale, selbst gehostete InfluxDB-Instanz. Die Daten wurden dann mit Grafana visualisiert. Die Grafana-Dashboards findet Ihr [hier](https://grafana.datagnome.de/). 
 
 Wir stellen außerdem einen Lesezugriff auf unseren MQTT Server und unsere InfluxDB unter folgender URL bereit:
 
@@ -160,10 +160,6 @@ Wir stellen außerdem einen Lesezugriff auf unseren MQTT Server und unsere Influ
 ### Wo finde ich den Sourcecode?
 
 Alles kann in diesem GitHub-Repository gefunden werden: [romses/Datenzwerg](https://github.com/romses/Datenzwerg).
-
-### Kann ich nach dem Camp einen Datenzwerg adoptieren?
-
-Wir sind noch unentschlossen, ob wir uns von unseren Datenzwergen trennen wollen. Wenn wir uns dazu entschließen, werden wir das hier bekannt geben. Falls wir uns dazu entschließen hätten wir aber in einem solchen Fall gerne die Materialkosten erstattet. Diese belaufen sich auf ca. 20€ pro Zwerg ohne Akkus.
 
 ## Credits & Danksagung
 
