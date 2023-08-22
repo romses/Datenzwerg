@@ -26,3 +26,4 @@ certificatesresolvers:
 
 api:
   insecure: true
+
