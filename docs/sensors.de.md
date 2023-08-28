@@ -4,6 +4,11 @@ description: "Ein Blick auf die aktuellen Datenzwerg-Sensordaten."
 
 # Aktuelle Datenzwergdaten
 
+Zur Zeit gibt es keine aktuellen Datenzwergdaten. Check hier nochmal vorbei, wenn sie wieder auf einem Event sind.
+
+Du kannst den Datenexport von CCCamp23 [im Repo finden](https://github.com/romses/Datenzwerg/tree/main/camp23_data).
+
+<!--
 ## Umgebungsdaten
 
 {% for env in grafana.environment %}
@@ -33,3 +38,4 @@ Wenn du an den Rohdaten interessiert bist, verbinde dich einfach auf unsere Infl
     - Port: 1883
     - User: `cccamp23`
     - Password: `cccamp23`
+-->

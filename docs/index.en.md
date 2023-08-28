@@ -106,6 +106,12 @@ We asked ChatGPT to describe the Datenzwerg for us[^2] and this is what it came 
 2023-08-19
 : (Almost) all Datenzwerge have left the camp and are traveling back to the Rhein-Main-Area. Thanks everyone for the big interest!
 
+2023-08-22
+: The Datenzwerge are back home and are being prepared for future deployments. The CCCamp data export is [available in the repository](https://github.com/romses/Datenzwerg/tree/main/camp23_data).
+
+2023-08-28
+: The infrastructure has been shut down for now and only the page here and of course the source code remains. The Datenzwerge are taking a well deserved rest.
+
 ## FAQ
 
 ### What kind of data does the Datenzwerg collect?

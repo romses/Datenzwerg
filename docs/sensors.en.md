@@ -4,6 +4,11 @@ description: "A look at the current Datenzwerg sensor data."
 
 # Current Datenzwerg data
 
+There is currently no current Datenzwerg data. Check again when they are back at an event.
+
+You can find the data export of CCCamp23 [on the repo](https://github.com/romses/Datenzwerg/tree/main/camp23_data).
+
+<!--
 ## Environmental data
 
 {% for env in grafana.environment %}
@@ -34,3 +39,4 @@ If you are interested in the raw data, connect to our InfluxDB or MQTT (read-onl
     - Port: 1883
     - User: `cccamp23`
     - Password: `cccamp23`
+-->

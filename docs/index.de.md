@@ -111,6 +111,12 @@ Wir haben ChatGPT gebeten, den Datenzwerg für uns zu beschreiben[^2] und das is
 2023-08-19
 : Die Zwerge haben (fast) alle das Camp verlassen und sind auf dem Weg zurück ins Rhein-Main-Gebiet. Vielen Dank für das rege Interesse!
 
+2023-08-22
+: Die Zwerge sind wieder zuhause und werden für zukünftige Einsätze vorbereitet. Der Datenexport from CCCamp ist [im Repository verfügbar](https://github.com/romses/Datenzwerg/tree/main/camp23_data).
+
+2023-08-28
+: Die Infrastruktur ist vorerst offline und nur noch diese Webseite und der Sourcecode bleiben verfügbar. Die Datenzwerge gönnen sich eine wohlverdiente Pause.
+
 ## FAQ
 
 ### Was für Daten werden vom Datenzwerg aufgezeichnet?
