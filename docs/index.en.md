@@ -142,21 +142,7 @@ We need to put the gnomes into direct sunlight in order to be able to measure UV
 
 ### Where can I find the data?
 
-Each camp Datenzwerg sent its data to a central self-hosted InfluxDB instance. The data is then visualized using Grafana. You can find the Grafana dashboards [here](https://grafana.datagnome.de/).
-
-We also provide read-only access to our InfluxDB and MQTT:
-
-  - InfluxDB:
-    - Host: `influxdb.datagnome.de`
-    - Port: 8086
-    - Organization: `datagnome`
-    - Bucket: `datagnome`
-    - Auth token: `5amv72PFZxPmnbUISjntEVxtElDYMhkeofg9Deo1ykO6Zy2XIba_iWPcyxyAp_R0dHsvHm5moE4YBCwxGIEriw==`
-  - MQTT:
-    - Host: `datagnome.de`
-    - Port: 1883
-    - User: `cccamp23`
-    - Password: `cccamp23`
+Each camp Datenzwerg sent its data to a central self-hosted InfluxDB instance. The data is then visualized using Grafana. The infrastructure for that has been shut down for now, but an data export is [available in the repository](https://github.com/romses/Datenzwerg/tree/main/camp23_data).
 
 ### Where can I find the source?
 

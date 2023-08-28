@@ -147,21 +147,7 @@ Wir müssen die Zwerge in die direkte Sonne stellen, damit der UV Sensor messen 
 
 ### Wo kann ich die Daten sehen?
 
-Jeder Datenzwerg auf dem Camp sendete seine Daten an eine zentrale, selbst gehostete InfluxDB-Instanz. Die Daten wurden dann mit Grafana visualisiert. Die Grafana-Dashboards findet Ihr [hier](https://grafana.datagnome.de/). 
-
-Wir stellen außerdem einen Lesezugriff auf unseren MQTT Server und unsere InfluxDB unter folgender URL bereit:
-
-  - InfluxDB:
-    - Host: `influxdb.datagnome.de`
-    - Port: 8068
-    - Organization: `datagnome`
-    - Bucket: `datagnome`
-    - Auth token: `5amv72PFZxPmnbUISjntEVxtElDYMhkeofg9Deo1ykO6Zy2XIba_iWPcyxyAp_R0dHsvHm5moE4YBCwxGIEriw==`
-  - MQTT:
-    - Host: `datagnome.de`
-    - Port: 1883
-    - User: `cccamp23`
-    - Password: `cccamp23`
+Jeder Datenzwerg auf dem Camp sendete seine Daten an eine zentrale, selbst gehostete InfluxDB-Instanz. Die Daten wurden dann mit Grafana visualisiert. Die zugehörige Infrastruktur ist mittlerweile wieder offline, aber wir haben die Daten vom CCCamp23 [im Repo hinterlegt](https://github.com/romses/Datenzwerg/tree/main/camp23_data).
 
 ### Wo finde ich den Sourcecode?
 
