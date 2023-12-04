@@ -117,6 +117,9 @@ Wir haben ChatGPT gebeten, den Datenzwerg für uns zu beschreiben[^2] und das is
 2023-08-28
 : Die Infrastruktur ist vorerst offline und nur noch diese Webseite und der Sourcecode bleiben verfügbar. Die Datenzwerge gönnen sich eine wohlverdiente Pause.
 
+2023-10-30
+: Es geht los mit der 37c3 Edition der Datenzwerge. Der Plan ist es, TVOC Monitoring zur Sensor-Suite hinzuzufügen.
+
 ## FAQ
 
 ### Was für Daten werden vom Datenzwerg aufgezeichnet?
@@ -147,7 +150,7 @@ Wir müssen die Zwerge in die direkte Sonne stellen, damit der UV Sensor messen 
 
 ### Wo kann ich die Daten sehen?
 
-Jeder Datenzwerg auf dem Camp sendete seine Daten an eine zentrale, selbst gehostete InfluxDB-Instanz. Die Daten wurden dann mit Grafana visualisiert. Die zugehörige Infrastruktur ist mittlerweile wieder offline, aber wir haben die Daten vom CCCamp23 [im Repo hinterlegt](https://github.com/romses/Datenzwerg/tree/main/camp23_data).
+Jeder Datenzwerg auf dem Camp sendete seine Daten an eine zentrale, selbst gehostete InfluxDB-Instanz. Die Daten wurden dann mit Grafana visualisiert. Die zugehörige Infrastruktur ist mittlerweile wieder offline, aber wir haben die Daten vom CCCamp23 [im Repo hinterlegt](https://github.com/romses/Datenzwerg/tree/main/exports/cccamp2023).
 
 ### Wo finde ich den Sourcecode?
 

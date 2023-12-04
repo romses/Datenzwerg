@@ -6,7 +6,7 @@ description: "A look at the current Datenzwerg sensor data."
 
 There is currently no current Datenzwerg data. Check again when they are back at an event.
 
-You can find the data export of CCCamp23 [on the repo](https://github.com/romses/Datenzwerg/tree/main/camp23_data).
+You can find the data export of CCCamp23 [on the repo](https://github.com/romses/Datenzwerg/tree/main/exports/cccamp2023).
 
 <!--
 ## Environmental data

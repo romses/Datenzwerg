@@ -112,6 +112,9 @@ We asked ChatGPT to describe the Datenzwerg for us[^2] and this is what it came 
 2023-08-28
 : The infrastructure has been shut down for now and only the page here and of course the source code remains. The Datenzwerge are taking a well deserved rest.
 
+2023-10-30
+: Work has started on the 37c3 edition of the Datenzwerg. The plan is to add TVOC monitoring to the sensor suite.
+
 ## FAQ
 
 ### What kind of data does the Datenzwerg collect?
@@ -142,7 +145,7 @@ We need to put the gnomes into direct sunlight in order to be able to measure UV
 
 ### Where can I find the data?
 
-Each camp Datenzwerg sent its data to a central self-hosted InfluxDB instance. The data is then visualized using Grafana. The infrastructure for that has been shut down for now, but an data export is [available in the repository](https://github.com/romses/Datenzwerg/tree/main/camp23_data).
+Each camp Datenzwerg sent its data to a central self-hosted InfluxDB instance. The data is then visualized using Grafana. The infrastructure for that has been shut down for now, but an data export is [available in the repository](https://github.com/romses/Datenzwerg/tree/main/exports/cccamp2023).
 
 ### Where can I find the source?
 
