@@ -28,6 +28,7 @@ In the `models` directory, you will find the following files:
 - `datenzwerg_40p_1.2mm.blend`: Main design file, edit with [Blender](https://blender.org)
 - `datenzwerg_40p_1.2mm_top.stl`: Upper body, electronics compartment
 - `datenzwerg_40p_1.2mm_bottom.stl`: Lower body, feet, mount point
+- `datenzwerg_40p_1.2mm_bottom_poe.stl`: Lower body, feet, mount point, PoE version
 
 ### Documentation
 
