@@ -112,8 +112,11 @@ We asked ChatGPT to describe the Datenzwerg for us[^2] and this is what it came 
 2023-08-28
 : The infrastructure has been shut down for now and only the page here and of course the source code remains. The Datenzwerge are taking a well deserved rest.
 
-2023-10-30
-: Work has started on the 37c3 edition of the Datenzwerg. The plan is to add TVOC monitoring to the sensor suite.
+2023-10-31
+: Work has started on the 37c3 edition of the Datenzwerg. The plan is to add TVOC monitoring to the sensor suite. A new PCB has been designed, ordered, arrived, and ten new mainboards have been soldered.
+
+2023-12-08
+: An alternative version of the bottom part of the Datenzwerg is finished that allows leading through a cable. Ten new bottoms have been printed and magnetised to allow for POE use at 37c3. This completes the hardware side of the 37c3 preparations.
 
 ## FAQ
 

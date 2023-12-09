@@ -118,7 +118,10 @@ Wir haben ChatGPT gebeten, den Datenzwerg für uns zu beschreiben[^2] und das is
 : Die Infrastruktur ist vorerst offline und nur noch diese Webseite und der Sourcecode bleiben verfügbar. Die Datenzwerge gönnen sich eine wohlverdiente Pause.
 
 2023-10-30
-: Es geht los mit der 37c3 Edition der Datenzwerge. Der Plan ist es, TVOC Monitoring zur Sensor-Suite hinzuzufügen.
+: Es geht los mit der 37c3 Edition der Datenzwerge. Der Plan ist es, TVOC Monitoring zur Sensor-Suite hinzuzufügen. Eine neue Platine wurde entworfen, bestellt, und zehn neue Mainboards wurden gelötet.
+
+2023-12-08
+: Eine alternative Version des Datenzwergunterteils wurde erstellt, die die Durchführung eines Kabels erlaubt. Zehn neue Unterteile wurden gedruckt und magnetisiert, und erlauben damit den Einsatz von POE auf dem 37c3. Damit sind die Vorbereitungen der Hardware für den 37c3 abgeschlossen.
 
 ## FAQ
 
