@@ -1,0 +1,236 @@
+substitutions:
+  name: test
+  update_interval: 5s
+
+esphome:
+  name: "datenzwerg-${name}"
+  platform: ESP8266
+  board: d1_mini
+  on_boot:
+    then:
+      - switch.turn_on: en_sens
+  on_shutdown:
+    then:
+      - switch.turn_off: en_sens
+
+external_components:
+  - source: github://JeroenvdV/esphome-influxdb2
+    components: [ influxdb2 ]
+  - source: github://RoboMagus/esphome-gitref-sensor
+    components: [ git_ref ]
+  - source:
+      type: local
+      path: components
+    components: [ peak_to_peak ]
+
+influxdb2:
+  host: !secret influxdb_host
+  port: !secret influxdb_port
+  orgid: !secret influxdb_orgid
+  bucket: !secret influxdb_bucket
+  token: !secret influxdb_token
+  device: "${name}"
+
+mqtt:
+  broker: !secret mqtt_host
+  port: !secret mqtt_port
+  username: !secret mqtt_user
+  password: !secret mqtt_pass
+  topic_prefix: "datagnome/${name}"
+  discovery: false
+
+logger:
+
+wifi:
+  networks:
+    - ssid: Camp2023-open
+    - ssid: 37c3-open
+    - ssid: !secret wifi_ssid
+      password: !secret wifi_psk
+
+mdns:
+  disabled: true
+
+i2c:
+  scl: D1
+  sda: D2
+  id: bus_a
+
+switch:
+  - platform: gpio
+    pin: D6
+    id: en_sens
+
+  - platform: restart
+    name: "Restart"
+
+ads1115:
+  - address: 0x48
+
+sensor:
+  - platform: wifi_signal
+    name: "WiFi Signal"
+    update_interval: ${update_interval}
+
+  - platform: bme280
+    temperature:
+      name: "Temperature"
+      oversampling: 16x
+      id: bme280_temperature
+    pressure:
+      name: "Pressure"
+      id: bme280_pressure
+    humidity:
+      name: "Humidity"
+      id: bme280_humidity
+    address: 0x76
+    update_interval: ${update_interval}
+
+  - platform: sgp30
+    eco2:
+      name: "eCO2"
+      id: eco2
+      accuracy_decimals: 2
+    tvoc:
+      name: "TVOC"
+      id: tvoc
+      accuracy_decimals: 2
+    compensation:
+      humidity_source: bme280_humidity
+      temperature_source: bme280_temperature
+    store_baseline: yes
+    update_interval: ${update_interval}
+
+  - platform: ads1115
+    gain: 6.144
+    multiplexer: 'A0_GND'
+    name: 'UV Voltage'
+    id: uv_voltage
+    update_interval: ${update_interval}
+
+  - platform: ads1115
+    gain: 6.144
+    multiplexer: 'A1_GND'
+    name: 'Battery Voltage'
+    id: battery_voltage
+    update_interval: ${update_interval}
+
+  - platform: template
+    name: "UV Index"
+    update_interval: ${update_interval}
+    lambda: |-
+      float value = id(uv_voltage).state;
+      ESP_LOGD("uv_index", "The UV voltage is: %f", value);
+      if (value >= 1.170) {
+        return 11.0;
+      } else if (value >= 1.079) {
+        return 10.0;
+      } else if (value >= 0.976) {
+        return 9.0;
+      } else if (value >= 0.881) {
+        return 8.0;
+      } else if (value >= 0.795) {
+        return 7.0;
+      } else if (value >= 0.696) {
+        return 6.0;
+      } else if (value >= 0.606) {
+        return 5.0;
+      } else if (value >= 0.503) {
+        return 4.0;
+      } else if (value >= 0.408) {
+        return 3.0;
+      } else if (value >= 0.318) {
+        return 2.0;
+      } else if (value >= 0.227) {
+        return 1.0;
+      } else {
+        return 0.0;
+      }
+
+  - platform: template
+    name: "Altitude"
+    lambda: |-
+      const float STANDARD_SEA_LEVEL_PRESSURE = 1013.25; //in hPa, see note
+      return ((id(bme280_temperature).state + 273.15) / 0.0065) *
+        (powf((STANDARD_SEA_LEVEL_PRESSURE / id(bme280_pressure).state), 0.190234) - 1); // in meter
+    update_interval: ${update_interval}
+    icon: 'mdi:signal'
+    unit_of_measurement: 'm'
+
+  - platform: absolute_humidity
+    name: "Absolute Humidity"
+    temperature: bme280_temperature
+    humidity: bme280_humidity
+
+  - platform: template
+    name: "Dew Point"
+    lambda: |-
+      return (243.5*(log(id(bme280_humidity).state/100)+((17.67*id(bme280_temperature).state)/
+      (243.5+id(bme280_temperature).state)))/(17.67-log(id(bme280_humidity).state/100)-
+      ((17.67*id(bme280_temperature).state)/(243.5+id(bme280_temperature).state))));
+    unit_of_measurement: °C
+    icon: 'mdi:thermometer-alert'
+    update_interval: ${update_interval}
+
+  - platform: adc
+    pin: A0
+    name: "Sound Voltage"
+    id: sound_voltage
+    update_interval: ${update_interval}
+    filters:
+    - multiply: 3.3
+
+  - platform: peak_to_peak
+    sensor: sound_voltage
+    name: "Sound Voltage Peak to Peak"
+    id: sound_voltage_peak_to_peak
+    update_interval: ${update_interval}
+    accuracy_decimals: 6
+    sample_duration: 1s
+    filters:
+    - multiply: 3.3 # 1.0V to 3.3V
+    - multiply: 0.7071 # Peak to Peak to RMS
+
+  - platform: template
+    name: "Sound Pressure"
+    lambda: |-
+      const float reference = 94;
+      const float amp_gain = 20 * log10(25);
+      const float mic_sensitivity = -44;
+      return log10(id(sound_voltage_peak_to_peak).state) * 20 + reference - amp_gain - mic_sensitivity;
+    unit_of_measurement: "dB"
+    accuracy_decimals: 6
+    update_interval: ${update_interval}
+
+text_sensor:
+  - platform: version
+    hide_timestamp: true
+    name: "ESPHome Version"
+    id: esphome_version_sensor
+
+  - platform: wifi_info
+    ip_address:
+      name: "IP"
+      icon: mdi:wifi
+    ssid:
+      name: "SSID"
+      icon: mdi:wifi-strength-2
+
+  - platform: git_ref
+    name: "Git Ref"
+    long: true
+    all: true
+    dirty: "-dirty"
+    id: git_ref_sensor
+
+# manually force updating the static text sensors once wifi is connected
+interval:
+  - interval: ${update_interval}
+    then:
+      - if:
+          condition: wifi.connected
+          then:
+            - lambda: |-
+                id(esphome_version_sensor).publish_state(id(esphome_version_sensor).state);
+                id(git_ref_sensor).publish_state(id(git_ref_sensor).state);
+
