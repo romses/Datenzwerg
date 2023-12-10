@@ -21,7 +21,7 @@ external_components:
   - source:
       type: local
       path: components
-    components: [ peak_to_peak ]
+    components: [ peak_to_peak, custom_sgp30 ]
 
 influxdb2:
   host: !secret influxdb_host
@@ -86,7 +86,7 @@ sensor:
     address: 0x76
     update_interval: ${update_interval}
 
-  - platform: sgp30
+  - platform: custom_sgp30
     eco2:
       name: "eCO2"
       id: eco2
@@ -95,11 +95,17 @@ sensor:
       name: "TVOC"
       id: tvoc
       accuracy_decimals: 2
+    eco2_baseline:
+      name: "eCO2 Baseline"
+      id: eco2_baseline
+    tvoc_baseline:
+      name: "TVOC Baseline"
+      id: tvoc_baseline
     compensation:
       humidity_source: bme280_humidity
       temperature_source: bme280_temperature
     store_baseline: yes
-    update_interval: ${update_interval}
+    update_interval: 1s
 
   - platform: ads1115
     gain: 6.144

@@ -1,4 +1,6 @@
 packages:
   base: !include packages/base.yaml
-  deepsleep: !include packages/deepsleep.yaml
+  #deepsleep: !include packages/deepsleep.yaml
   #ota: !include packages/ota.yaml
+  uptime: !include packages/uptime.yaml
+  #webserver: !include packages/webserver.yaml
