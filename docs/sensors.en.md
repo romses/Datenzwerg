@@ -35,10 +35,10 @@ If you are interested in the raw data, connect to our InfluxDB or MQTT (read-onl
     - Bucket: `datagnome`
     - Auth token: `5amv72PFZxPmnbUISjntEVxtElDYMhkeofg9Deo1ykO6Zy2XIba_iWPcyxyAp_R0dHsvHm5moE4YBCwxGIEriw==`
   - MQTT:
-    - Host: `datagnome.de`
+    - Host: `mqtt.datagnome.de`
     - Port: 1883
-    - User: `cccamp23`
-    - Password: `cccamp23`
+    - User: `readonly`
+    - Password: `readonly`
 
 ## Exports of past events
 
