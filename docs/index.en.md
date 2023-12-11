@@ -7,9 +7,9 @@ description: "The Datenzwerg is a garden gnome with a mission: To collect enviro
 ![Datenzwerg logo](assets/images/logo.png){: class="logo" :}
 
 <!--
-!!! tip "Datenzwerg @ CCCamp23"
+!!! tip "Datenzwerg @ 37c3"
 
-    You are at CCCamp and came across one of the Datenzwerge? Awesome! Here's some quick links for you:
+    You are at 37c3 and came across one of the Datenzwerge? Awesome! Here's some quick links for you:
 
     - [What is the Datenzwerg?](#what-is-the-datenzwerg)
     - [FAQ](#faq)
@@ -21,16 +21,16 @@ description: "The Datenzwerg is a garden gnome with a mission: To collect enviro
 
     | Datenzwerg | Location | Status |
     | ---------- | -------- | ------ |
-    | [Bashful](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Bashful&theme=dark) | - | Collected |
-    | [Doc](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Doc&theme=dark) | [CERT](https://map.events.ccc.de/camp/2023/map/#19/53.029849/13.309139/m=53.029849,13.309139) | Deployed |
-    | [Dopey](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Dopey&theme=dark) | - | Collected |
-    | [Grumpy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Grumpy&theme=dark) | - | Collected |
-    | [Happy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Happy&theme=dark) | - | Collected |
-    | [Hefty](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Hefty&theme=dark) | - | Collected |
-    | [Kinky](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Kinky&theme=dark) | - | Collected |
-    | [Nerdy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Nerdy&theme=dark)  | - | Collected |
-    | [Sleepy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sleepy&theme=dark) | - | Collected |
-    | [Sneezy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sneezy&theme=dark) | - | Collected |
+    | [Bashful](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Bashful&theme=dark) | - | Not yet deployed |
+    | [Chef](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Chef&theme=dark) | - | Not yet deployed |
+    | [Dopey](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Dopey&theme=dark) | - | Not yet deployed |
+    | [Grumpy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Grumpy&theme=dark) | - | Not yet deployed |
+    | [Happy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Happy&theme=dark) | - | Not yet deployed |
+    | [Hefty](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Hefty&theme=dark) | - | Not yet deployed |
+    | [Moopsy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Moopsy&theme=dark) | - | Not yet deployed |
+    | [Nerdy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Nerdy&theme=dark)  | - | Not yet deployed |
+    | [Sleepy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sleepy&theme=dark) | - | Not yet deployed |
+    | [Sneezy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sneezy&theme=dark) | - | Not yet deployed |
 -->
 
 ## What is the Datenzwerg?
@@ -39,9 +39,11 @@ The Datenzwerg is a garden gnome with a mission: To collect environmental data a
 
 It was originally developed for the [Chaos Communication Camp 2023](https://events.ccc.de/camp/2023/infos/) where we ([@romses](https://chaos.social/@romses) and [@foosel](https://chaos.social/@foosel)) deployed a small army of 10 Datenzwerge across the camp grounds: Happy, Doc, Grumpy, Dopey, Bashful, Sleepy, Sneezy, Nerdy, Kinky and Hefty[^1].
 
-The Datenzwerg consists of a 3D printed gnome body, a custom PCB with an ESP8266 D1 Mini microcontroller board, a BME280, UV and sound sensor and an 18650 battery. It's powered by [ESPHome](https://esphome.io/) and sends its data to an [InfluxDB](https://www.influxdata.com/) instance. The firmware currently logs temperature, relative and absolute humidity, air pressure, dew point, UV index and sound pressure.
+It will make a reappearance at 37c3 with Happy, Chef, Grumpy, Dopey, Bashful, Sleepy, Sneezy, Moopsy and Hefty[^2].
 
-We asked ChatGPT to describe the Datenzwerg for us[^2] and this is what it came up with:
+The Datenzwerg consists of a 3D printed gnome body, a custom PCB with an ESP8266 D1 Mini microcontroller board, a BME280, SGP30, UV and sound sensor and an optional 18650 battery. It's powered by [ESPHome](https://esphome.io/) and sends its data to an [InfluxDB](https://www.influxdata.com/) instance. The firmware currently logs temperature, relative and absolute humidity, air pressure, dew point, UV index, eCO2, TVOC and sound pressure.
+
+We asked ChatGPT to describe the Datenzwerg for us[^3] and this is what it came up with:
 
 > Welcome to the world of the Datenzwerg, an enchanting garden gnome with a technological twist! 
 > This delightful little creature may look like your average garden decoration, 
@@ -118,6 +120,9 @@ We asked ChatGPT to describe the Datenzwerg for us[^2] and this is what it came 
 2023-12-08
 : An alternative version of the bottom part of the Datenzwerg is finished that allows leading through a cable. Ten new bottoms have been printed and magnetised to allow for POE use at 37c3. This completes the hardware side of the 37c3 preparations.
 
+2023-12-11
+: The server infrastructure is back up an running and the first Datenzwerge are reporting data again.
+
 ## FAQ
 
 ### What kind of data does the Datenzwerg collect?
@@ -127,6 +132,8 @@ The Datenzwerg contains sensors to collect the following data:
 - Temperature
 - Relative humidity
 - Air pressure
+- eCO2
+- TVOC
 - UV sensor voltage
 - Microphone voltage
 - Battery voltage
@@ -136,11 +143,13 @@ We calculate dew point and absolute humidity from the temperature and relative h
 
 ### Do you record audio?
 
-No. While there is a microphone inside each Datenzwerg hooked up to the ESP's ADC, we only use it to sample 1s of audio every 5s during the Datenzwerg's 30s wake cycle every 10min, from which we calculate the peak-to-peak voltage and from that the sound pressure on the Datenzwerg itself. The sample rate is way too low and irregular to record any meaningful audio, and the noise on the line vs the 10-bit ADC would make for a bad experience as well if that was our intention. We are not interested in audio, we are interested in noise levels.
+No. While there is a microphone inside each Datenzwerg hooked up to the ESP's ADC, we only use it to sample 1s of audio every 5s, from which we calculate the peak-to-peak voltage and from that the sound pressure on the Datenzwerg itself. The sample rate is way too low and irregular to record any meaningful audio, and the noise on the line vs the 10-bit ADC would make for a bad experience as well if that was our intention. We are not interested in audio, we are interested in noise levels.
 
 ### What's the battery life?
 
-In our tests, a Datenzwerg seems to last between three to four days on a single charge of our 18650 LiPos that range from 1600mAh to 2800 mAh. This obviously depends on the cell capacity but also temperature and other environmental factors.
+In our tests, a Datenzwerg without TVOC sensor seems to last between three to four days on a single charge of our 18650 LiPos that range from 1600mAh to 2800 mAh. This obviously depends on the cell capacity but also temperature and other environmental factors.
+
+With the TVOC sensor included powering via a single 18650 LiPo is sadly not working out.
 
 ### Why are the measured temperatures that high during the day?
 
@@ -164,4 +173,5 @@ The Datenzwerg model files are based on [this "Garden Gnome" model](https://www.
 
 
 [^1]: Yes, the last three are not canon, and one of them even is a smurf - so what, chaos ftw!
-[^2]: Prompt: 'Write me a text for a website that gives an overview of the "Datenzwerg". The Datenzwerg is a garden gnome that collects environmental data, and makes it publicly available. The Datenzwerg will be presented at the Chaos Communication Camp.'
+[^2]: Doc and Kinky were given away at CCCamp23, so two new recruits were needed.
+[^3]: Prompt: 'Write me a text for a website that gives an overview of the "Datenzwerg". The Datenzwerg is a garden gnome that collects environmental data, and makes it publicly available. The Datenzwerg will be presented at the Chaos Communication Camp.'
