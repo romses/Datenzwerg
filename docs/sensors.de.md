@@ -4,11 +4,10 @@ description: "Ein Blick auf die aktuellen Datenzwerg-Sensordaten."
 
 # Aktuelle Datenzwergdaten
 
-Zur Zeit gibt es keine aktuellen Datenzwergdaten. Check hier nochmal vorbei, wenn sie wieder auf einem Event sind.
-
-Du kannst den Datenexport von CCCamp23 [im Repo finden](https://github.com/romses/Datenzwerg/tree/main/exports/cccamp2023).
-
 <!--
+Zur Zeit gibt es keine aktuellen Datenzwergdaten. Check hier nochmal vorbei, wenn sie wieder auf einem Event sind.
+-->
+
 ## Umgebungsdaten
 
 {% for env in grafana.environment %}
@@ -25,6 +24,8 @@ Du kannst den Datenexport von CCCamp23 [im Repo finden](https://github.com/romse
 
 Mehr Dashboards sind unter <a href="https://grafana.datagnome.de">grafana.datagnome.de</a> verfügbar
 
+## Rohdaten
+
 Wenn du an den Rohdaten interessiert bist, verbinde dich einfach auf unsere InfluxDB oder MQTT (Lesezugriff):
 
   - InfluxDB:
@@ -38,4 +39,7 @@ Wenn du an den Rohdaten interessiert bist, verbinde dich einfach auf unsere Infl
     - Port: 1883
     - User: `cccamp23`
     - Password: `cccamp23`
--->
+
+## Exporte vergangener Events
+
+Du kannst den Datenexport von CCCamp23 [im Repo finden](https://github.com/romses/Datenzwerg/tree/main/exports/cccamp2023).

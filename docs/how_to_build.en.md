@@ -183,7 +183,7 @@ esphome -s name <gnome> -s eco2_baseline <eco2 baseline> -s tvoc_baseline <tvoc 
 
 to compile and flash the firmware for your Datenzwerg named `<gnome>` with the eCO2 baseline `<eco2 baseline>` and the TVOC baseline value `<tvoc baseline>`.
 
-E.g. if you want to flash the firmware for the gnome named `zwerg` with eCO2 baseline `0x7F10` and TVOC baseline `0x88B4`, run `esphome -s name zwerg -s eco2_baseline 0x7F10 -s tvoc_baseline 0x88B4 run datenzwerg.yaml`). If you don't yet have a baseline value, you can use `0x0000`.
+E.g. if you want to flash the firmware for the gnome named `zwerg` with eCO2 baseline `0x7F10` and TVOC baseline `0x88B4`, run `esphome -s name zwerg -s eco2_baseline 0x7F10 -s tvoc_baseline 0x88B4 run datenzwerg.yaml`. If you don't yet have baseline values, you can leave them out: `esphome -s name zwerg run datenzwerg.yaml`.
 
 Plug the D1 mini back into the mainboard and reconnect the power. It should connect to your WiFi and start sending data to the configured InfluxDB.
 

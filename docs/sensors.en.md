@@ -4,11 +4,10 @@ description: "A look at the current Datenzwerg sensor data."
 
 # Current Datenzwerg data
 
-There is currently no current Datenzwerg data. Check again when they are back at an event.
-
-You can find the data export of CCCamp23 [on the repo](https://github.com/romses/Datenzwerg/tree/main/exports/cccamp2023).
-
 <!--
+There is currently no current Datenzwerg data. Check again when they are back at an event.
+-->
+
 ## Environmental data
 
 {% for env in grafana.environment %}
@@ -23,8 +22,9 @@ You can find the data export of CCCamp23 [on the repo](https://github.com/romses
     <iframe src="{{ grafana.base_url }}{{ env.panel }}" class="grafana-iframe"></iframe>
 {% endfor %}
 
-
 The full set of grafana dashboards are available at <a href="https://grafana.datagnome.de">grafana.datagnome.de</a>
+
+## Raw data
 
 If you are interested in the raw data, connect to our InfluxDB or MQTT (read-only):
 
@@ -39,4 +39,7 @@ If you are interested in the raw data, connect to our InfluxDB or MQTT (read-onl
     - Port: 1883
     - User: `cccamp23`
     - Password: `cccamp23`
--->
+
+## Exports of past events
+
+You can find the data export of CCCamp23 [on the repo](https://github.com/romses/Datenzwerg/tree/main/exports/cccamp2023).

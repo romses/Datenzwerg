@@ -183,7 +183,7 @@ esphome -s name <zwerg> -s eco2_baseline <eco2 baseline> -s tvoc_baseline <tvoc 
 
 um die Firmware für den Datenzwerg mit dem Namen <zwerg>, der eCO2 Baseline `<eco2 baseline>` und der TVOC Baseline `<tvoc baseline>` zu kompilieren und zu flashen.
 
-Wenn z.B. die Firmware für den Zwerg mit dem Namen `zwerg`, der eCO2 Baseline `0x7F10` und der TVOC Baseline `0x88B4` geflashet werden soll, führe `esphome -s name zwerg -s eco2_baseline 0x7F10 -s tvoc_baseline 0x88B4 run datenzwerg.yaml` run aus. Falls du noch keine Baseline Werte hast, kannst du `0x0000` verwenden.
+Wenn z.B. die Firmware für den Zwerg mit dem Namen `zwerg`, der eCO2 Baseline `0x7F10` und der TVOC Baseline `0x88B4` geflashet werden soll, führe `esphome -s name zwerg -s eco2_baseline 0x7F10 -s tvoc_baseline 0x88B4 run datenzwerg.yaml` aus. Falls du noch keine Baseline Werte hast, kannst du sie auch weglassen: `esphome -s name zwerg run datenzwerg.yaml`.
 
 Stecke den D1 mini wieder in die Hauptplatine und schließe ihn wieder an die Stromversorgung an. Es sollte sich mit dem WiFi verbinden und Daten an die konfigurierte InfluxDB senden.
 
