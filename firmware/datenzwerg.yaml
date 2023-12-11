@@ -1,6 +1,9 @@
 packages:
-  base: !include packages/base.yaml
-  #deepsleep: !include packages/deepsleep.yaml
+  base: !include packages/base.yaml # base v1.0 sensor package
+  tvoc: !include packages/tvoc.yaml # TVOC sensor added in v1.1, incompatible to battery power
+  #deepsleep: !include packages/deepsleep.yaml  # enable this on battery power
+  uptime: !include packages/uptime.yaml  # disable this on battery power
+
+  # these should not be enabled in production
   ota: !include packages/ota.yaml
-  uptime: !include packages/uptime.yaml
   webserver: !include packages/webserver.yaml
