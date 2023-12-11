@@ -8,6 +8,10 @@ description: Du willst selbst einen Datenzwerg bauen? Hier findest du eine Bauan
     
     Der Datenzwerg wurde für das [CCCamp23](https://events.ccc.de/camp/2023/infos/) entwickelt. Hardware, Firmware und Modelle wurden für einen bestimmten Zweck und eine bestimmte Nutzungsdauer entwickelt und sind möglicherweise nicht für andere Anwendungsfälle geeignet. Der Datenzwerg wird wie er ist ohne jegliche Garantie, Pläne zur Verbesserung oder Behebung oder andere Unterstützung bereitgestellt. Wenn du deinen eigenen Datenzwerg bauen möchtest, bist du auf dich allein gestellt.
 
+!!! note
+
+    Die Doku wird aktuell auf den Stand von Datenzwerg Version 1.1 gebracht, welche auf dem #37c3 deployed werden soll.
+
 ## Voraussetzungen
 
 Einen Datenzwerg zu bauen erfordert etwas Löterfahrung und 3D-Druckkenntnisse.
@@ -174,10 +178,12 @@ Dadurch werden alle Abhängigkeiten, die zum Erstellen der Firmware und der Doku
 Wechsel dann in das Verzeichnis `firmware`. Kopieren die secrets-template.yaml nach secrets.yaml und gib Deine WiFi- und InfluxDB2-Anmeldedaten ein. Führedann
 
 ```
-esphome -s name <gnome> run datenzwerg.yaml
+esphome -s name <zwerg> -s eco2_baseline <eco2 baseline> -s tvoc_baseline <tvoc baseline> run datenzwerg.yaml
 ```
 
-um die Firmware für den Datenzwerg mit dem Namen <gnome> zu kompilieren und zu flashen (wenn z.B. die Firmware für den Zwerg mit dem Namen `zwerg` geflashet werden soll, führe `esphome -s name zwerg datenzwerg.yaml` run aus).
+um die Firmware für den Datenzwerg mit dem Namen <zwerg>, der eCO2 Baseline `<eco2 baseline>` und der TVOC Baseline `<tvoc baseline>` zu kompilieren und zu flashen.
+
+Wenn z.B. die Firmware für den Zwerg mit dem Namen `zwerg`, der eCO2 Baseline `0x7F10` und der TVOC Baseline `0x88B4` geflashet werden soll, führe `esphome -s name zwerg -s eco2_baseline 0x7F10 -s tvoc_baseline 0x88B4 run datenzwerg.yaml` run aus. Falls du noch keine Baseline Werte hast, kannst du `0x0000` verwenden.
 
 Stecke den D1 mini wieder in die Hauptplatine und schließe ihn wieder an die Stromversorgung an. Es sollte sich mit dem WiFi verbinden und Daten an die konfigurierte InfluxDB senden.
 

@@ -8,6 +8,10 @@ description: You want to build your own Datenzwerg? Here's a build guide!
     
     The Datenzwerg was initially developed for the [CCCamp23](https://events.ccc.de/camp/2023/infos/). Hardware, firmware and models were chosen and designed for a specific purpose and a specific deployment duration and might not be suitable for other use cases. The Datenzwerg is provided as-is without any warranty, and also for now without any plans to improve or fix it or any other support. If you want to build your own Datenzwerg, you are mostly on your own.
 
+!!! note
+
+    The docs are currently being adjusted to Datenzwerg version 1.1 as to be deployed at #37c3.
+
 ## Prerequisites
 
 Building a Datenzwerg requires some soldering and 3D printing skills.
@@ -174,10 +178,12 @@ This will install all dependencies needed to build the firmware and the document
 Then, navigate to the `firmware` directory. Copy `secrets-template.yaml` to `secrets.yaml` and fill in your WiFi and InfluxDB2 credentials. Then run
 
 ```
-esphome -s name <gnome> run datenzwerg.yaml
+esphome -s name <gnome> -s eco2_baseline <eco2 baseline> -s tvoc_baseline <tvoc baseline> run datenzwerg.yaml
 ```
 
-to compile and flash the firmware for your Datenzwerg named `<gnome>` (e.g. if you want to flash the firmware for the gnome named `zwerg`, run `esphome -s name zwerg run datenzwerg.yaml`).
+to compile and flash the firmware for your Datenzwerg named `<gnome>` with the eCO2 baseline `<eco2 baseline>` and the TVOC baseline value `<tvoc baseline>`.
+
+E.g. if you want to flash the firmware for the gnome named `zwerg` with eCO2 baseline `0x7F10` and TVOC baseline `0x88B4`, run `esphome -s name zwerg -s eco2_baseline 0x7F10 -s tvoc_baseline 0x88B4 run datenzwerg.yaml`). If you don't yet have a baseline value, you can use `0x0000`.
 
 Plug the D1 mini back into the mainboard and reconnect the power. It should connect to your WiFi and start sending data to the configured InfluxDB.
 

@@ -1,17 +1,13 @@
 substitutions:
   name: test
   update_interval: 5s
+  eco2_baseline: 0x0000
+  tvoc_baseline: 0x0000
 
 esphome:
   name: "datenzwerg-${name}"
   platform: ESP8266
   board: d1_mini
-  on_boot:
-    then:
-      - switch.turn_on: en_sens
-  on_shutdown:
-    then:
-      - switch.turn_off: en_sens
 
 external_components:
   - source: github://JeroenvdV/esphome-influxdb2
@@ -57,10 +53,6 @@ i2c:
   id: bus_a
 
 switch:
-  - platform: gpio
-    pin: D6
-    id: en_sens
-
   - platform: restart
     name: "Restart"
 
@@ -104,8 +96,11 @@ sensor:
     compensation:
       humidity_source: bme280_humidity
       temperature_source: bme280_temperature
+    baseline:
+      eco2_baseline: ${eco2_baseline}
+      tvoc_baseline: ${tvoc_baseline}
     store_baseline: yes
-    update_interval: 1s
+    update_interval: 1s  # this has to be 1s for according to the sgp30 datasheet
 
   - platform: ads1115
     gain: 6.144
