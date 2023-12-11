@@ -1,8 +1,8 @@
 substitutions:
   name: test
   update_interval: 5s
-  eco2_baseline: 0x0000
-  tvoc_baseline: 0x0000
+  eco2_baseline: "0x0000"
+  tvoc_baseline: "0x0000"
 
 esphome:
   name: "datenzwerg-${name}"
@@ -17,7 +17,7 @@ external_components:
   - source:
       type: local
       path: components
-    components: [ peak_to_peak, custom_sgp30 ]
+    components: [ peak_to_peak ]
 
 influxdb2:
   host: !secret influxdb_host
@@ -78,7 +78,7 @@ sensor:
     address: 0x76
     update_interval: ${update_interval}
 
-  - platform: custom_sgp30
+  - platform: sgp30
     eco2:
       name: "eCO2"
       id: eco2
@@ -93,9 +93,9 @@ sensor:
     tvoc_baseline:
       name: "TVOC Baseline"
       id: tvoc_baseline
-    compensation:
-      humidity_source: bme280_humidity
-      temperature_source: bme280_temperature
+    #compensation:
+    #  humidity_source: bme280_humidity
+    #  temperature_source: bme280_temperature
     baseline:
       eco2_baseline: ${eco2_baseline}
       tvoc_baseline: ${tvoc_baseline}
