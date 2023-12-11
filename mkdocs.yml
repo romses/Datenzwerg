@@ -56,6 +56,14 @@ extra:
           en: Air pressure
           de: Luftdruck
         panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=4
+      - name: 
+          en: eCO2
+          de: eCO2
+        panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=21
+      - name: 
+          en: TVOC
+          de: TVOC
+        panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=22
       - name:
           en: UV index
           de: UV Index
@@ -73,14 +81,22 @@ extra:
           de: Absolute Luftfeuchte
         panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=15
     internal:
-      - name: 
-          en: Battery voltage
-          de: Batteriespannung
-        panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=1
+      #- name: 
+      #    en: Battery voltage
+      #    de: Batteriespannung
+      #  panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=1
       - name: 
           en: Wifi signal
           de: Wifisignal
         panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=5
+      - name:
+          en: eCO2 baseline
+          de: eCO2 Baseline
+        panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=23
+      - name:
+          en: TVOC baseline
+          de: TVOC Baseline
+        panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=24
       - name:
           en: UV sensor voltage
           de: UV-Sensorspannung
