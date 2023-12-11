@@ -118,7 +118,7 @@ We asked ChatGPT to describe the Datenzwerg for us[^3] and this is what it came 
 : Work has started on the 37c3 edition of the Datenzwerg. The plan is to add TVOC monitoring to the sensor suite. A new PCB has been designed, ordered, arrived, and ten new mainboards have been soldered.
 
 2023-12-08
-: An alternative version of the bottom part of the Datenzwerg is finished that allows leading through a cable. Ten new bottoms have been printed and magnetised to allow for POE use at 37c3. This completes the hardware side of the 37c3 preparations.
+: An alternative version of the bottom part of the Datenzwerg is finished that allows leading through a cable. Ten new bottoms have been printed and magnetised to allow for USB or POE powering at 37c3. This completes the hardware side of the 37c3 preparations.
 
 2023-12-11
 : The server infrastructure is back up an running and the first Datenzwerge are reporting data again.
@@ -157,7 +157,9 @@ We need to put the gnomes into direct sunlight in order to be able to measure UV
 
 ### Where can I find the data?
 
-Each camp Datenzwerg sent its data to a central self-hosted InfluxDB instance. The data is then visualized using Grafana. The infrastructure for that has been shut down for now, but an data export is [available in the repository](https://github.com/romses/Datenzwerg/tree/main/exports/cccamp2023).
+Each camp Datenzwerg sends its data to a central self-hosted InfluxDB instance. The data is then visualized using Grafana. 
+
+Done of those visualisations as well as credentials for accessing the raw data and links to data exports from past events can be found [here](./sensors).
 
 ### Where can I find the source?
 
