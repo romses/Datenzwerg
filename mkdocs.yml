@@ -90,14 +90,6 @@ extra:
           de: Wifisignal
         panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=5
       - name:
-          en: eCO2 baseline
-          de: eCO2 Baseline
-        panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=23
-      - name:
-          en: TVOC baseline
-          de: TVOC Baseline
-        panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=24
-      - name:
           en: UV sensor voltage
           de: UV-Sensorspannung
         panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=6
@@ -105,6 +97,10 @@ extra:
           en: Sound sensor RMS voltage
           de: Schallsensor-RMS-Spannung
         panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=16
+      - name:
+          en: Metadata
+          de: Metadata
+        panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=26
 
 extra_css:
   - assets/css/extras.css
