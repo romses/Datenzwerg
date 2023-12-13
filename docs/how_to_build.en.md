@@ -6,11 +6,7 @@ description: You want to build your own Datenzwerg? Here's a build guide!
 
 !!! warning
     
-    The Datenzwerg was initially developed for the [CCCamp23](https://events.ccc.de/camp/2023/infos/). Hardware, firmware and models were chosen and designed for a specific purpose and a specific deployment duration and might not be suitable for other use cases. The Datenzwerg is provided as-is without any warranty, and also for now without any plans to improve or fix it or any other support. If you want to build your own Datenzwerg, you are mostly on your own.
-
-!!! note
-
-    The docs are currently being adjusted to Datenzwerg version 1.1 as to be deployed at [37c3](https://events.ccc.de/congress/2023/infos/index.html).
+    The Datenzwerg was initially developed for the [CCCamp23](https://events.ccc.de/camp/2023/infos/) and later adapted for [37c3](https://events.ccc.de/congress/2023/infos/index.html). Hardware, firmware and models were chosen and designed for a specific purpose and a specific deployment duration and might not be suitable for other use cases. The Datenzwerg is provided as-is without any warranty, and also for now without any plans to improve or fix it or any other support. If you want to build your own Datenzwerg, you are mostly on your own.
 
 ## Prerequisites
 
@@ -46,7 +42,7 @@ Additionally you'll need a soldering iron, solder, some wires and shrink tubing.
 
 !!! warning
 
-    If you want to battery power your Datenzwerg, do not use the TVOC/eCO2 sensor. It requires constant power to work properly and will not work with deep sleep. Leave it unpopulated and adjust the firmware config as described below.
+    If you want to battery power your Datenzwerg, do not use the SGP30 sensor. It requires constant power to work properly and will not work with deep sleep. Leave it unpopulated and adjust the firmware config as described below.
 
 !!! note
 
@@ -99,6 +95,8 @@ If you want to have the Datenzwerg running on MicroUSB power, you will also need
 | ----- | ---- | -------- | ---- |
 | 1     | Micro USB breakout board | Power connector | [Amazon](https://www.amazon.de/gp/product/B0BZDL6GKC/) |
 
+In that case you should also chose the gnome body bottom with the cable throughholes.
+
 ## Assembly
 
 ### Mainboard
@@ -148,7 +146,7 @@ Once you are done soldering up the mainboard, we recommend covering the undersid
 
     Things to check after soldering:
 
-    - UV sensor, BME280 and sound sensor are powered by 3V3 coming from the ESP.
+    - UV sensor, BME280, SGP30 and sound sensor are powered by 3V3 coming from the ESP.
     - ADS1115 and ESP are powered by 5V coming from the power supply module.
     - All GNDs are connected.
     - No shorts between any of the pins, especially between neighbouring pins bridges can quickly happen. Use a multimeter to check for shorts.
@@ -162,9 +160,9 @@ The UV and sound sensors are soldered to JST connector cables to make the sensor
 ![The UV module](assets/images/UV-module.png)
 ![The UV module as a Fritzing schematic, showing how to connect the JST header. Orange to Vcc, Black to GND, Yellow to Signal](assets/images/UV-module-fritzing.png)
 
-#### BME280 and TVOC/eCO2 sensor
+#### BME280 und SGP30 sensor
 
-The BME280 and TVOC/eCO2 sensors are soldered to a 4-pin JST header. Apply shrink tube to protect the soldering joints and reduce the likelihood of shorts. 
+The BME280 and SGP30 sensors are soldered to a 4-pin JST header. Apply shrink tube to protect the soldering joints and reduce the likelihood of shorts. 
 
 ![The BME module](assets/images/BME280.png)
 ![The BME module as a Fritzing schematic, showing how to connect the JST header. Orange to Vin, Black to GND, Yellow to SCL, Green to SDA](assets/images/BME280-fritzing.png)
@@ -223,7 +221,7 @@ Install Python 3.11. Check out the [GitHub repository](https://github.com/romses
 
 This will install all dependencies needed to build the firmware and the documentation into a virtual environment and activate it.
 
-Then, navigate to the `firmware` directory. Copy `secrets-template.yaml` to `secrets.yaml` and fill in your WiFi and InfluxDB2 credentials. Make desired adjustments of packages to be compiled in in `datenzwerg.yaml`. Then run
+Then, navigate to the `firmware` directory. Copy `secrets-template.yaml` to `secrets.yaml` and fill in your WiFi, MQTT and InfluxDB2 credentials and also set an OTA password if wanted. Make desired adjustments of packages to be compiled in in `datenzwerg.yaml`. Then run
 
 ```
 esphome -s name <gnome> -s eco2_baseline <eco2 baseline> -s tvoc_baseline <tvoc baseline> run datenzwerg.yaml

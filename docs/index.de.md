@@ -7,9 +7,9 @@ description: "Der Datenzwerg ist ein Gartenzwerg mit einer Mission: Umweltdaten 
 ![Datenzwerg Logo](assets/images/logo.png){: class="logo" :}
 
 <!--
-!!! tip "Datenzwerg @ CCCamp23"
+!!! tip "Datenzwerg @ 37c3"
 
-    Du bist auf dem CCCamp und über einen der Datenzwerge gestolpert? Super! Hier sind ein paar Links für dich:
+    Du bist auf dem 37c3 und über einen der Datenzwerge gestolpert? Super! Hier sind ein paar Links für dich:
 
     - [Was ist der Datenzwerg?](#was-ist-der-datenzwerg)
     - [FAQ](#faq)
@@ -21,16 +21,16 @@ description: "Der Datenzwerg ist ein Gartenzwerg mit einer Mission: Umweltdaten 
 
     | Datenzwerg | Location | Status |
     | ---------- | -------- | ------ |
-    | [Bashful](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Bashful&theme=dark) | - | Collected |
-    | [Doc](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Doc&theme=dark) | [CERT](https://map.events.ccc.de/camp/2023/map/#19/53.029849/13.309139/m=53.029849,13.309139) | Deployed |
-    | [Dopey](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Dopey&theme=dark) | - | Collected |
-    | [Grumpy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Grumpy&theme=dark) | - | Collected |
-    | [Happy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Happy&theme=dark) | - | Collected |
-    | [Hefty](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Hefty&theme=dark) | - | Collected |
-    | [Kinky](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Kinky&theme=dark) | - | Collected |
-    | [Nerdy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Nerdy&theme=dark)  | - | Collected |
-    | [Sleepy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sleepy&theme=dark) | - | Collected |
-    | [Sneezy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sneezy&theme=dark) | - | Collected |
+    | [Bashful](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Bashful&theme=dark) | - | Not yet deployed |
+    | [Dopey](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Dopey&theme=dark) | - | Not yet deployed |
+    | [Grumpy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Grumpy&theme=dark) | - | Not yet deployed |
+    | [Happy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Happy&theme=dark) | - | Not yet deployed |
+    | [Hefty](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Hefty&theme=dark) | - | Not yet deployed |
+    | [Moopsy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Moopsy&theme=dark) | - | Not yet deployed |
+    | [Name Me](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Nameme&theme=dark) | - | Not yet deployed |
+    | [Nerdy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Nerdy&theme=dark)  | - | Not yet deployed |
+    | [Sleepy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sleepy&theme=dark) | - | Not yet deployed |
+    | [Sneezy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sneezy&theme=dark) | - | Not yet deployed |
 -->
 
 ## Was ist der Datenzwerg?
@@ -42,7 +42,9 @@ wo wir ([@romses](https://chaos.social/@romses) und [@foosel](https://chaos.soci
 von 10 Datenzwergen über das Camp-Gelände verteilt hatten: Happy, Doc, Grumpy, Dopey, Bashful, Sleepy, Sneezy, 
 Nerdy, Kinky und Hefty[^1].
 
-Der Datenzwerg besteht aus einem 3D-gedruckten Gartenzwerg, einer eigenen Platine mit einem ESP8266 D1 Mini Mikrocontroller, einem BME280, UV- und Schallsensor und einer 18650 Batterie. Er wird von [ESPHome](https://esphome.io/) betrieben und sendet seine Daten an eine [InfluxDB](https://www.influxdata.com/) Instanz. Die Firmware zeichnet derzeit Temperatur, relative und absolute Luftfeuchtigkeit, Luftdruck, Taupunkt, UV-Index und Schalldruck auf.
+Wenn alles klappt, werden die Datenzwerge auf dem [37c3](https://events.ccc.de/congress/2023/infos/index.html) wieder zum Einsatz kommen.
+
+Der Datenzwerg besteht aus einem 3D-gedruckten Gartenzwerg, einer eigenen Platine mit einem ESP8266 D1 Mini Mikrocontroller, einem BME280, SGP30, UV- und Schallsensor und optional einer 18650 Batterie. Er wird von [ESPHome](https://esphome.io/) betrieben und sendet seine Daten an eine [InfluxDB](https://www.influxdata.com/) Instanz. Die Firmware zeichnet derzeit Temperatur, relative und absolute Luftfeuchtigkeit, Luftdruck, Taupunkt, UV-Index eCO2, TVOC und Schalldruck auf.
 
 Wir haben ChatGPT gebeten, den Datenzwerg für uns zu beschreiben[^2] und das ist dabei herausgekommen:
 
@@ -121,7 +123,10 @@ Wir haben ChatGPT gebeten, den Datenzwerg für uns zu beschreiben[^2] und das is
 : Es geht los mit der 37c3 Edition der Datenzwerge. Der Plan ist es, TVOC Monitoring zur Sensor-Suite hinzuzufügen. Eine neue Platine wurde entworfen, bestellt, und zehn neue Mainboards wurden gelötet.
 
 2023-12-08
-: Eine alternative Version des Datenzwergunterteils wurde erstellt, die die Durchführung eines Kabels erlaubt. Zehn neue Unterteile wurden gedruckt und magnetisiert, und erlauben damit den Einsatz von POE auf dem 37c3. Damit sind die Vorbereitungen der Hardware für den 37c3 abgeschlossen.
+: Eine alternative Version des Datenzwergunterteils wurde erstellt, die die Durchführung eines Kabels erlaubt. Zehn neue Unterteile wurden gedruckt und magnetisiert, und erlauben damit den Einsatz von USB oder POE für die Stromversorgung auf dem 37c3. Damit sind die Vorbereitungen der Hardware für den 37c3 abgeschlossen.
+
+2023-12-11
+: Die Server-Infstruktur ist wieder am Start und die ersten Datenzwerge senden wieder Daten.
 
 ## FAQ
 
@@ -132,6 +137,8 @@ Der Datenzwerg hat Sensoren, die die folgenden Daten aufzeichnen:
 - Temperatur
 - Relative Luftfeuchtigkeit
 - Luftdruck
+- eCO2
+- TVOC
 - UV-Sensor-Spannung
 - Mikrofon-Spannung
 - Batteriespannung
@@ -141,19 +148,23 @@ Wir berechnet Taupunkt und absolute Luftfeuchtigkeit aus den Temperatur- und rel
 
 ### Nehmt ihr Audio auf?
 
-Nein. Zwar hat jeder Datenzwerg ein Mikrofon im Inneren, das an den ADC des ESPs angeschlossen ist, wir nutzen es jedoch nur, um während der 30s Wachphase des Datenzwergs alle 5s jeweils 1s an Audiosamples zu loggen, aus denen wir dann die Peak-to-Peak-Spannung und daraus den Schalldruck auf dem Datenzwerg selbst berechnen. Die Abtastrate ist viel zu niedrig und ungleichmäßig, um irgendwelches sinnvolles Audio aufzuzeichnen, und das Rauschen auf der Leitung vs. dem 10-Bit-ADC würde auch für eine schlechte Erfahrung sorgen, wenn das unser Ziel wäre. Wir sind nicht an Audio interessiert, wir sind an Lautstärke interessiert.
+Nein. Zwar hat jeder Datenzwerg ein Mikrofon im Inneren, das an den ADC des ESPs angeschlossen ist, wir nutzen es jedoch nur, um alle 5s jeweils 1s an Audiosamples zu loggen, aus denen wir dann die Peak-to-Peak-Spannung und daraus den Schalldruck auf dem Datenzwerg selbst berechnen. Die Abtastrate ist viel zu niedrig und ungleichmäßig, um irgendwelches sinnvolles Audio aufzuzeichnen, und das Rauschen auf der Leitung vs. dem 10-Bit-ADC würde auch für eine schlechte Erfahrung sorgen, wenn das unser Ziel wäre. Wir sind nicht an Audio interessiert, wir sind an Lautstärke interessiert.
 
 ### Wie lange hält die Batterie?
 
 In unseren Tests hält ein Datenzwerg zwischen drei und vier Tagen mit einer einzigen Ladung unserer 18650 LiPos, die von 1600mAh bis 2800 mAh reichen. Dies hängt natürlich von der Zellkapazität ab, aber auch von der Temperatur und anderen Umweltfaktoren.
 
+Mit dem TVOC Sensor an Bord reicht eine einzelne 18650 Zelle leider nicht aus.
+
 ### Warum sind die Temperaturdaten tagsüber so hoch?
 
-Wir müssen die Zwerge in die direkte Sonne stellen, damit der UV Sensor messen kann. Wir haben versucht, genug Luftdurchfluss im Zwerg zu erzeugen, leider strahlt das Material sehr stark ab. Von daher sind die Temperaturen bei direkter Sonneneinstrahlung leider verfälscht.
+Wir müssen die Zwerge in die direkte Sonne stellen, damit der UV Sensor messen kann. Darüber hinaus sondern der ESP und nun auch der TVOC-Sensor selbst Wärme ab. Wir haben versucht, genug Luftdurchfluss im Zwerg zu erzeugen, leider strahlt das Material sehr stark ab. Von daher sind die Temperaturen, insbesondere bei direkter Sonneneinstrahlung, leider verfälscht.
 
 ### Wo kann ich die Daten sehen?
 
-Jeder Datenzwerg auf dem Camp sendete seine Daten an eine zentrale, selbst gehostete InfluxDB-Instanz. Die Daten wurden dann mit Grafana visualisiert. Die zugehörige Infrastruktur ist mittlerweile wieder offline, aber wir haben die Daten vom CCCamp23 [im Repo hinterlegt](https://github.com/romses/Datenzwerg/tree/main/exports/cccamp2023).
+Jeder Datenzwerg sendet seine Daten an eine zentrale, selbst gehostete InfluxDB-Instanz. Die Daten werden dann mit Grafana visualisiert. 
+
+Einige dieser Visualisierungen sowie auch die Zugangsdaten um die Rohdaten selbst abzufragen, sowie Links zu Exports vergangener Veranstaltungen können [hier](./sensors) gefunden werden.
 
 ### Wo finde ich den Sourcecode?
 

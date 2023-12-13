@@ -22,12 +22,12 @@ description: "The Datenzwerg is a garden gnome with a mission: To collect enviro
     | Datenzwerg | Location | Status |
     | ---------- | -------- | ------ |
     | [Bashful](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Bashful&theme=dark) | - | Not yet deployed |
-    | [Chef](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Chef&theme=dark) | - | Not yet deployed |
     | [Dopey](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Dopey&theme=dark) | - | Not yet deployed |
     | [Grumpy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Grumpy&theme=dark) | - | Not yet deployed |
     | [Happy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Happy&theme=dark) | - | Not yet deployed |
     | [Hefty](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Hefty&theme=dark) | - | Not yet deployed |
     | [Moopsy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Moopsy&theme=dark) | - | Not yet deployed |
+    | [Name Me](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Nameme&theme=dark) | - | Not yet deployed |
     | [Nerdy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Nerdy&theme=dark)  | - | Not yet deployed |
     | [Sleepy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sleepy&theme=dark) | - | Not yet deployed |
     | [Sneezy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sneezy&theme=dark) | - | Not yet deployed |
@@ -153,13 +153,13 @@ With the TVOC sensor included powering via a single 18650 LiPo is sadly not work
 
 ### Why are the measured temperatures that high during the day?
 
-We need to put the gnomes into direct sunlight in order to be able to measure UV index. We tried to get enough airflow inside the gnome body, but sadly the material itself radiates off heat a lot. As such, the temperature readings are distorted under direct sun light.
+We need to put the gnomes into direct sunlight in order to be able to measure UV index. Additionally, the ESP and now also the TVOC sensor are producing heat themselves. We tried to get enough airflow inside the gnome body, but sadly the material itself radiates off heat a lot. As such, the temperature readings are distorted, especially under direct sun light.
 
 ### Where can I find the data?
 
 Each camp Datenzwerg sends its data to a central self-hosted InfluxDB instance. The data is then visualized using Grafana. 
 
-Done of those visualisations as well as credentials for accessing the raw data and links to data exports from past events can be found [here](./sensors).
+Some of those visualisations as well as credentials for accessing the raw data and links to data exports from past events can be found [here](./sensors).
 
 ### Where can I find the source?
 
