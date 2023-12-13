@@ -39,11 +39,11 @@ The Datenzwerg is a garden gnome with a mission: To collect environmental data a
 
 It was originally developed for the [Chaos Communication Camp 2023](https://events.ccc.de/camp/2023/infos/) where we ([@romses](https://chaos.social/@romses) and [@foosel](https://chaos.social/@foosel)) deployed a small army of 10 Datenzwerge across the camp grounds: Happy, Doc, Grumpy, Dopey, Bashful, Sleepy, Sneezy, Nerdy, Kinky and Hefty[^1].
 
-It will make a reappearance at 37c3 with Happy, Chef, Grumpy, Dopey, Bashful, Sleepy, Sneezy, Moopsy and Hefty[^2].
+If all goes as planned, the Datenzwerge will make a reappearance at [37c3](https://events.ccc.de/congress/2023/infos/index.html).
 
 The Datenzwerg consists of a 3D printed gnome body, a custom PCB with an ESP8266 D1 Mini microcontroller board, a BME280, SGP30, UV and sound sensor and an optional 18650 battery. It's powered by [ESPHome](https://esphome.io/) and sends its data to an [InfluxDB](https://www.influxdata.com/) instance. The firmware currently logs temperature, relative and absolute humidity, air pressure, dew point, UV index, eCO2, TVOC and sound pressure.
 
-We asked ChatGPT to describe the Datenzwerg for us[^3] and this is what it came up with:
+We asked ChatGPT to describe the Datenzwerg for us[^2] and this is what it came up with:
 
 > Welcome to the world of the Datenzwerg, an enchanting garden gnome with a technological twist! 
 > This delightful little creature may look like your average garden decoration, 
@@ -175,5 +175,4 @@ The Datenzwerg model files are based on [this "Garden Gnome" model](https://www.
 
 
 [^1]: Yes, the last three are not canon, and one of them even is a smurf - so what, chaos ftw!
-[^2]: Doc and Kinky were given away at CCCamp23, so two new recruits were needed.
-[^3]: Prompt: 'Write me a text for a website that gives an overview of the "Datenzwerg". The Datenzwerg is a garden gnome that collects environmental data, and makes it publicly available. The Datenzwerg will be presented at the Chaos Communication Camp.'
+[^2]: Prompt: 'Write me a text for a website that gives an overview of the "Datenzwerg". The Datenzwerg is a garden gnome that collects environmental data, and makes it publicly available. The Datenzwerg will be presented at the Chaos Communication Camp.'

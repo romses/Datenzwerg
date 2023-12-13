@@ -17,7 +17,7 @@ The Datenzwerg firmware is based on [esphome](https://esphome.io/) which gets in
 To flash your own Datenzwerg, navigate to the `firmware` directory, then
 
 1. Copy `secrets-template.yaml` to `secrets.yaml` and fill in your WiFi and InfluxDB2 credentials.
-2. Run `esphome -s name <gnome> -s eco2_baseline 0x0000 -s tvoc_baseline 0x0000 run datenzwerg.yaml` to compile and flash the firmware for your gnome named `<gnome>`.
+2. Run `esphome -s name <gnome> run datenzwerg.yaml` to compile and flash the firmware for your gnome named `<gnome>`.
 
 ### Models
 

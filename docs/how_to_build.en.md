@@ -10,7 +10,7 @@ description: You want to build your own Datenzwerg? Here's a build guide!
 
 !!! note
 
-    The docs are currently being adjusted to Datenzwerg version 1.1 as to be deployed at #37c3.
+    The docs are currently being adjusted to Datenzwerg version 1.1 as to be deployed at [37c3](https://events.ccc.de/congress/2023/infos/index.html).
 
 ## Prerequisites
 
