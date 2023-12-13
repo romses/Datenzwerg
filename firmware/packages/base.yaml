@@ -1,5 +1,5 @@
 substitutions:
-  name: test
+  name: gnome
   update_interval: 5s
 
 esphome:

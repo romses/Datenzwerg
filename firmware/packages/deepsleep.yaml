@@ -2,6 +2,6 @@ substitutions:
   wake_time: 30s
   sleep_time: 10min
 
-deep_sleep:  # deep sleep is disabled when powering from USB
+deep_sleep:
   run_duration: ${wake_time}
   sleep_duration: ${sleep_time}

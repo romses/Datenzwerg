@@ -1,6 +1,4 @@
 substitutions:
-  name: test
-  update_interval: 5s
   eco2_baseline: "0x0000"
   tvoc_baseline: "0x0000"
 
@@ -27,4 +25,4 @@ sensor:
       eco2_baseline: ${eco2_baseline}
       tvoc_baseline: ${tvoc_baseline}
     store_baseline: yes
-    update_interval: 1s  # this has to be 1s for according to the sgp30 datasheet
+    update_interval: 1s  # this has to be 1s according to the sgp30 datasheet
