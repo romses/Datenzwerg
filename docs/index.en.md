@@ -165,7 +165,7 @@ Some of those visualisations as well as credentials for accessing the raw data a
 
 Everything can be found in this GitHub repository: [romses/Datenzwerg](https://github.com/romses/Datenzwerg).
 
-## Medis echo
+## Media echo
 
 WThe datagnomes were the opener at the #cccamp23 review [media.ccc.de](https://media.ccc.de/v/camp2023-57105-cccamp23_review)
 
