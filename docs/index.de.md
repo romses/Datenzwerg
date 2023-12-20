@@ -170,6 +170,10 @@ Einige dieser Visualisierungen sowie auch die Zugangsdaten um die Rohdaten selbs
 
 Alles kann in diesem GitHub-Repository gefunden werden: [romses/Datenzwerg](https://github.com/romses/Datenzwerg).
 
+## Medienecho
+
+Die Datenzwerge warden der Opener des Camp reviews 2023 [media.ccc.de](https://media.ccc.de/v/camp2023-57105-cccamp23_review)
+
 ## Credits & Danksagung
 
 Der Datenzwerg ist ein Gemeinschaftsprojekt von [@romses](https://chaos.social/@romses) und [@foosel](https://chaos.social/@foosel).
