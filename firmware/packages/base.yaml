@@ -41,7 +41,11 @@ wifi:
     - ssid: 37c3-open
     - ssid: !secret wifi_ssid
       password: !secret wifi_psk
-
+    ap:
+      ssid: "${name}-fallback hotspot"
+      password: !secret hotspot-password
+  captive_portal:
+  
 mdns:
   disabled: true
 
