@@ -1,0 +1,5 @@
+sensor:
+  - platform: scd4x
+    co2:
+      name: "CO2"
+    update_interval: 6s  # sensor only updates every 5s
