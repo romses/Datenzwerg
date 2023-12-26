@@ -182,5 +182,8 @@ Das Datenzwerg-Logo wurde von D.B. entworfen.
 
 Das Datenzwerg-Modell basiert auf [diesem "Garden Gnome" Modell](https://www.printables.com/model/260908-garden-gnome) von [Sci3D](https://www.printables.com/@Sci3D), das unter CC-BY veröffentlicht ist. Unser Remix kann [hier](https://www.printables.com/model/534875-datenzwerg-enclosure) und natürlich auch [im GitHub Repository](https://github.com/romses/Datenzwerg/tree/main/models) gefunden werden.
 
+Die SCD41 sensoren wurden gesponsort von [@dx@mastodon.social](https://chaos.social/@dx@mastodon.social)
+
+
 [^1]: Ja, die letzten drei genannten Namen sind nicht canon, und einer von ihnen gehört sogar einem Schlumpf - na und, Chaos ftw!
 [^2]: Prompt: 'Write me a text for a website that gives an overview of the "Datenzwerg". The Datenzwerg is a garden gnome that collects environmental data, and makes it publicly available. The Datenzwerg will be presented at the Chaos Communication Camp.'

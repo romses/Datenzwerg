@@ -40,6 +40,18 @@ Wenn du an den Rohdaten interessiert bist, verbinde dich einfach auf unsere Infl
     - User: `readonly`
     - Password: `readonly`
 
+## Datagnome locations @37C3
+  - Bashful: NOC Helpdesk
+  - Dopey: DDOS Bar
+  - Grumpy: Hall Z
+  - Happy: Hall G
+  - Hefty: Jugend Assembly
+  - Moopsy: Hall 1
+  - Nerdy: Telnet Assembly
+  - UNNAMED: Flower Assembly
+  - Sleepy: POC
+  - Sneezy: Hall E
+
 ## Exporte vergangener Events
 
 Du kannst den Datenexport von CCCamp23 [im Repo finden](https://github.com/romses/Datenzwerg/tree/main/exports/cccamp2023).

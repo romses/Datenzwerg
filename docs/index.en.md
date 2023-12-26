@@ -177,6 +177,7 @@ The Datenzwerg logo was created by D.B.
 
 The Datenzwerg model files are based on [this "Garden Gnome" model](https://www.printables.com/model/260908-garden-gnome) by [Sci3D](https://www.printables.com/@Sci3D), released under CC-BY. Our remix can be found [here](https://www.printables.com/model/534875-datenzwerg-enclosure) and of course also [in the GitHub repository](https://github.com/romses/Datenzwerg/tree/main/models).
 
+The SCD41 sensors were sponsored by [@dx@mastodon.social](https://chaos.social/@dx@mastodon.social)
 
 [^1]: Yes, the last three are not canon, and one of them even is a smurf - so what, chaos ftw!
 [^2]: Prompt: 'Write me a text for a website that gives an overview of the "Datenzwerg". The Datenzwerg is a garden gnome that collects environmental data, and makes it publicly available. The Datenzwerg will be presented at the Chaos Communication Camp.'
