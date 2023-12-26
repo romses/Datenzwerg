@@ -51,7 +51,6 @@ If you are interested in the raw data, connect to our InfluxDB or MQTT (read-onl
   - UNNAMED: Flower Assembly
   - Sleepy: POC
   - Sneezy: Hall E
-  - 
 
 ## Exports of past events
 
