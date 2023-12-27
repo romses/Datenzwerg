@@ -173,7 +173,8 @@ Alles kann in diesem GitHub-Repository gefunden werden: [romses/Datenzwerg](http
 
 ## Medienecho
 
-Die Datenzwerge warden der Opener des Camp reviews 2023 [media.ccc.de](https://media.ccc.de/v/camp2023-57105-cccamp23_review)
+- Die Datenzwerge waren der Opener des Camp reviews 2023 [media.ccc.de](https://media.ccc.de/v/camp2023-57105-cccamp23_review).
+- romses und foosel waren zu Gast beim [Datenleben Podcast](https://www.datenleben.de/index.php/2023/10/14/dl043-perspektiven-auf-data-science/) und haben über die Datenzwerge gesprochen.
 
 ## Credits & Danksagung
 
