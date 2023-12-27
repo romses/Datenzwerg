@@ -102,6 +102,12 @@ extra:
           de: Metadata
         panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=26
 
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/romses/Datenzwerg
+    - icon: fontawesome/brands/mastodon 
+      link: https://chaos.social/@dzoc
+
 extra_css:
   - assets/css/extras.css
 
