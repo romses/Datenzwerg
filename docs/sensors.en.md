@@ -40,18 +40,6 @@ If you are interested in the raw data, connect to our InfluxDB or MQTT (read-onl
     - User: `readonly`
     - Password: `readonly`
 
-## Datagnome locations @37C3
-  - Bashful: NOC Helpdesk
-  - Dopey: DDOS Bar
-  - Grumpy: Hall Z
-  - Happy: Hall G
-  - Hefty: Jugend Assembly
-  - Moopsy: Hall 1
-  - Nerdy: Telnet Assembly
-  - UNNAMED: Flower Assembly
-  - Sleepy: POC
-  - Sneezy: Hall E
-
 ## Exports of past events
 
 You can find the data export of CCCamp23 [on the repo](https://github.com/romses/Datenzwerg/tree/main/exports/cccamp2023).
