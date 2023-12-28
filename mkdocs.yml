@@ -57,8 +57,8 @@ extra:
           de: Luftdruck
         panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=4
       - name: 
-          en: eCO2
-          de: eCO2
+          en: (e)CO2
+          de: (e)CO2
         panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=21
       - name: 
           en: TVOC
@@ -80,10 +80,6 @@ extra:
           en: Absolute humidity
           de: Absolute Luftfeuchte
         panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=15
-      - name: 
-          en: CO2
-          de: CO2
-        panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=29
     internal:
       #- name: 
       #    en: Battery voltage
