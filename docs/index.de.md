@@ -6,7 +6,6 @@ description: "Der Datenzwerg ist ein Gartenzwerg mit einer Mission: Umweltdaten 
 
 ![Datenzwerg Logo](assets/images/logo.png){: class="logo" :}
 
-<!--
 !!! tip "Datenzwerg @ 37c3"
 
     Du bist auf dem 37c3 und über einen der Datenzwerge gestolpert? Super! Hier sind ein paar Links für dich:
@@ -17,21 +16,20 @@ description: "Der Datenzwerg ist ein Gartenzwerg mit einer Mission: Umweltdaten 
     
     Du kannst uns erreichen unter **DECT 3962 (DZOC)**.
 
-    Und falls du dich wunderst, wo sich welcher Datenzwerg befindet, hier eine kurze Übersicht. Ein Klick auf den Namen bringt dich zum jeweiligen Dashboard, ein Klick auf den Ort zur jeweiligen Kartenansicht:
+    Und falls du dich wunderst, wo sich welcher Datenzwerg befindet, hier eine kurze Übersicht. Ein Klick auf den Namen bringt dich zum jeweiligen Dashboard:
 
     | Datenzwerg | Location | Status |
     | ---------- | -------- | ------ |
-    | [Bashful](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Bashful&theme=dark) | - | Not yet deployed |
-    | [Dopey](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Dopey&theme=dark) | - | Not yet deployed |
-    | [Grumpy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Grumpy&theme=dark) | - | Not yet deployed |
-    | [Happy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Happy&theme=dark) | - | Not yet deployed |
-    | [Hefty](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Hefty&theme=dark) | - | Not yet deployed |
-    | [Moopsy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Moopsy&theme=dark) | - | Not yet deployed |
-    | [Name Me](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Nameme&theme=dark) | - | Not yet deployed |
-    | [Nerdy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Nerdy&theme=dark)  | - | Not yet deployed |
-    | [Sleepy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sleepy&theme=dark) | - | Not yet deployed |
-    | [Sneezy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sneezy&theme=dark) | - | Not yet deployed |
--->
+    | [Bashful](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Bashful&theme=dark) | NOC Helpdesk | Deployed |
+    | [Dopey](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Dopey&theme=dark) | DDOS Bar | Deployed |
+    | [Grumpy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Grumpy&theme=dark) | Hall Z | Deployed |
+    | [Happy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Happy&theme=dark) | Hall G | Deployed |
+    | [Hefty](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Hefty&theme=dark) | Jugend Assembly | Deployed |
+    | [Moopsy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Moopsy&theme=dark) | Lounge | Deployed |
+    | [UNNAMED](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Nameme&theme=dark) | Telnet Assembly | Deployed |
+    | [Nerdy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Nerdy&theme=dark)  | Flower Assembly | Deployed |
+    | [Sleepy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sleepy&theme=dark) | POC | Deployed |
+    | [Sneezy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sneezy&theme=dark) | Hall E | Deployed |
 
 ## Was ist der Datenzwerg?
 
@@ -128,6 +126,9 @@ Wir haben ChatGPT gebeten, den Datenzwerg für uns zu beschreiben[^2] und das is
 2023-12-11
 : Die Server-Infstruktur ist wieder am Start und die ersten Datenzwerge senden wieder Daten.
 
+2023-12-26
+: Die Datenzwerge sind auf dem 37c3 im Einsatz. Die ersten Daten sind online.
+
 ## FAQ
 
 ### Was für Daten werden vom Datenzwerg aufgezeichnet?
@@ -164,7 +165,7 @@ Wir müssen die Zwerge in die direkte Sonne stellen, damit der UV Sensor messen 
 
 Jeder Datenzwerg sendet seine Daten an eine zentrale, selbst gehostete InfluxDB-Instanz. Die Daten werden dann mit Grafana visualisiert. 
 
-Einige dieser Visualisierungen sowie auch die Zugangsdaten um die Rohdaten selbst abzufragen, sowie Links zu Exports vergangener Veranstaltungen können [hier](./sensors) gefunden werden.
+Einige dieser Visualisierungen sowie auch die Zugangsdaten um die Rohdaten selbst abzufragen, sowie Links zu Exports vergangener Veranstaltungen können [hier](./sensors/) gefunden werden.
 
 ### Wo finde ich den Sourcecode?
 
@@ -172,7 +173,8 @@ Alles kann in diesem GitHub-Repository gefunden werden: [romses/Datenzwerg](http
 
 ## Medienecho
 
-Die Datenzwerge warden der Opener des Camp reviews 2023 [media.ccc.de](https://media.ccc.de/v/camp2023-57105-cccamp23_review)
+- Die Datenzwerge waren der Opener des Camp reviews 2023 [media.ccc.de](https://media.ccc.de/v/camp2023-57105-cccamp23_review).
+- romses und foosel waren zu Gast beim [Datenleben Podcast](https://www.datenleben.de/index.php/2023/10/14/dl043-perspektiven-auf-data-science/) und haben über die Datenzwerge gesprochen.
 
 ## Credits & Danksagung
 
@@ -182,8 +184,7 @@ Das Datenzwerg-Logo wurde von D.B. entworfen.
 
 Das Datenzwerg-Modell basiert auf [diesem "Garden Gnome" Modell](https://www.printables.com/model/260908-garden-gnome) von [Sci3D](https://www.printables.com/@Sci3D), das unter CC-BY veröffentlicht ist. Unser Remix kann [hier](https://www.printables.com/model/534875-datenzwerg-enclosure) und natürlich auch [im GitHub Repository](https://github.com/romses/Datenzwerg/tree/main/models) gefunden werden.
 
-Die SCD41 sensoren wurden gesponsort von [@dx@mastodon.social](https://chaos.social/@dx@mastodon.social)
-
+Die SCD41 sensoren wurden gesponsort von [@dx@mastodon.social](https://chaos.social/@dx@mastodon.social).
 
 [^1]: Ja, die letzten drei genannten Namen sind nicht canon, und einer von ihnen gehört sogar einem Schlumpf - na und, Chaos ftw!
 [^2]: Prompt: 'Write me a text for a website that gives an overview of the "Datenzwerg". The Datenzwerg is a garden gnome that collects environmental data, and makes it publicly available. The Datenzwerg will be presented at the Chaos Communication Camp.'
