@@ -225,7 +225,7 @@
             "type": "influxdb",
             "uid": "${DS_INFLUXDB}"
           },
-          "query": "import \"strings\"\nimport \"dict\"\n\nlocations = [\n  \"Bashful\": \"NOC Helpdesk\",\n  \"Dopey\": \"DDOS Bar\",\n  \"Grumpy\": \"Hall Z\",\n  \"Happy\": \"Hall G\",\n  \"Hefty\": \"Jugend Assembly\",\n  \"Kinky\": \"Telnet Assembly\",\n  \"Moopsy\": \"Lounge\",\n  \"Kinky\": \"Telnet Assembly\",\n  \"Nerdy\": \"Flower Assembly\",\n  \"Sleepy\": \"POC\",\n  \"Sneezy\": \"Hall E\"\n]\n\nfrom(bucket: \"datagnome\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"datenzwerg_temperature\" or r._measurement == \"temperature\")\n  |> map(fn: (r) => ({r with device: if r.device == \"nameme\" then \"kinky\" else r.device}))\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\n  |> map(fn: (r) => ({r with device: r.device + \" (\" + dict.get(dict: locations, key: r.device, default: \"?\") + \")\"}))",
+          "query": "import \"strings\"\nimport \"dict\"\n\nlocations = [\n  \"Bashful\": \"NOC Helpdesk\",\n  \"Dopey\": \"DDOS Bar\",\n  \"Grumpy\": \"Hall Z\",\n  \"Happy\": \"Hall G\",\n  \"Hefty\": \"Jugend Assembly\",\n  \"Moopsy\": \"Lounge\",\n  \"Kinky\": \"Flower Assembly\",\n  \"Nerdy\": \"Telnet Assembly\",\n  \"Sleepy\": \"POC\",\n  \"Sneezy\": \"Hall E\"\n]\n\nfrom(bucket: \"datagnome\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"datenzwerg_temperature\" or r._measurement == \"temperature\")\n  |> map(fn: (r) => ({r with device: if r.device == \"nameme\" then \"kinky\" else r.device}))\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\n  |> map(fn: (r) => ({r with device: r.device + \" (\" + dict.get(dict: locations, key: r.device, default: \"?\") + \")\"}))",
           "refId": "A"
         }
       ],
@@ -322,7 +322,7 @@
             "type": "influxdb",
             "uid": "${DS_INFLUXDB}"
           },
-          "query": "import \"strings\"\nimport \"dict\"\n\nlocations = [\n  \"Bashful\": \"NOC Helpdesk\",\n  \"Dopey\": \"DDOS Bar\",\n  \"Grumpy\": \"Hall Z\",\n  \"Happy\": \"Hall G\",\n  \"Hefty\": \"Jugend Assembly\",\n  \"Kinky\": \"Telnet Assembly\",\n  \"Moopsy\": \"Lounge\",\n  \"Kinky\": \"Telnet Assembly\",\n  \"Nerdy\": \"Flower Assembly\",\n  \"Sleepy\": \"POC\",\n  \"Sneezy\": \"Hall E\"\n]\n\nfrom(bucket: \"datagnome\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"datenzwerg_pressure\" or r._measurement == \"pressure\")\n  |> map(fn: (r) => ({r with device: if r.device == \"nameme\" then \"kinky\" else r.device}))\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\n  |> map(fn: (r) => ({r with device: r.device + \" (\" + dict.get(dict: locations, key: r.device, default: \"?\") + \")\"}))",
+          "query": "import \"strings\"\nimport \"dict\"\n\nlocations = [\n  \"Bashful\": \"NOC Helpdesk\",\n  \"Dopey\": \"DDOS Bar\",\n  \"Grumpy\": \"Hall Z\",\n  \"Happy\": \"Hall G\",\n  \"Hefty\": \"Jugend Assembly\",\n  \"Moopsy\": \"Lounge\",\n  \"Kinky\": \"Flower Assembly\",\n  \"Nerdy\": \"Telnet Assembly\",\n  \"Sleepy\": \"POC\",\n  \"Sneezy\": \"Hall E\"\n]\n\nfrom(bucket: \"datagnome\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"datenzwerg_pressure\" or r._measurement == \"pressure\")\n  |> map(fn: (r) => ({r with device: if r.device == \"nameme\" then \"kinky\" else r.device}))\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\n  |> map(fn: (r) => ({r with device: r.device + \" (\" + dict.get(dict: locations, key: r.device, default: \"?\") + \")\"}))",
           "refId": "A"
         }
       ],
@@ -419,7 +419,7 @@
             "type": "influxdb",
             "uid": "${DS_INFLUXDB}"
           },
-          "query": "import \"strings\"\nimport \"dict\"\n\nlocations = [\n  \"Bashful\": \"NOC Helpdesk\",\n  \"Dopey\": \"DDOS Bar\",\n  \"Grumpy\": \"Hall Z\",\n  \"Happy\": \"Hall G\",\n  \"Hefty\": \"Jugend Assembly\",\n  \"Kinky\": \"Telnet Assembly\",\n  \"Moopsy\": \"Lounge\",\n  \"Kinky\": \"Telnet Assembly\",\n  \"Nerdy\": \"Flower Assembly\",\n  \"Sleepy\": \"POC\",\n  \"Sneezy\": \"Hall E\"\n]\n\nfrom(bucket: \"datagnome\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"datenzwerg_humidity\" or r._measurement == \"humidity\")\n  |> map(fn: (r) => ({r with device: if r.device == \"nameme\" then \"kinky\" else r.device}))\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\n  |> map(fn: (r) => ({r with device: r.device + \" (\" + dict.get(dict: locations, key: r.device, default: \"?\") + \")\"}))",
+          "query": "import \"strings\"\nimport \"dict\"\n\nlocations = [\n  \"Bashful\": \"NOC Helpdesk\",\n  \"Dopey\": \"DDOS Bar\",\n  \"Grumpy\": \"Hall Z\",\n  \"Happy\": \"Hall G\",\n  \"Hefty\": \"Jugend Assembly\",\n  \"Moopsy\": \"Lounge\",\n  \"Kinky\": \"Flower Assembly\",\n  \"Nerdy\": \"Telnet Assembly\",\n  \"Sleepy\": \"POC\",\n  \"Sneezy\": \"Hall E\"\n]\n\nfrom(bucket: \"datagnome\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"datenzwerg_humidity\" or r._measurement == \"humidity\")\n  |> map(fn: (r) => ({r with device: if r.device == \"nameme\" then \"kinky\" else r.device}))\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\n  |> map(fn: (r) => ({r with device: r.device + \" (\" + dict.get(dict: locations, key: r.device, default: \"?\") + \")\"}))",
           "refId": "A"
         }
       ],
@@ -516,7 +516,7 @@
             "type": "influxdb",
             "uid": "${DS_INFLUXDB}"
           },
-          "query": "import \"strings\"\r\nimport \"dict\"\r\n\r\nlocations = [\r\n  \"Bashful\": \"NOC Helpdesk\",\r\n  \"Dopey\": \"DDOS Bar\",\r\n  \"Grumpy\": \"Hall Z\",\r\n  \"Happy\": \"Hall G\",\r\n  \"Hefty\": \"Jugend Assembly\",\r\n  \"Kinky\": \"Telnet Assembly\",\r\n  \"Moopsy\": \"Lounge\",\r\n  \"Kinky\": \"Telnet Assembly\",\r\n  \"Nerdy\": \"Flower Assembly\",\r\n  \"Sleepy\": \"POC\",\r\n  \"Sneezy\": \"Hall E\"\r\n]\r\n\r\nfrom(bucket: \"datagnome\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"absolute_humidity\")\r\n  |> map(fn: (r) => ({r with device: if r.device == \"nameme\" then \"kinky\" else r.device}))\r\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\r\n  |> group(columns: [\"device\"])\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\r\n  |> map(fn: (r) => ({r with device: r.device + \" (\" + dict.get(dict: locations, key: r.device, default: \"?\") + \")\"}))",
+          "query": "import \"strings\"\r\nimport \"dict\"\r\n\r\nlocations = [\r\n  \"Bashful\": \"NOC Helpdesk\",\r\n  \"Dopey\": \"DDOS Bar\",\r\n  \"Grumpy\": \"Hall Z\",\r\n  \"Happy\": \"Hall G\",\r\n  \"Hefty\": \"Jugend Assembly\",\r\n  \"Moopsy\": \"Lounge\",\r\n  \"Kinky\": \"Flower Assembly\",\r\n  \"Nerdy\": \"Telnet Assembly\",\r\n  \"Sleepy\": \"POC\",\r\n  \"Sneezy\": \"Hall E\"\r\n]\r\n\r\nfrom(bucket: \"datagnome\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"absolute_humidity\")\r\n  |> map(fn: (r) => ({r with device: if r.device == \"nameme\" then \"kinky\" else r.device}))\r\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\r\n  |> group(columns: [\"device\"])\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\r\n  |> map(fn: (r) => ({r with device: r.device + \" (\" + dict.get(dict: locations, key: r.device, default: \"?\") + \")\"}))",
           "refId": "A"
         }
       ],
@@ -622,7 +622,7 @@
             "type": "influxdb",
             "uid": "${DS_INFLUXDB}"
           },
-          "query": "import \"strings\"\nimport \"dict\"\n\nlocations = [\n  \"bashful\": \"NOC Helpdesk\",\n  \"dopey\": \"DDOS Bar\",\n  \"grumpy\": \"Hall Z\",\n  \"happy\": \"Hall G\",\n  \"hefty\": \"Jugend Assembly\",\n  \"moopsy\": \"Lounge\",\n  \"kinky\": \"Telnet Assembly\",\n  \"nerdy\": \"Flower Assembly\",\n  \"sleepy\": \"POC\",\n  \"sneezy\": \"Hall E\"\n]\n\nco2 = [\n  \"hefty\", \"moopsy\", \"kinky\", \"sleepy\"\n]\n\nfrom(bucket: \"datagnome\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => (r._measurement == \"eco2\" and not contains(value: r.device, set: co2)) or (r._measurement == \"co2\" and contains(value: r.device, set: co2)))\n  |> map(fn: (r) => ({r with device: if r.device == \"nameme\" then \"kinky\" else r.device}))\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device) + \" (\" + dict.get(dict: locations, key: r.device, default: \"?\") + \", \" + (if contains(value: r.device, set: co2) then \"CO2\" else \"eCO2\") + \")\"}))\n",
+          "query": "import \"strings\"\nimport \"dict\"\n\nlocations = [\n  \"bashful\": \"NOC Helpdesk\",\n  \"dopey\": \"DDOS Bar\",\n  \"grumpy\": \"Hall Z\",\n  \"happy\": \"Hall G\",\n  \"hefty\": \"Jugend Assembly\",\n  \"moopsy\": \"Lounge\",\n  \"kinky\": \"Flower Assembly\",\n  \"nerdy\": \"Telnet Assembly\",\n  \"sleepy\": \"POC\",\n  \"sneezy\": \"Hall E\"\n]\n\nco2 = [\n  \"hefty\", \"moopsy\", \"kinky\", \"sleepy\"\n]\n\nfrom(bucket: \"datagnome\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => (r._measurement == \"eco2\" and not contains(value: r.device, set: co2)) or (r._measurement == \"co2\" and contains(value: r.device, set: co2)))\n  |> map(fn: (r) => ({r with device: if r.device == \"nameme\" then \"kinky\" else r.device}))\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device) + \" (\" + dict.get(dict: locations, key: r.device, default: \"?\") + \", \" + (if contains(value: r.device, set: co2) then \"CO2\" else \"eCO2\") + \")\"}))\n",
           "refId": "A"
         }
       ],
@@ -727,7 +727,7 @@
             "type": "influxdb",
             "uid": "${DS_INFLUXDB}"
           },
-          "query": "import \"strings\"\r\nimport \"dict\"\r\n\r\nlocations = [\r\n  \"Bashful\": \"NOC Helpdesk\",\r\n  \"Dopey\": \"DDOS Bar\",\r\n  \"Grumpy\": \"Hall Z\",\r\n  \"Happy\": \"Hall G\",\r\n  \"Hefty\": \"Jugend Assembly\",\r\n  \"Kinky\": \"Telnet Assembly\",\r\n  \"Moopsy\": \"Lounge\",\r\n  \"Kinky\": \"Telnet Assembly\",\r\n  \"Nerdy\": \"Flower Assembly\",\r\n  \"Sleepy\": \"POC\",\r\n  \"Sneezy\": \"Hall E\"\r\n]\r\n\r\nfrom(bucket: \"datagnome\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"tvoc\")\r\n  |> map(fn: (r) => ({r with device: if r.device == \"nameme\" then \"kinky\" else r.device}))\r\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\r\n  |> group(columns: [\"device\"])\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\r\n  |> map(fn: (r) => ({r with device: r.device + \" (\" + dict.get(dict: locations, key: r.device, default: \"?\") + \")\"}))",
+          "query": "import \"strings\"\r\nimport \"dict\"\r\n\r\nlocations = [\r\n  \"Bashful\": \"NOC Helpdesk\",\r\n  \"Dopey\": \"DDOS Bar\",\r\n  \"Grumpy\": \"Hall Z\",\r\n  \"Happy\": \"Hall G\",\r\n  \"Hefty\": \"Jugend Assembly\",\r\n  \"Moopsy\": \"Lounge\",\r\n  \"Kinky\": \"Flower Assembly\",\r\n  \"Nerdy\": \"Telnet Assembly\",\r\n  \"Sleepy\": \"POC\",\r\n  \"Sneezy\": \"Hall E\"\r\n]\r\n\r\nfrom(bucket: \"datagnome\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"tvoc\")\r\n  |> map(fn: (r) => ({r with device: if r.device == \"nameme\" then \"kinky\" else r.device}))\r\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\r\n  |> group(columns: [\"device\"])\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\r\n  |> map(fn: (r) => ({r with device: r.device + \" (\" + dict.get(dict: locations, key: r.device, default: \"?\") + \")\"}))",
           "refId": "A"
         }
       ],
@@ -809,7 +809,7 @@
             "type": "influxdb",
             "uid": "${DS_INFLUXDB}"
           },
-          "query": "import \"strings\"\nimport \"dict\"\n\nlocations = [\n  \"Bashful\": \"NOC Helpdesk\",\n  \"Dopey\": \"DDOS Bar\",\n  \"Grumpy\": \"Hall Z\",\n  \"Happy\": \"Hall G\",\n  \"Hefty\": \"Jugend Assembly\",\n  \"Kinky\": \"Telnet Assembly\",\n  \"Moopsy\": \"Lounge\",\n  \"Kinky\": \"Telnet Assembly\",\n  \"Nerdy\": \"Flower Assembly\",\n  \"Sleepy\": \"POC\",\n  \"Sneezy\": \"Hall E\"\n]\n\nfrom(bucket: \"datagnome\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"uv_index\")\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\n  |> map(fn: (r) => ({r with device: r.device + \" (\" + dict.get(dict: locations, key: r.device, default: \"?\") + \")\"}))",
+          "query": "import \"strings\"\nimport \"dict\"\n\nlocations = [\n  \"Bashful\": \"NOC Helpdesk\",\n  \"Dopey\": \"DDOS Bar\",\n  \"Grumpy\": \"Hall Z\",\n  \"Happy\": \"Hall G\",\n  \"Hefty\": \"Jugend Assembly\",\n  \"Moopsy\": \"Lounge\",\n  \"Kinky\": \"Flower Assembly\",\n  \"Nerdy\": \"Telnet Assembly\",\n  \"Sleepy\": \"POC\",\n  \"Sneezy\": \"Hall E\"\n]\n\nfrom(bucket: \"datagnome\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"uv_index\")\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\n  |> map(fn: (r) => ({r with device: r.device + \" (\" + dict.get(dict: locations, key: r.device, default: \"?\") + \")\"}))",
           "refId": "A"
         }
       ],
@@ -907,7 +907,7 @@
             "type": "influxdb",
             "uid": "${DS_INFLUXDB}"
           },
-          "query": "import \"strings\"\nimport \"math\"\nimport \"dict\"\n\nlocations = [\n  \"Bashful\": \"NOC Helpdesk\",\n  \"Dopey\": \"DDOS Bar\",\n  \"Grumpy\": \"Hall Z\",\n  \"Happy\": \"Hall G\",\n  \"Hefty\": \"Jugend Assembly\",\n  \"Kinky\": \"Telnet Assembly\",\n  \"Moopsy\": \"Lounge\",\n  \"Kinky\": \"Telnet Assembly\",\n  \"Nerdy\": \"Flower Assembly\",\n  \"Sleepy\": \"POC\",\n  \"Sneezy\": \"Hall E\"\n]\n\nfrom(bucket: \"datagnome\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"uv_level\" or r._measurement == \"uv_index\")\n  |> map(fn: (r) => ({r with device: if r.device == \"nameme\" then \"kinky\" else r.device}))\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({r with _value: math.round(x: r._value)}))\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\n  |> map(fn: (r) => ({r with device: r.device + \" (\" + dict.get(dict: locations, key: r.device, default: \"?\") + \")\"}))",
+          "query": "import \"strings\"\nimport \"math\"\nimport \"dict\"\n\nlocations = [\n  \"Bashful\": \"NOC Helpdesk\",\n  \"Dopey\": \"DDOS Bar\",\n  \"Grumpy\": \"Hall Z\",\n  \"Happy\": \"Hall G\",\n  \"Hefty\": \"Jugend Assembly\",\n  \"Moopsy\": \"Lounge\",\n  \"Kinky\": \"Flower Assembly\",\n  \"Nerdy\": \"Telnet Assembly\",\n  \"Sleepy\": \"POC\",\n  \"Sneezy\": \"Hall E\"\n]\n\nfrom(bucket: \"datagnome\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"uv_level\" or r._measurement == \"uv_index\")\n  |> map(fn: (r) => ({r with device: if r.device == \"nameme\" then \"kinky\" else r.device}))\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({r with _value: math.round(x: r._value)}))\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\n  |> map(fn: (r) => ({r with device: r.device + \" (\" + dict.get(dict: locations, key: r.device, default: \"?\") + \")\"}))",
           "refId": "A"
         }
       ],
@@ -1005,7 +1005,7 @@
             "type": "influxdb",
             "uid": "${DS_INFLUXDB}"
           },
-          "query": "import \"strings\"\nimport \"dict\"\n\nlocations = [\n  \"Bashful\": \"NOC Helpdesk\",\n  \"Dopey\": \"DDOS Bar\",\n  \"Grumpy\": \"Hall Z\",\n  \"Happy\": \"Hall G\",\n  \"Hefty\": \"Jugend Assembly\",\n  \"Kinky\": \"Telnet Assembly\",\n  \"Moopsy\": \"Lounge\",\n  \"Kinky\": \"Telnet Assembly\",\n  \"Nerdy\": \"Flower Assembly\",\n  \"Sleepy\": \"POC\",\n  \"Sneezy\": \"Hall E\"\n]\n\nfrom(bucket: \"datagnome\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"sound_pressure\")\n  |> map(fn: (r) => ({r with device: if r.device == \"nameme\" then \"kinky\" else r.device}))\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: 60m, fn: median, createEmpty: false)\n  |> map(fn: (r) => ({r with _value: r._value - 15.0}))\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\n  |> map(fn: (r) => ({r with device: r.device + \" (\" + dict.get(dict: locations, key: r.device, default: \"?\") + \")\"}))",
+          "query": "import \"strings\"\nimport \"dict\"\n\nlocations = [\n  \"Bashful\": \"NOC Helpdesk\",\n  \"Dopey\": \"DDOS Bar\",\n  \"Grumpy\": \"Hall Z\",\n  \"Happy\": \"Hall G\",\n  \"Hefty\": \"Jugend Assembly\",\n  \"Moopsy\": \"Lounge\",\n  \"Kinky\": \"Flower Assembly\",\n  \"Nerdy\": \"Telnet Assembly\",\n  \"Sleepy\": \"POC\",\n  \"Sneezy\": \"Hall E\"\n]\n\nfrom(bucket: \"datagnome\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"sound_pressure\")\n  |> map(fn: (r) => ({r with device: if r.device == \"nameme\" then \"kinky\" else r.device}))\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: 60m, fn: median, createEmpty: false)\n  |> map(fn: (r) => ({r with _value: r._value - 15.0}))\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\n  |> map(fn: (r) => ({r with device: r.device + \" (\" + dict.get(dict: locations, key: r.device, default: \"?\") + \")\"}))",
           "refId": "A"
         }
       ],
@@ -1102,7 +1102,7 @@
             "type": "influxdb",
             "uid": "${DS_INFLUXDB}"
           },
-          "query": "import \"strings\"\r\nimport \"dict\"\r\n\r\nlocations = [\r\n  \"Bashful\": \"NOC Helpdesk\",\r\n  \"Dopey\": \"DDOS Bar\",\r\n  \"Grumpy\": \"Hall Z\",\r\n  \"Happy\": \"Hall G\",\r\n  \"Hefty\": \"Jugend Assembly\",\r\n  \"Kinky\": \"Telnet Assembly\",\r\n  \"Moopsy\": \"Lounge\",\r\n  \"Kinky\": \"Telnet Assembly\",\r\n  \"Nerdy\": \"Flower Assembly\",\r\n  \"Sleepy\": \"POC\",\r\n  \"Sneezy\": \"Hall E\"\r\n]\r\n\r\nfrom(bucket: \"datagnome\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"dew_point\")\r\n  |> map(fn: (r) => ({r with device: if r.device == \"nameme\" then \"kinky\" else r.device}))\r\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\r\n  |> group(columns: [\"device\"])\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\r\n  |> map(fn: (r) => ({r with device: r.device + \" (\" + dict.get(dict: locations, key: r.device, default: \"?\") + \")\"}))",
+          "query": "import \"strings\"\r\nimport \"dict\"\r\n\r\nlocations = [\r\n  \"Bashful\": \"NOC Helpdesk\",\r\n  \"Dopey\": \"DDOS Bar\",\r\n  \"Grumpy\": \"Hall Z\",\r\n  \"Happy\": \"Hall G\",\r\n  \"Hefty\": \"Jugend Assembly\",\r\n  \"Moopsy\": \"Lounge\",\r\n  \"Kinky\": \"Flower Assembly\",\r\n  \"Nerdy\": \"Telnet Assembly\",\r\n  \"Sleepy\": \"POC\",\r\n  \"Sneezy\": \"Hall E\"\r\n]\r\n\r\nfrom(bucket: \"datagnome\")\r\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\r\n  |> filter(fn: (r) => r[\"_measurement\"] == \"dew_point\")\r\n  |> map(fn: (r) => ({r with device: if r.device == \"nameme\" then \"kinky\" else r.device}))\r\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\r\n  |> group(columns: [\"device\"])\r\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\r\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\r\n  |> map(fn: (r) => ({r with device: r.device + \" (\" + dict.get(dict: locations, key: r.device, default: \"?\") + \")\"}))",
           "refId": "A"
         }
       ],
@@ -1141,7 +1141,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -1151,11 +1152,24 @@
               },
               "unit": "hex0x"
             },
-            "overrides": []
+            "overrides": [
+              {
+                "matcher": {
+                  "id": "byName",
+                  "options": "Uptime"
+                },
+                "properties": [
+                  {
+                    "id": "unit",
+                    "value": "dthms"
+                  }
+                ]
+              }
+            ]
           },
           "gridPos": {
             "h": 11,
-            "w": 12,
+            "w": 24,
             "x": 0,
             "y": 60
           },
@@ -1181,7 +1195,7 @@
                 "type": "influxdb",
                 "uid": "${DS_INFLUXDB}"
               },
-              "query": "import \"strings\"\n\nfrom(bucket: \"datagnome-raw\")\n  |> range(start: -6h, stop: now())\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"esphome_version\" or r[\"_measurement\"] == \"git_ref\" or r[\"_measurement\"] == \"eco2_baseline\" or r[\"_measurement\"] == \"tvoc_baseline\")\n  |> map(fn: (r) => ({r with _value: string(v: r._value)}))\n  |> group(columns: [\"device\"])\n  |> pivot(rowKey: [\"_measurement\"], columnKey: [\"_field\"], valueColumn: \"_value\")\n  |> group()\n  |> pivot(rowKey: [\"device\"], columnKey: [\"_measurement\"], valueColumn: \"value\")\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\n",
+              "query": "import \"strings\"\n\nfrom(bucket: \"datagnome-raw\")\n  |> range(start: -6h, stop: now())\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"esphome_version\" or r[\"_measurement\"] == \"git_ref\" or r[\"_measurement\"] == \"eco2_baseline\" or r[\"_measurement\"] == \"tvoc_baseline\" or r[\"_measurement\"] == \"uptime\")\n  |> map(fn: (r) => ({r with _value: string(v: r._value)}))\n  |> group(columns: [\"device\"])\n  |> pivot(rowKey: [\"_measurement\"], columnKey: [\"_field\"], valueColumn: \"_value\")\n  |> group()\n  |> pivot(rowKey: [\"device\"], columnKey: [\"_measurement\"], valueColumn: \"value\")\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\n",
               "refId": "A"
             }
           ],
@@ -1193,12 +1207,20 @@
                 "excludeByName": {},
                 "indexByName": {
                   "device": 0,
-                  "eco2_baseline": 3,
-                  "esphome_version": 1,
-                  "git_ref": 2,
-                  "tvoc_baseline": 4
+                  "eco2_baseline": 4,
+                  "esphome_version": 2,
+                  "git_ref": 3,
+                  "tvoc_baseline": 5,
+                  "uptime": 1
                 },
-                "renameByName": {}
+                "renameByName": {
+                  "device": "Datenzwerg",
+                  "eco2_baseline": "eCO2 Baseline",
+                  "esphome_version": "ESPHome Version",
+                  "git_ref": "Git Ref",
+                  "tvoc_baseline": "TVOC Baseline",
+                  "uptime": "Uptime"
+                }
               }
             }
           ],
@@ -1251,7 +1273,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -1266,8 +1289,8 @@
           "gridPos": {
             "h": 11,
             "w": 12,
-            "x": 12,
-            "y": 60
+            "x": 0,
+            "y": 71
           },
           "id": 5,
           "options": {
@@ -1278,7 +1301,7 @@
                 "max",
                 "mean"
               ],
-              "displayMode": "list",
+              "displayMode": "table",
               "placement": "bottom",
               "showLegend": true
             },
@@ -1293,11 +1316,108 @@
                 "type": "influxdb",
                 "uid": "${DS_INFLUXDB}"
               },
-              "query": "import \"strings\"\nfrom(bucket: \"datagnome\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"datenzwerg___wifi_signal\" or r._measurement == \"wifi_signal\")\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))",
+              "query": "import \"strings\"\n\nimport \"dict\"\n\nlocations = [\n  \"Bashful\": \"NOC Helpdesk\",\n  \"Dopey\": \"DDOS Bar\",\n  \"Grumpy\": \"Hall Z\",\n  \"Happy\": \"Hall G\",\n  \"Hefty\": \"Jugend Assembly\",\n  \"Moopsy\": \"Lounge\",\n  \"Kinky\": \"Flower Assembly\",\n  \"Nerdy\": \"Telnet Assembly\",\n  \"Sleepy\": \"POC\",\n  \"Sneezy\": \"Hall E\"\n]\n\nfrom(bucket: \"datagnome\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"datenzwerg___wifi_signal\" or r._measurement == \"wifi_signal\")\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\n  |> map(fn: (r) => ({r with device: r.device + \" (\" + dict.get(dict: locations, key: r.device, default: \"?\") + \")\"}))\n",
               "refId": "A"
             }
           ],
           "title": "WiFi Signal",
+          "type": "timeseries"
+        },
+        {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "${DS_INFLUXDB}"
+          },
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "palette-classic"
+              },
+              "custom": {
+                "axisBorderShow": false,
+                "axisCenteredZero": false,
+                "axisColorMode": "text",
+                "axisLabel": "",
+                "axisPlacement": "auto",
+                "barAlignment": 0,
+                "drawStyle": "line",
+                "fillOpacity": 0,
+                "gradientMode": "none",
+                "hideFrom": {
+                  "legend": false,
+                  "tooltip": false,
+                  "viz": false
+                },
+                "insertNulls": false,
+                "lineInterpolation": "linear",
+                "lineWidth": 1,
+                "pointSize": 5,
+                "scaleDistribution": {
+                  "type": "linear"
+                },
+                "showPoints": "never",
+                "spanNulls": false,
+                "stacking": {
+                  "group": "A",
+                  "mode": "none"
+                },
+                "thresholdsStyle": {
+                  "mode": "off"
+                }
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green",
+                    "value": null
+                  },
+                  {
+                    "color": "red",
+                    "value": 80
+                  }
+                ]
+              },
+              "unit": "dthms"
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 11,
+            "w": 12,
+            "x": 12,
+            "y": 71
+          },
+          "id": 31,
+          "options": {
+            "legend": {
+              "calcs": [
+                "lastNotNull",
+                "min",
+                "max",
+                "mean"
+              ],
+              "displayMode": "table",
+              "placement": "bottom",
+              "showLegend": true
+            },
+            "tooltip": {
+              "mode": "multi",
+              "sort": "none"
+            }
+          },
+          "targets": [
+            {
+              "datasource": {
+                "type": "influxdb",
+                "uid": "${DS_INFLUXDB}"
+              },
+              "query": "import \"strings\"\n\nimport \"dict\"\n\nlocations = [\n  \"Bashful\": \"NOC Helpdesk\",\n  \"Dopey\": \"DDOS Bar\",\n  \"Grumpy\": \"Hall Z\",\n  \"Happy\": \"Hall G\",\n  \"Hefty\": \"Jugend Assembly\",\n  \"Moopsy\": \"Lounge\",\n  \"Kinky\": \"Flower Assembly\",\n  \"Nerdy\": \"Telnet Assembly\",\n  \"Sleepy\": \"POC\",\n  \"Sneezy\": \"Hall E\"\n]\n\nfrom(bucket: \"datagnome-raw\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"uptime\")\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\n  |> map(fn: (r) => ({r with device: r.device + \" (\" + dict.get(dict: locations, key: r.device, default: \"?\") + \")\"}))\n",
+              "refId": "A"
+            }
+          ],
+          "title": "Uptime",
           "type": "timeseries"
         },
         {
@@ -1350,7 +1470,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -1366,7 +1487,7 @@
             "h": 11,
             "w": 12,
             "x": 0,
-            "y": 71
+            "y": 82
           },
           "id": 27,
           "options": {
@@ -1376,7 +1497,7 @@
                 "min",
                 "max"
               ],
-              "displayMode": "list",
+              "displayMode": "table",
               "placement": "bottom",
               "showLegend": true
             },
@@ -1391,7 +1512,7 @@
                 "type": "influxdb",
                 "uid": "${DS_INFLUXDB}"
               },
-              "query": "import \"strings\"\nfrom(bucket: \"datagnome-raw\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"eco2_baseline\")\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))",
+              "query": "import \"strings\"\n\nimport \"dict\"\n\nlocations = [\n  \"Bashful\": \"NOC Helpdesk\",\n  \"Dopey\": \"DDOS Bar\",\n  \"Grumpy\": \"Hall Z\",\n  \"Happy\": \"Hall G\",\n  \"Hefty\": \"Jugend Assembly\",\n  \"Moopsy\": \"Lounge\",\n  \"Kinky\": \"Flower Assembly\",\n  \"Nerdy\": \"Telnet Assembly\",\n  \"Sleepy\": \"POC\",\n  \"Sneezy\": \"Hall E\"\n]\n\nfrom(bucket: \"datagnome-raw\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"eco2_baseline\")\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\n  |> map(fn: (r) => ({r with device: r.device + \" (\" + dict.get(dict: locations, key: r.device, default: \"?\") + \")\"}))\n",
               "refId": "A"
             }
           ],
@@ -1447,7 +1568,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -1463,7 +1585,7 @@
             "h": 11,
             "w": 12,
             "x": 12,
-            "y": 71
+            "y": 82
           },
           "id": 28,
           "options": {
@@ -1473,7 +1595,7 @@
                 "min",
                 "max"
               ],
-              "displayMode": "list",
+              "displayMode": "table",
               "placement": "bottom",
               "showLegend": true
             },
@@ -1488,7 +1610,7 @@
                 "type": "influxdb",
                 "uid": "${DS_INFLUXDB}"
               },
-              "query": "import \"strings\"\nfrom(bucket: \"datagnome-raw\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"tvoc_baseline\")\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))",
+              "query": "import \"strings\"\n\nimport \"dict\"\n\nlocations = [\n  \"Bashful\": \"NOC Helpdesk\",\n  \"Dopey\": \"DDOS Bar\",\n  \"Grumpy\": \"Hall Z\",\n  \"Happy\": \"Hall G\",\n  \"Hefty\": \"Jugend Assembly\",\n  \"Moopsy\": \"Lounge\",\n  \"Kinky\": \"Flower Assembly\",\n  \"Nerdy\": \"Telnet Assembly\",\n  \"Sleepy\": \"POC\",\n  \"Sneezy\": \"Hall E\"\n]\n\nfrom(bucket: \"datagnome-raw\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"tvoc_baseline\")\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\n  |> map(fn: (r) => ({r with device: r.device + \" (\" + dict.get(dict: locations, key: r.device, default: \"?\") + \")\"}))\n",
               "refId": "A"
             }
           ],
@@ -1543,7 +1665,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "yellow",
@@ -1567,7 +1690,7 @@
             "h": 11,
             "w": 12,
             "x": 0,
-            "y": 82
+            "y": 93
           },
           "id": 30,
           "options": {
@@ -1593,7 +1716,7 @@
                 "type": "influxdb",
                 "uid": "${DS_INFLUXDB}"
               },
-              "query": "import \"strings\"\nimport \"dict\"\n\nlocations = [\n  \"Bashful\": \"NOC Helpdesk\",\n  \"Dopey\": \"DDOS Bar\",\n  \"Grumpy\": \"Hall Z\",\n  \"Happy\": \"Hall G\",\n  \"Hefty\": \"Jugend Assembly\",\n  \"Moopsy\": \"Lounge\",\n  \"Nameme\": \"Telnet Assembly\",\n  \"Nerdy\": \"Flower Assembly\",\n  \"Sleepy\": \"POC\",\n  \"Sneezy\": \"Hall E\"\n]\n\nfrom(bucket: \"datagnome\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"co2\")\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\n  |> map(fn: (r) => ({r with device: r.device + \" (\" + dict.get(dict: locations, key: r.device, default: \"?\") + \")\"}))\n",
+              "query": "import \"strings\"\nimport \"dict\"\n\nlocations = [\n  \"Bashful\": \"NOC Helpdesk\",\n  \"Dopey\": \"DDOS Bar\",\n  \"Grumpy\": \"Hall Z\",\n  \"Happy\": \"Hall G\",\n  \"Hefty\": \"Jugend Assembly\",\n  \"Moopsy\": \"Lounge\",\n  \"Kinky\": \"Flower Assembly\",\n  \"Nerdy\": \"Telnet Assembly\",\n  \"Sleepy\": \"POC\",\n  \"Sneezy\": \"Hall E\"\n]\n\nfrom(bucket: \"datagnome\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"co2\")\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\n  |> map(fn: (r) => ({r with device: r.device + \" (\" + dict.get(dict: locations, key: r.device, default: \"?\") + \")\"}))\n",
               "refId": "A"
             }
           ],
@@ -1648,7 +1771,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "yellow",
@@ -1672,7 +1796,7 @@
             "h": 11,
             "w": 12,
             "x": 12,
-            "y": 82
+            "y": 93
           },
           "id": 29,
           "options": {
@@ -1698,7 +1822,7 @@
                 "type": "influxdb",
                 "uid": "${DS_INFLUXDB}"
               },
-              "query": "import \"strings\"\nimport \"dict\"\n\nlocations = [\n  \"Bashful\": \"NOC Helpdesk\",\n  \"Dopey\": \"DDOS Bar\",\n  \"Grumpy\": \"Hall Z\",\n  \"Happy\": \"Hall G\",\n  \"Hefty\": \"Jugend Assembly\",\n  \"Moopsy\": \"Lounge\",\n  \"Nameme\": \"Telnet Assembly\",\n  \"Nerdy\": \"Flower Assembly\",\n  \"Sleepy\": \"POC\",\n  \"Sneezy\": \"Hall E\"\n]\n\nfrom(bucket: \"datagnome\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"eco2\")\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\n  |> map(fn: (r) => ({r with device: r.device + \" (\" + dict.get(dict: locations, key: r.device, default: \"?\") + \")\"}))\n",
+              "query": "import \"strings\"\nimport \"dict\"\n\nlocations = [\n  \"Bashful\": \"NOC Helpdesk\",\n  \"Dopey\": \"DDOS Bar\",\n  \"Grumpy\": \"Hall Z\",\n  \"Happy\": \"Hall G\",\n  \"Hefty\": \"Jugend Assembly\",\n  \"Moopsy\": \"Lounge\",\n  \"Kinky\": \"Flower Assembly\",\n  \"Nerdy\": \"Telnet Assembly\",\n  \"Sleepy\": \"POC\",\n  \"Sneezy\": \"Hall E\"\n]\n\nfrom(bucket: \"datagnome\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"eco2\")\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\n  |> map(fn: (r) => ({r with device: r.device + \" (\" + dict.get(dict: locations, key: r.device, default: \"?\") + \")\"}))\n",
               "refId": "A"
             }
           ],
@@ -1753,7 +1877,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "red"
+                    "color": "red",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -1777,7 +1902,7 @@
             "h": 11,
             "w": 12,
             "x": 0,
-            "y": 93
+            "y": 104
           },
           "id": 1,
           "options": {
@@ -1787,7 +1912,7 @@
                 "min",
                 "max"
               ],
-              "displayMode": "list",
+              "displayMode": "table",
               "placement": "bottom",
               "showLegend": true
             },
@@ -1802,7 +1927,7 @@
                 "type": "influxdb",
                 "uid": "${DS_INFLUXDB}"
               },
-              "query": "import \"strings\"\nfrom(bucket: \"datagnome\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"battery_level\" or r._measurement == \"battery_voltage\")\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))",
+              "query": "import \"strings\"\n\nimport \"dict\"\n\nlocations = [\n  \"Bashful\": \"NOC Helpdesk\",\n  \"Dopey\": \"DDOS Bar\",\n  \"Grumpy\": \"Hall Z\",\n  \"Happy\": \"Hall G\",\n  \"Hefty\": \"Jugend Assembly\",\n  \"Moopsy\": \"Lounge\",\n  \"Kinky\": \"Flower Assembly\",\n  \"Nerdy\": \"Telnet Assembly\",\n  \"Sleepy\": \"POC\",\n  \"Sneezy\": \"Hall E\"\n]\n\nfrom(bucket: \"datagnome\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"battery_level\" or r._measurement == \"battery_voltage\")\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\n  |> map(fn: (r) => ({r with device: r.device + \" (\" + dict.get(dict: locations, key: r.device, default: \"?\") + \")\"}))\n",
               "refId": "A"
             }
           ],
@@ -1857,7 +1982,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -1873,7 +1999,7 @@
             "h": 11,
             "w": 12,
             "x": 12,
-            "y": 93
+            "y": 104
           },
           "id": 19,
           "options": {
@@ -1884,7 +2010,7 @@
                 "max",
                 "mean"
               ],
-              "displayMode": "list",
+              "displayMode": "table",
               "placement": "bottom",
               "showLegend": true
             },
@@ -1899,7 +2025,7 @@
                 "type": "influxdb",
                 "uid": "${DS_INFLUXDB}"
               },
-              "query": "import \"strings\"\nfrom(bucket: \"datagnome\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"battery_level\" or r._measurement == \"battery_voltage\")\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> fill(usePrevious: true)\n  |> difference(initialZero: true)\n  |> filter(fn: (r) => r._value <= 0.0)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\n",
+              "query": "import \"strings\"\n\nimport \"dict\"\n\nlocations = [\n  \"Bashful\": \"NOC Helpdesk\",\n  \"Dopey\": \"DDOS Bar\",\n  \"Grumpy\": \"Hall Z\",\n  \"Happy\": \"Hall G\",\n  \"Hefty\": \"Jugend Assembly\",\n  \"Moopsy\": \"Lounge\",\n  \"Kinky\": \"Flower Assembly\",\n  \"Nerdy\": \"Telnet Assembly\",\n  \"Sleepy\": \"POC\",\n  \"Sneezy\": \"Hall E\"\n]\n\nfrom(bucket: \"datagnome\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"battery_level\" or r._measurement == \"battery_voltage\")\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> fill(usePrevious: true)\n  |> difference(initialZero: true)\n  |> filter(fn: (r) => r._value <= 0.0)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\n  |> map(fn: (r) => ({r with device: r.device + \" (\" + dict.get(dict: locations, key: r.device, default: \"?\") + \")\"}))\n",
               "refId": "A"
             }
           ],
@@ -1954,7 +2080,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -1970,7 +2097,7 @@
             "h": 11,
             "w": 12,
             "x": 0,
-            "y": 104
+            "y": 115
           },
           "id": 6,
           "options": {
@@ -1981,7 +2108,7 @@
                 "max",
                 "mean"
               ],
-              "displayMode": "list",
+              "displayMode": "table",
               "placement": "bottom",
               "showLegend": true
             },
@@ -1996,7 +2123,7 @@
                 "type": "influxdb",
                 "uid": "${DS_INFLUXDB}"
               },
-              "query": "import \"strings\"\nfrom(bucket: \"datagnome\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"uv_level\" or r._measurement == \"uv_voltage\")\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))",
+              "query": "import \"strings\"\n\nimport \"dict\"\n\nlocations = [\n  \"Bashful\": \"NOC Helpdesk\",\n  \"Dopey\": \"DDOS Bar\",\n  \"Grumpy\": \"Hall Z\",\n  \"Happy\": \"Hall G\",\n  \"Hefty\": \"Jugend Assembly\",\n  \"Moopsy\": \"Lounge\",\n  \"Kinky\": \"Flower Assembly\",\n  \"Nerdy\": \"Telnet Assembly\",\n  \"Sleepy\": \"POC\",\n  \"Sneezy\": \"Hall E\"\n]\n\nfrom(bucket: \"datagnome\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"uv_level\" or r._measurement == \"uv_voltage\")\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\n  |> map(fn: (r) => ({r with device: r.device + \" (\" + dict.get(dict: locations, key: r.device, default: \"?\") + \")\"}))\n",
               "refId": "A"
             }
           ],
@@ -2052,7 +2179,8 @@
                 "mode": "absolute",
                 "steps": [
                   {
-                    "color": "green"
+                    "color": "green",
+                    "value": null
                   },
                   {
                     "color": "red",
@@ -2068,7 +2196,7 @@
             "h": 11,
             "w": 12,
             "x": 12,
-            "y": 104
+            "y": 115
           },
           "id": 16,
           "options": {
@@ -2079,7 +2207,7 @@
                 "max",
                 "mean"
               ],
-              "displayMode": "list",
+              "displayMode": "table",
               "placement": "bottom",
               "showLegend": true
             },
@@ -2094,7 +2222,7 @@
                 "type": "influxdb",
                 "uid": "${DS_INFLUXDB}"
               },
-              "query": "import \"strings\"\nfrom(bucket: \"datagnome\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"sound_voltage_peak_to_peak\")\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))",
+              "query": "import \"strings\"\n\nimport \"dict\"\n\nlocations = [\n  \"Bashful\": \"NOC Helpdesk\",\n  \"Dopey\": \"DDOS Bar\",\n  \"Grumpy\": \"Hall Z\",\n  \"Happy\": \"Hall G\",\n  \"Hefty\": \"Jugend Assembly\",\n  \"Moopsy\": \"Lounge\",\n  \"Kinky\": \"Flower Assembly\",\n  \"Nerdy\": \"Telnet Assembly\",\n  \"Sleepy\": \"POC\",\n  \"Sneezy\": \"Hall E\"\n]\n\nfrom(bucket: \"datagnome\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"sound_voltage_peak_to_peak\")\n  |> filter(fn: (r) => r.device =~ /(?i)${zwerg:regex}/)\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\n  |> map(fn: (r) => ({r with device: r.device + \" (\" + dict.get(dict: locations, key: r.device, default: \"?\") + \")\"}))\n",
               "refId": "A"
             }
           ],
@@ -2142,6 +2270,6 @@
   "timezone": "",
   "title": "Overview",
   "uid": "f17a6449-84ed-4733-b982-21c0d480c42a",
-  "version": 86,
+  "version": 89,
   "weekStart": ""
 }
