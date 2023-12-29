@@ -142,7 +142,7 @@
             "type": "influxdb",
             "uid": "${DS_INFLUXDB}"
           },
-          "query": "import \"strings\"\n\nfrom(bucket: \"datagnome-raw\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"wifi_signal\")\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\n  |> map(fn: (r) => ({r with _value: int(v: uint(v: now()) - uint(v: r._time)) / 1000000000}))\n  |> map(fn: (r) => ({r with _value: if r._value < 0 then 0 else r._value}))\n  |> last()\n",
+          "query": "import \"strings\"\n\nfrom(bucket: \"datagnome-raw\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"wifi_signal\")\n  |> filter(fn: (r) => r.device != \"nameme\")\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\n  |> map(fn: (r) => ({r with _value: int(v: uint(v: now()) - uint(v: r._time)) / 1000000000}))\n  |> map(fn: (r) => ({r with _value: if r._value < 0 then 0 else r._value}))\n  |> last()\n",
           "refId": "A"
         }
       ],
@@ -214,7 +214,7 @@
             "type": "influxdb",
             "uid": "${DS_INFLUXDB}"
           },
-          "query": "import \"strings\"\n\nfrom(bucket: \"datagnome-raw\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"temperature\")\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\n  |> map(fn: (r) => ({r with _value: int(v: uint(v: now()) - uint(v: r._time)) / 1000000000}))\n  |> map(fn: (r) => ({r with _value: if r._value < 0 then 0 else r._value}))\n  |> last()\n",
+          "query": "import \"strings\"\n\nfrom(bucket: \"datagnome-raw\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"temperature\")\n  |> filter(fn: (r) => r.device != \"nameme\")\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\n  |> map(fn: (r) => ({r with _value: int(v: uint(v: now()) - uint(v: r._time)) / 1000000000}))\n  |> map(fn: (r) => ({r with _value: if r._value < 0 then 0 else r._value}))\n  |> last()\n",
           "refId": "A"
         }
       ],
@@ -515,7 +515,7 @@
             "type": "influxdb",
             "uid": "${DS_INFLUXDB}"
           },
-          "query": "import \"strings\"\nfrom(bucket: \"datagnome-raw\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"datenzwerg___wifi_signal\" or r._measurement == \"wifi_signal\")\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: 60m, fn: median, createEmpty: false)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))",
+          "query": "import \"strings\"\nfrom(bucket: \"datagnome-raw\")\n  |> range(start: v.timeRangeStart, stop:v.timeRangeStop)\n  |> filter(fn: (r) => r._measurement == \"datenzwerg___wifi_signal\" or r._measurement == \"wifi_signal\")\n  |> filter(fn: (r) => r.device != \"nameme\")\n  |> group(columns: [\"device\"])\n  |> aggregateWindow(every: 60m, fn: median, createEmpty: false)\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))",
           "refId": "A"
         }
       ],
@@ -585,7 +585,7 @@
             "type": "influxdb",
             "uid": "${DS_INFLUXDB}"
           },
-          "query": "import \"strings\"\n\nfrom(bucket: \"datagnome-raw\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\n  |> filter(fn: (r) => r[\"_measurement\"] == \"esphome_version\" or r[\"_measurement\"] == \"git_ref\" or r[\"_measurement\"] == \"eco2_baseline\" or r[\"_measurement\"] == \"tvoc_baseline\")\n  |> map(fn: (r) => ({r with _value: string(v: r._value)}))\n  |> group(columns: [\"device\"])\n  |> pivot(rowKey: [\"_measurement\"], columnKey: [\"_field\"], valueColumn: \"_value\")\n  |> group()\n  |> pivot(rowKey: [\"device\"], columnKey: [\"_measurement\"], valueColumn: \"value\")\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\n",
+          "query": "import \"strings\"\n\nfrom(bucket: \"datagnome-raw\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_field\"] == \"value\")\n  |> filter(fn: (r) => r[\"_measurement\"] == \"esphome_version\" or r[\"_measurement\"] == \"git_ref\" or r[\"_measurement\"] == \"eco2_baseline\" or r[\"_measurement\"] == \"tvoc_baseline\")\n  |> filter(fn: (r) => r.device != \"nameme\")\n  |> map(fn: (r) => ({r with _value: string(v: r._value)}))\n  |> group(columns: [\"device\"])\n  |> pivot(rowKey: [\"_measurement\"], columnKey: [\"_field\"], valueColumn: \"_value\")\n  |> group()\n  |> pivot(rowKey: [\"device\"], columnKey: [\"_measurement\"], valueColumn: \"value\")\n  |> map(fn: (r) => ({r with device: strings.title(v: r.device)}))\n",
           "refId": "A"
         }
       ],
@@ -623,6 +623,6 @@
   "timezone": "",
   "title": "Healthchecks",
   "uid": "a5cb5f8d-b6ce-47c4-a414-69c74e41e388",
-  "version": 26,
+  "version": 27,
   "weekStart": ""
 }
