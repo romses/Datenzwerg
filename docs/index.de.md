@@ -6,6 +6,7 @@ description: "Der Datenzwerg ist ein Gartenzwerg mit einer Mission: Umweltdaten 
 
 ![Datenzwerg Logo](assets/images/logo.png){: class="logo" :}
 
+<!--
 !!! tip "Datenzwerg @ 37c3"
 
     Du bist auf dem 37c3 und über einen der Datenzwerge gestolpert? Super! Hier sind ein paar Links für dich:
@@ -30,6 +31,7 @@ description: "Der Datenzwerg ist ein Gartenzwerg mit einer Mission: Umweltdaten 
     | [Nerdy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Nerdy&theme=dark)  | Telnet Assembly | Deployed |
     | [Sleepy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sleepy&theme=dark) | POC | Deployed |
     | [Sneezy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sneezy&theme=dark) | Hall E | Deployed |
+-->
 
 ## Was ist der Datenzwerg?
 
@@ -126,8 +128,8 @@ Wir haben ChatGPT gebeten, den Datenzwerg für uns zu beschreiben[^2] und das is
 2023-12-11
 : Die Server-Infstruktur ist wieder am Start und die ersten Datenzwerge senden wieder Daten.
 
-2023-12-26
-: Die Datenzwerge sind auf dem 37c3 im Einsatz. Die ersten Daten sind online.
+2023-12-26 - 2023-12-30
+: Die Datenzwerge sind auf dem 37c3 im Einsatz.
 
 ## FAQ
 

@@ -6,6 +6,7 @@ description: "The Datenzwerg is a garden gnome with a mission: To collect enviro
 
 ![Datenzwerg logo](assets/images/logo.png){: class="logo" :}
 
+<!--
 !!! tip "Datenzwerg @ 37c3"
 
     You are at 37c3 and came across one of the Datenzwerge? Awesome! Here's some quick links for you:
@@ -30,6 +31,7 @@ description: "The Datenzwerg is a garden gnome with a mission: To collect enviro
     | [Nerdy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Nerdy&theme=dark)  | Telnet Assembly | Deployed |
     | [Sleepy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sleepy&theme=dark) | POC | Deployed |
     | [Sneezy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sneezy&theme=dark) | Hall E | Deployed |
+-->
 
 ## What is the Datenzwerg?
 
@@ -121,8 +123,8 @@ We asked ChatGPT to describe the Datenzwerg for us[^2] and this is what it came 
 2023-12-11
 : The server infrastructure is back up an running and the first Datenzwerge are reporting data again.
 
-2023-12-26
-: The Datenzwerge are deployed at 37c3 and sending data.
+2023-12-26 2023-12-30
+: The Datenzwerge are deployed at 37c3.
 
 ## FAQ
 
