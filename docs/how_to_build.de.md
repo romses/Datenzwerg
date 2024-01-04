@@ -22,12 +22,12 @@ Um deinen eigenen Datenzwerg zu bauen, benötigst du folgende Teile:
 
 | Menge | Teil | Funktion | Link |
 | ----- | ---- | -------- | ---- |
-| 1     | Wemos D1 Mini | MCU | [AliExpress](https://aliexpress.com/item/1005004967205772.html) |
-| 1     | BME280 | Environment Sensor | [AliExpress](https://aliexpress.com/item/1005003676342598.html) |
+| 1     | Wemos D1 Mini | MCU | [AliExpress](https://aliexpress.com/item/1005004967205772.html), [Reichelt elektronik](https://www.reichelt.de/d1-mini-kompatibles-esp8266-board-v2-0-d1-mini-p253978.html?&nbc=1) |
+| 1     | BME280 | Environment Sensor | [AliExpress](https://aliexpress.com/item/1005003676342598.html), [Reichelt elektronik](https://www.reichelt.de/kombo-sensor-luftdruck-luftfeuchtigkeit-temp--bme-280-p159825.html?&nbc=1) |
 | 1     | SGP30 | TVOC/eCO2 Sensor | [AliExpress](https://aliexpress.com/item/1005004680000599.html) |
-| 1     | VEML6075 | UV Sensor | [AliExpress](https://aliexpress.com/item/1005004653958045.html) |
-| 1     | ADS1115 | 4 Port ADC | [AliExpress](https://aliexpress.com/item/32817162654.html) |
-| 1     | GY-MAX4466 | Sound sensor | [Amazon](https://www.amazon.de/dp/B07YDG3VZF) |
+| 1     | VEML6075 | UV Sensor | [AliExpress](https://aliexpress.com/item/1005004653958045.html)|
+| 1     | ADS1115 | 4 Port ADC | [AliExpress](https://aliexpress.com/item/32817162654.html), [Reichelt elektronik](https://www.reichelt.de/raspberry-a-d-wandler-ads1115-rpi-adc-1115-p316202.html?&nbc=1) |
+| 1     | GY-MAX4466 | Sound sensor | [Amazon](https://www.amazon.de/dp/B07YDG3VZF), [Reichelt elektronik](https://www.reichelt.de/entwicklerboards-mikrofonverstaerker-max4466-debo-amp-mic-p235481.html?&nbc=1) |
 | 3     | male 3-pin JST connectors + cables | Sensor & power connectors | [Amazon](https://www.amazon.de/gp/product/B08ZJ6JGB5) |
 | 2     | male 4-pin JST connectors + cables | I2C connector | [Amazon](https://www.amazon.de/gp/product/B09LCRCTQG) |
 | 2     | male 8-pin headers, male and female | ESP8266 connector | [Amazon](https://www.amazon.de/dp/B07DBY753C/) |
