@@ -30,8 +30,8 @@ Um deinen eigenen Datenzwerg zu bauen, benötigst du folgende Teile:
 | 1     | GY-MAX4466 | Sound sensor | [Amazon](https://www.amazon.de/dp/B07YDG3VZF), [Reichelt elektronik](https://www.reichelt.de/entwicklerboards-mikrofonverstaerker-max4466-debo-amp-mic-p235481.html?&nbc=1) |
 | 3     | male 3-pin JST connectors + cables | Sensor & power connectors | [Amazon](https://www.amazon.de/gp/product/B08ZJ6JGB5) |
 | 2     | male 4-pin JST connectors + cables | I2C connector | [Amazon](https://www.amazon.de/gp/product/B09LCRCTQG) |
-| 2     | male 8-pin headers, male and female | ESP8266 connector | [Amazon](https://www.amazon.de/dp/B07DBY753C/) |
-| 1     | male 10-pin header, male and female | ADS1115 connector | [Amazon](https://www.amazon.de/dp/B07DBY753C/) |
+| 2     | male 8-pin headers, male and female | ESP8266 connector | [Amazon](https://www.amazon.de/dp/B07DBY753C/), [reichelt elektronik](https://www.reichelt.de/buchsenleiste-2-54mm-1x20-trennbar-vergoldet-fis-bl1-20-g-p283787.html?&trstct=vrt_pdn&nbc=1) |
+| 1     | male 10-pin header, male and female | ADS1115 connector | [Amazon](https://www.amazon.de/dp/B07DBY753C/), [reichelt elektronik](https://www.reichelt.de/buchsenleiste-2-54mm-1x20-trennbar-vergoldet-fis-bl1-20-g-p283787.html?&trstct=vrt_pdn&nbc=1)  |
 
 Zusätzlich benötigst du einen Lötkolben, Lötzinn, Litze und Schrumpfschlauch.
 
