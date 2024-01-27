@@ -1,6 +1,7 @@
 substitutions:
   eco2_baseline: "0x0000"
   tvoc_baseline: "0x0000"
+  disable_eco2: "false"
 
 sensor:
   - platform: sgp30
@@ -8,6 +9,7 @@ sensor:
       name: "eCO2"
       id: eco2
       accuracy_decimals: 2
+      internal: ${disable_eco2}
     tvoc:
       name: "TVOC"
       id: tvoc

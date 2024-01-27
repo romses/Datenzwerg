@@ -17,20 +17,20 @@ description: "The Datenzwerg is a garden gnome with a mission: To collect enviro
 
     You can reach us on **DECT 3962 (DZOC)**
 
-    And if you are wondering where each Datenzwerg is located, here's a quick overview. Clicking on the name will take you to the respective dashboard, clicking on the location to the respective map grid:
+    And if you are wondering where each Datenzwerg is located, here's a quick overview. Clicking on the name will take you to the respective dashboard:
 
     | Datenzwerg | Location | Status |
     | ---------- | -------- | ------ |
-    | [Bashful](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Bashful&theme=dark) | - | Not yet deployed |
-    | [Dopey](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Dopey&theme=dark) | - | Not yet deployed |
-    | [Grumpy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Grumpy&theme=dark) | - | Not yet deployed |
-    | [Happy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Happy&theme=dark) | - | Not yet deployed |
-    | [Hefty](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Hefty&theme=dark) | - | Not yet deployed |
-    | [Moopsy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Moopsy&theme=dark) | - | Not yet deployed |
-    | [Name Me](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Nameme&theme=dark) | - | Not yet deployed |
-    | [Nerdy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Nerdy&theme=dark)  | - | Not yet deployed |
-    | [Sleepy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sleepy&theme=dark) | - | Not yet deployed |
-    | [Sneezy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sneezy&theme=dark) | - | Not yet deployed |
+    | [Bashful](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Bashful&theme=dark) | NOC Helpdesk | Deployed |
+    | [Dopey](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Dopey&theme=dark) | DDOS Bar | Deployed |
+    | [Grumpy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Grumpy&theme=dark) | Hall Z | Deployed |
+    | [Happy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Happy&theme=dark) | Hall G | Deployed |
+    | [Hefty](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Hefty&theme=dark) | Jugend Assembly | Deployed |
+    | [Kinky](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Kinky&theme=dark) | Flower Assembly | Deployed |
+    | [Moopsy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Moopsy&theme=dark) | Lounge | Deployed |
+    | [Nerdy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Nerdy&theme=dark)  | Telnet Assembly | Deployed |
+    | [Sleepy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sleepy&theme=dark) | POC | Deployed |
+    | [Sneezy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sneezy&theme=dark) | Hall E | Deployed |
 -->
 
 ## What is the Datenzwerg?
@@ -123,6 +123,9 @@ We asked ChatGPT to describe the Datenzwerg for us[^2] and this is what it came 
 2023-12-11
 : The server infrastructure is back up an running and the first Datenzwerge are reporting data again.
 
+2023-12-26 2023-12-30
+: The Datenzwerge are deployed at 37c3.
+
 ## FAQ
 
 ### What kind of data does the Datenzwerg collect?
@@ -157,9 +160,9 @@ We need to put the gnomes into direct sunlight in order to be able to measure UV
 
 ### Where can I find the data?
 
-Each camp Datenzwerg sends its data to a central self-hosted InfluxDB instance. The data is then visualized using Grafana. 
+Each Datenzwerg sends its data to a central self-hosted InfluxDB instance. The data is then visualized using Grafana. 
 
-Some of those visualisations as well as credentials for accessing the raw data and links to data exports from past events can be found [here](./sensors).
+Some of those visualisations as well as credentials for accessing the raw data and links to data exports from past events can be found [here](./sensors/).
 
 ### Where can I find the source?
 
@@ -167,7 +170,8 @@ Everything can be found in this GitHub repository: [romses/Datenzwerg](https://g
 
 ## Media echo
 
-The datagnomes were the opener at the #cccamp23 review [media.ccc.de](https://media.ccc.de/v/camp2023-57105-cccamp23_review)
+- The datagnomes were the opener at the #cccamp23 review [media.ccc.de](https://media.ccc.de/v/camp2023-57105-cccamp23_review).
+- romses and foosel were guests at the [Datenleben Podcast](https://www.datenleben.de/index.php/2023/10/14/dl043-perspektiven-auf-data-science/) and talked about the Datenzwerge (German).
 
 ## Credits & Thanks
 
@@ -177,6 +181,7 @@ The Datenzwerg logo was created by D.B.
 
 The Datenzwerg model files are based on [this "Garden Gnome" model](https://www.printables.com/model/260908-garden-gnome) by [Sci3D](https://www.printables.com/@Sci3D), released under CC-BY. Our remix can be found [here](https://www.printables.com/model/534875-datenzwerg-enclosure) and of course also [in the GitHub repository](https://github.com/romses/Datenzwerg/tree/main/models).
 
+The SCD41 sensors were sponsored by [@dx@mastodon.social](https://chaos.social/@dx@mastodon.social).
 
 [^1]: Yes, the last three are not canon, and one of them even is a smurf - so what, chaos ftw!
 [^2]: Prompt: 'Write me a text for a website that gives an overview of the "Datenzwerg". The Datenzwerg is a garden gnome that collects environmental data, and makes it publicly available. The Datenzwerg will be presented at the Chaos Communication Camp.'
