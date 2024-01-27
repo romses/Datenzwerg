@@ -3,6 +3,9 @@ packages:
   tvoc: !include packages/tvoc.yaml # TVOC sensor added in v1.1, incompatible to battery power
   #deepsleep: !include packages/deepsleep.yaml  # enable this on battery power
   uptime: !include packages/uptime.yaml  # disable this on battery power
+  mqtt: !include packages/mqtt.yaml
+  influxdb: !include packages/influxdb.yaml
+  homeassistant: !include packages/homeassistant.yaml
 
   # these should not be enabled in production
   ota: !include packages/ota.yaml

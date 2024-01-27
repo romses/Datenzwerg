@@ -6,3 +6,4 @@ docker/www-data/*
 .env
 *.blend1
 .cache
+.venv/

@@ -1,0 +1,7 @@
+influxdb2:
+  host: !secret influxdb_host
+  port: !secret influxdb_port
+  orgid: !secret influxdb_orgid
+  bucket: !secret influxdb_bucket
+  token: !secret influxdb_token
+  device: "${name}"

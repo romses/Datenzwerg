@@ -26,3 +26,10 @@ sensor:
       tvoc_baseline: ${tvoc_baseline}
     store_baseline: yes
     update_interval: 1s  # this has to be 1s according to the sgp30 datasheet
+  - platform: scd4x
+    co2:
+      name: "CO2 (scd41)"
+    temperature:
+      name: "Temperature (scd41)"
+    humidity:
+      name: "Humidity (scd41)"
