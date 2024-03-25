@@ -42,7 +42,8 @@ wo wir ([@romses](https://chaos.social/@romses) und [@foosel](https://chaos.soci
 von 10 Datenzwergen über das Camp-Gelände verteilt hatten: Happy, Doc, Grumpy, Dopey, Bashful, Sleepy, Sneezy, 
 Nerdy, Kinky und Hefty[^1].
 
-Wenn alles klappt, werden die Datenzwerge auf dem [37c3](https://events.ccc.de/congress/2023/infos/index.html) wieder zum Einsatz kommen.
+Die Datenzwerge haben sich außerdem über einen Besuch auf dem [37c3](https://events.ccc.de/congress/2023/infos/index.html) gefreut
+und werden wenn alles klappt zumindest teilweise auch auf der [GPN22](https://entropia.de/GPN22) vertreten sein.
 
 Der Datenzwerg besteht aus einem 3D-gedruckten Gartenzwerg, einer eigenen Platine mit einem ESP8266 D1 Mini Mikrocontroller, einem BME280, SGP30, UV- und Schallsensor und optional einer 18650 Batterie. Er wird von [ESPHome](https://esphome.io/) betrieben und sendet seine Daten an eine [InfluxDB](https://www.influxdata.com/) Instanz. Die Firmware zeichnet derzeit Temperatur, relative und absolute Luftfeuchtigkeit, Luftdruck, Taupunkt, UV-Index eCO2, TVOC und Schalldruck auf.
 
