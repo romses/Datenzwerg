@@ -130,10 +130,10 @@ We asked ChatGPT to describe the Datenzwerg for us[^2] and this is what it came 
 2023-12-11
 : The server infrastructure is back up an running and the first Datenzwerge are reporting data again.
 
-2023-12-26 2023-12-30
+2023-12-26 - 2023-12-30
 : The Datenzwerge are deployed at 37c3.
 
-2024-05-30 2024-06-02
+2024-05-30 - 2024-06-02
 : Five Datenzwerge are deployed at GPN22.
 
 ## FAQ

@@ -140,6 +140,9 @@ Wir haben ChatGPT gebeten, den Datenzwerg für uns zu beschreiben[^2] und das is
 2023-12-26 - 2023-12-30
 : Die Datenzwerge sind auf dem 37c3 im Einsatz.
 
+2024-05-30 - 2024-06-02
+: Fünf der Datenzwerge sind auf der GPN22 im Einsatz.
+
 ## FAQ
 
 ### Was für Daten werden vom Datenzwerg aufgezeichnet?
