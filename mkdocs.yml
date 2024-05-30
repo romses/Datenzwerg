@@ -57,8 +57,8 @@ extra:
           de: Luftdruck
         panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=4
       - name: 
-          en: (e)CO2
-          de: (e)CO2
+          en: CO2
+          de: CO2
         panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=21
       - name: 
           en: TVOC
