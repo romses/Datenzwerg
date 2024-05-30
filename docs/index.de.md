@@ -6,10 +6,9 @@ description: "Der Datenzwerg ist ein Gartenzwerg mit einer Mission: Umweltdaten 
 
 ![Datenzwerg Logo](assets/images/logo.png){: class="logo" :}
 
-<!--
-!!! tip "Datenzwerg @ 37c3"
+!!! tip "Datenzwerg @ GPN22"
 
-    Du bist auf dem 37c3 und über einen der Datenzwerge gestolpert? Super! Hier sind ein paar Links für dich:
+    Du bist auf dem GPN22 und über einen der Datenzwerge gestolpert? Super! Hier sind ein paar Links für dich:
 
     - [Was ist der Datenzwerg?](#was-ist-der-datenzwerg)
     - [FAQ](#faq)
@@ -19,6 +18,15 @@ description: "Der Datenzwerg ist ein Gartenzwerg mit einer Mission: Umweltdaten 
 
     Und falls du dich wunderst, wo sich welcher Datenzwerg befindet, hier eine kurze Übersicht. Ein Klick auf den Namen bringt dich zum jeweiligen Dashboard:
 
+    | Datenzwerg | Location | Status |
+    | ---------- | -------- | ------ |
+    | [Grumpy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Grumpy&theme=dark) | Mainbar | Deployed |
+    | [Hefty](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Hefty&theme=dark) | Blumentopf über der Chaospost | Deployed |
+    | [Kinky](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Kinky&theme=dark) | Frühstück | Deployed |
+    | [Nerdy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Nerdy&theme=dark)  | Unterwegs an einem Rucksack | Deployed |
+    | [Sleepy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sleepy&theme=dark) | Chaospost | Deployed |
+
+<!--
     | Datenzwerg | Location | Status |
     | ---------- | -------- | ------ |
     | [Bashful](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Bashful&theme=dark) | NOC Helpdesk | Deployed |

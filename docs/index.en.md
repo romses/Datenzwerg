@@ -6,19 +6,25 @@ description: "The Datenzwerg is a garden gnome with a mission: To collect enviro
 
 ![Datenzwerg logo](assets/images/logo.png){: class="logo" :}
 
-<!--
-!!! tip "Datenzwerg @ 37c3"
+!!! tip "Datenzwerg @ GPN22"
 
-    You are at 37c3 and came across one of the Datenzwerge? Awesome! Here's some quick links for you:
+    You are at GPN22 and came across one of the Datenzwerge? Awesome! Here's some quick links for you:
 
     - [What is the Datenzwerg?](#what-is-the-datenzwerg)
     - [FAQ](#faq)
     - [Fancy dashboards at grafana.datagnome.de](https://grafana.datagnome.de)
 
-    You can reach us on **DECT 3962 (DZOC)**
-
     And if you are wondering where each Datenzwerg is located, here's a quick overview. Clicking on the name will take you to the respective dashboard:
 
+    | Datenzwerg | Location | Status |
+    | ---------- | -------- | ------ |
+    | [Grumpy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Grumpy&theme=dark) | Mainbar | Deployed |
+    | [Hefty](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Hefty&theme=dark) | Flower pot above Chaospost | Deployed |
+    | [Kinky](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Kinky&theme=dark) | Breakfast | Deployed |
+    | [Nerdy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Nerdy&theme=dark)  | Mobile on a backpack | Deployed |
+    | [Sleepy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sleepy&theme=dark) | Chaospost | Deployed |
+
+<!--
     | Datenzwerg | Location | Status |
     | ---------- | -------- | ------ |
     | [Bashful](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Bashful&theme=dark) | NOC Helpdesk | Deployed |
@@ -126,6 +132,9 @@ We asked ChatGPT to describe the Datenzwerg for us[^2] and this is what it came 
 
 2023-12-26 2023-12-30
 : The Datenzwerge are deployed at 37c3.
+
+2024-05-30 2024-06-02
+: Five Datenzwerge are deployed at GPN22.
 
 ## FAQ
 
