@@ -64,10 +64,10 @@ extra:
           en: TVOC
           de: TVOC
         panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=22
-      - name:
-          en: UV index
-          de: UV Index
-        panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=18
+      #- name:
+      #    en: UV index
+      #    de: UV Index
+      #  panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=18
       - name: 
           en: Sound pressure
           de: Schalldruck
