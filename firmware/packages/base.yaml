@@ -21,15 +21,15 @@ logger:
 
 wifi:
   networks:
+#    - ssid: GPN-Open
+#    - ssid: 37C3
+#      eap:
+#        username: 37C3
+#        password: 37C3
+#    - ssid: 37C3-open
 #    - ssid: Camp2023-open
-#    - ssid: 37c3-open
     - ssid: !secret wifi_ssid
       password: !secret wifi_psk
-    - ssid: 37C3
-      eap:
-        username: 37C3
-        password: 37C3
-    - ssid: 37C3-open
 
 mdns:
   disabled: true
