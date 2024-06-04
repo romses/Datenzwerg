@@ -6,6 +6,8 @@ description: "Der Datenzwerg ist ein Gartenzwerg mit einer Mission: Umweltdaten 
 
 ![Datenzwerg Logo](assets/images/logo.png){: class="logo" :}
 
+<!--
+
 !!! tip "Datenzwerg @ GPN22"
 
     Du bist auf dem GPN22 und über einen der Datenzwerge gestolpert? Super! Hier sind ein paar Links für dich:

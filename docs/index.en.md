@@ -6,6 +6,8 @@ description: "The Datenzwerg is a garden gnome with a mission: To collect enviro
 
 ![Datenzwerg logo](assets/images/logo.png){: class="logo" :}
 
+<!--
+
 !!! tip "Datenzwerg @ GPN22"
 
     You are at GPN22 and came across one of the Datenzwerge? Awesome! Here's some quick links for you:
@@ -24,7 +26,6 @@ description: "The Datenzwerg is a garden gnome with a mission: To collect enviro
     | [Nerdy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Nerdy&theme=dark)  | Mobile on a backpack | Deployed |
     | [Sleepy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sleepy&theme=dark) | Chaospost | Deployed |
 
-<!--
     | Datenzwerg | Location | Status |
     | ---------- | -------- | ------ |
     | [Bashful](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Bashful&theme=dark) | NOC Helpdesk | Deployed |
