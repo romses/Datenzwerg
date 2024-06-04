@@ -6,7 +6,7 @@ packages:
   uptime: !include packages/uptime.yaml  # disable this on battery power
   mqtt: !include packages/mqtt.yaml
   influxdb: !include packages/influxdb.yaml
-  homeassistant: !include packages/homeassistant.yaml
+  #homeassistant: !include packages/homeassistant.yaml
 
   # these should NOT be enabled in production
   #ota: !include packages/ota.yaml
