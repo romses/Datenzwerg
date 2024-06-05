@@ -33,77 +33,39 @@ theme:
         name: Switch to light mode
 
 extra:
-  alternate:
-    - name: English
-      link: !ENV [I18N_EN, "/en/"]
-      lang: en
-    - name: Deutsch
-      link: !ENV [I18N_DE, "/de/"]
-      lang: de
-
   grafana:
     base_url: !ENV [GRAFANA_BASE, "https://grafana.datagnome.de/d-solo/" ]
     environment:
-      - name:
-          en: Temperature
-          de: Temperatur
+      - name: Temperature
         panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=3
-      - name: 
-          en: Humidity
-          de: Luftfeuchtigkeit
+      - name: Humidity
         panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=2
-      - name: 
-          en: Air pressure
-          de: Luftdruck
+      - name: Air pressure
         panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=4
-      - name: 
-          en: CO2
-          de: CO2
+      - name: CO2
         panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=21
-      - name: 
-          en: TVOC
-          de: TVOC
+      - name: TVOC
         panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=22
-      #- name:
-      #    en: UV index
-      #    de: UV Index
+      #- name: UV index
       #  panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=18
-      - name: 
-          en: Sound pressure
-          de: Schalldruck
+      - name: Sound pressure
         panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=17
-      - name: 
-          en: Dew point
-          de: Taupunkt
+      - name: Dew point
         panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=14
-      - name: 
-          en: Absolute humidity
-          de: Absolute Luftfeuchte
+      - name: Absolute humidity
         panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=15
     internal:
-      #- name: 
-      #    en: Battery voltage
-      #    de: Batteriespannung
+      #- name: Battery voltage
       #  panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=1
-      - name: 
-          en: Wifi signal
-          de: Wifisignal
+      - name: Wifi signal
         panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=5
-      - name:
-          en: Uptime
-          de: Uptime
+      - name: Uptime
         panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=31
-      - name:
-          en: UV sensor voltage
-          de: UV-Sensorspannung
+      - name: UV sensor voltage
         panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=6
-      - name:
-          en: Sound sensor RMS voltage
-          de: Schallsensor-RMS-Spannung
+      - name: Sound sensor RMS voltage
         panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=16
-      - name:
-          en: Metadata
-          de: Metadata
+      - name: Metadata
         panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=26
 
   social:
@@ -156,22 +118,7 @@ markdown_extensions:
 plugins:
   - search:
   - macros:
-  - i18n:
-      docs_structure: suffix
-      fallback_to_default: true
-      languages:
-        - build: true
-          default: true
-          locale: en
-          name: English
-        - build: true
-          default: false
-          locale: de
-          name: Deutsch
-      reconfigure_material: true
-      reconfigure_search: true
   - social:
       cards_layout_options:
         background_color: "#111111"
         color: "#ffffff"
-
