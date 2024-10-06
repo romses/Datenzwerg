@@ -6,6 +6,7 @@ description: "The Datenzwerg is a garden gnome with a mission: To collect enviro
 
 ![Datenzwerg logo](assets/images/logo.png){: class="logo" :}
 
+<!--
 !!! tip "Datenzwerg @ MRMCD"
 
     You are at MRMCD and came across one of the Datenzwerge? Awesome! Here's some quick links for you:
@@ -138,6 +139,9 @@ We asked ChatGPT to describe the Datenzwerg for us[^2] and this is what it came 
 
 2024-05-30 - 2024-06-02
 : Five Datenzwerge are deployed at GPN22.
+
+2024-10-03 - 2024-10-06
+: Eight Datenzwerge are deployed at MRMCD2024.
 
 ## FAQ
 
