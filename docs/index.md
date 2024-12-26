@@ -33,10 +33,9 @@ description: "The Datenzwerg is a garden gnome with a mission: To collect enviro
 
 The Datenzwerg is a garden gnome with a mission: To collect environmental data and make it publicly available. 
 
-It was originally developed for the [Chaos Communication Camp 2023](https://events.ccc.de/camp/2023/infos/) where we ([@romses](https://chaos.social/@romses) and [@foosel](https://chaos.social/@foosel)) deployed a small army of 10 Datenzwerge across the camp grounds: Happy, Doc, Grumpy, Dopey, Bashful, Sleepy, Sneezy, Nerdy, Kinky and Hefty[^1].
+It was originally developed for the [Chaos Communication Camp 2023](https://events.ccc.de/camp/2023/infos/) where we ([@romses](https://chaos.social/@romses) and [@foosel](https://chaos.social/@foosel)) deployed a small army of 10 Datenzwerge across the camp grounds: Happy, Doc, Grumpy, Dopey, Bashful, Sleepy, Sneezy, Nerdy, Kinky and Hefty[^1]. Since then, Doc has gotten a new home at the CERT and the official Datenzwerg family now consists of Bashful, Dopey, Grumpy, Happy, Hefty, Kinky, Moopsy, Nerdy, Sleepy and Sneezy.
 
-The Datenzwerge also made a reappearance at the [37c3](https://events.ccc.de/congress/2023/infos/index.html) and if all goes to plan a small army of them will
-also be attending [GPN22](https://entropia.de/GPN22).
+The Datenzwerge also made a reappearance at the [37c3](https://events.ccc.de/congress/2023/infos/index.html), the [GPN22](https://entropia.de/GPN22) and the [MRMCD 2024](https://2024.mrmcd.net/de/). They are currently deployed at [38c3](https://events.ccc.de/congress/2024/infos/index.html).
 
 The Datenzwerg consists of a 3D printed gnome body, a custom PCB with an ESP8266 D1 Mini microcontroller board, a BME280, SGP30, UV and sound sensor and an optional 18650 battery. It's powered by [ESPHome](https://esphome.io/) and sends its data to an [InfluxDB](https://www.influxdata.com/) instance. The firmware currently logs temperature, relative and absolute humidity, air pressure, dew point, UV index, eCO2, TVOC and sound pressure.
 
