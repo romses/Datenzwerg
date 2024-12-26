@@ -1,12 +1,12 @@
-{
-    "Bashful": "Uptime Bar",
-    "Dopey": "c3cat",
-    "Grumpy": "Späti",
-    "Happy": "Kidspace",
-    "Hefty": "HASS Assembly",
-    "Moopsy": "Chaospost",
-    "Kinky": "Eventphone",
-    "Nerdy": "House of Tea",
-    "Sleepy": "DDOS Bar",
-    "Sneezy": "Wohnzimmer"
-}
+[
+    {"key": "Bashful", "value": "Uptime Bar"},
+    {"key": "Dopey", "value": "c3cat"},
+    {"key": "Grumpy", "value": "Späti"},
+    {"key": "Happy", "value": "Kidspace"},
+    {"key": "Hefty", "value": "HASS Assembly"},
+    {"key": "Moopsy", "value": "Chaospost"},
+    {"key": "Kinky", "value": "Eventphone"},
+    {"key": "Nerdy", "value": "House of Tea"},
+    {"key": "Sleepy", "value": "DDOS Bar"},
+    {"key": "Sneezy", "value": "Wohnzimmer"}
+]
