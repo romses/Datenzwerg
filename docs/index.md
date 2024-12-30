@@ -6,6 +6,7 @@ description: "The Datenzwerg is a garden gnome with a mission: To collect enviro
 
 ![Datenzwerg logo](assets/images/logo.png){: class="logo" :}
 
+<!--
 !!! tip "Datenzwerg @ 38c3"
 
     You are at 38c3 and came across one of the Datenzwerge? Awesome! Here's some quick links for you:
@@ -28,6 +29,7 @@ description: "The Datenzwerg is a garden gnome with a mission: To collect enviro
     | [Nerdy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Nerdy&theme=dark)  | House of Tea | Deployed |
     | [Sleepy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sleepy&theme=dark) | DDOS Bar | Deployed |
     | [Sneezy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sneezy&theme=dark) | Wohnzimmer | Deployed |
+-->
 
 ## What is the Datenzwerg?
 
@@ -128,6 +130,9 @@ We asked ChatGPT to describe the Datenzwerg for us[^2] and this is what it came 
 2024-10-03 - 2024-10-06
 : Eight Datenzwerge are deployed at MRMCD2024.
 
+2024-12-27 - 2024-12-30
+: The Datenzwerge are deployed at 38c3.
+
 ## FAQ
 
 ### What kind of data does the Datenzwerg collect?
@@ -174,6 +179,7 @@ Everything can be found in this GitHub repository: [romses/Datenzwerg](https://g
 
 - The datagnomes were the opener at the #cccamp23 review [media.ccc.de](https://media.ccc.de/v/camp2023-57105-cccamp23_review).
 - romses and foosel were guests at the [Datenleben Podcast](https://www.datenleben.de/index.php/2023/10/14/dl043-perspektiven-auf-data-science/) and talked about the Datenzwerge (German).
+- The Datenzwerg project was also a topic on [C-RadaR](https://www.c-radar.de/2024/06/c-radar-juni-2024-datenzwerge-clubsareculture-verstehbahnhof-emf-camp/)
 
 ## Credits & Thanks
 
