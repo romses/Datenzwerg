@@ -7,9 +7,9 @@ description: "The Datenzwerg is a garden gnome with a mission: To collect enviro
 ![Datenzwerg logo](assets/images/logo.png){: class="logo" :}
 
 <!--
-!!! tip "Datenzwerg @ 38c3"
+!!! tip "Datenzwerg @ WHY2025"
 
-    You are at 38c3 and came across one of the Datenzwerge? Awesome! Here's some quick links for you:
+    You are at WHY2025 and came across one of the Datenzwerge? Awesome! Here's some quick links for you:
 
     - [What is the Datenzwerg?](#what-is-the-datenzwerg)
     - [FAQ](#faq)
@@ -37,31 +37,9 @@ The Datenzwerg is a garden gnome with a mission: To collect environmental data a
 
 It was originally developed for the [Chaos Communication Camp 2023](https://events.ccc.de/camp/2023/infos/) where we ([@romses](https://chaos.social/@romses) and [@foosel](https://chaos.social/@foosel)) deployed a small army of 10 Datenzwerge across the camp grounds: Happy, Doc, Grumpy, Dopey, Bashful, Sleepy, Sneezy, Nerdy, Kinky and Hefty[^1]. Since then, Doc has gotten a new home at the CERT and the official Datenzwerg family now consists of Bashful, Dopey, Grumpy, Happy, Hefty, Kinky, Moopsy, Nerdy, Sleepy and Sneezy.
 
-The Datenzwerge also made a reappearance at the [37c3](https://events.ccc.de/congress/2023/infos/index.html), the [GPN22](https://entropia.de/GPN22) and the [MRMCD 2024](https://2024.mrmcd.net/de/). They are currently deployed at [38c3](https://events.ccc.de/congress/2024/infos/index.html).
+The Datenzwerge also made a reappearance at the [37c3](https://events.ccc.de/congress/2023/infos/index.html), the [GPN22](https://entropia.de/GPN22), the [MRMCD 2024](https://2024.mrmcd.net/de/) and [38c3](https://events.ccc.de/congress/2024/infos/index.html). They are scheduled to make an appearance at [WHY2025](https://why2025.org/).
 
-The Datenzwerg consists of a 3D printed gnome body, a custom PCB with an ESP8266 D1 Mini microcontroller board, a BME280, SGP30, UV and sound sensor and an optional 18650 battery. It's powered by [ESPHome](https://esphome.io/) and sends its data to an [InfluxDB](https://www.influxdata.com/) instance. The firmware currently logs temperature, relative and absolute humidity, air pressure, dew point, UV index, eCO2, TVOC and sound pressure.
-
-We asked ChatGPT to describe the Datenzwerg for us[^2] and this is what it came up with:
-
-> Welcome to the world of the Datenzwerg, an enchanting garden gnome with a technological twist! 
-> This delightful little creature may look like your average garden decoration, 
-> but it harbors a secret mission that is as intriguing as it is important. 
-> The Datenzwerg is on a quest to collect environmental data and make it publicly available for the benefit of all.
-> 
-> [...]
-> 
-> By leveraging its unique vantage point in gardens and outdoor spaces, 
-> the Datenzwerg provides an unparalleled perspective on the environment around us.
-> 
-> All the data collected by these pint-sized environmental guardians is made freely 
-> available to the public through an intuitive online platform. 
-> 
-> [...]
-> 
-> At the upcoming Chaos Communication Camp, we are excited to introduce the Data Gnome to a 
-> wider audience of tech enthusiasts, hackers, and environmental advocates. 
-> This extraordinary convergence of nature and technology showcases the potential for 
-> citizen-driven environmental monitoring. 
+The Datenzwerg consists of a 3D printed gnome body, a custom PCB with an ESP8266 D1 Mini microcontroller board, a BME280, SCD41, UV and sound sensor and an optional 18650 battery. It's powered by [ESPHome](https://esphome.io/) and sends its data to an [InfluxDB](https://www.influxdata.com/) instance. The firmware currently logs temperature, relative and absolute humidity, air pressure, dew point, UV index, CO2 and sound pressure.
 
 ## A short history of the Datenzwerg
 
@@ -142,8 +120,7 @@ The Datenzwerg contains sensors to collect the following data:
 - Temperature
 - Relative humidity
 - Air pressure
-- eCO2
-- TVOC
+- CO2
 - UV sensor voltage
 - Microphone voltage
 - Battery voltage
@@ -157,9 +134,9 @@ No. While there is a microphone inside each Datenzwerg hooked up to the ESP's AD
 
 ### What's the battery life?
 
-In our tests, a Datenzwerg without TVOC sensor seems to last between three to four days on a single charge of our 18650 LiPos that range from 1600mAh to 2800 mAh. This obviously depends on the cell capacity but also temperature and other environmental factors.
+In our tests, a Datenzwerg without CO2 sensor seems to last between three to four days on a single charge of our 18650 LiPos that range from 1600mAh to 2800 mAh. This obviously depends on the cell capacity but also temperature and other environmental factors.
 
-With the TVOC sensor included powering via a single 18650 LiPo is sadly not working out.
+With the CO2 sensor included powering via a single 18650 LiPo is sadly not working out.
 
 ### Why are the measured temperatures that high during the day?
 
@@ -192,4 +169,3 @@ The Datenzwerg model files are based on [this "Garden Gnome" model](https://www.
 The SCD41 sensors were sponsored by [@dx@mastodon.social](https://chaos.social/@dx@mastodon.social).
 
 [^1]: Yes, the last three are not canon, and one of them even is a smurf - so what, chaos ftw!
-[^2]: Prompt: 'Write me a text for a website that gives an overview of the "Datenzwerg". The Datenzwerg is a garden gnome that collects environmental data, and makes it publicly available. The Datenzwerg will be presented at the Chaos Communication Camp.'
