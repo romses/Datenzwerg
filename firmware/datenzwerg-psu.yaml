@@ -1,0 +1,14 @@
+packages:
+  base: !include packages/base.yaml # base v1.0 sensor package
+  #tvoc: !include packages/tvoc.yaml # TVOC/eCO2 sensor added in v1.1, incompatible to battery power
+  scd41: !include packages/scd41.yaml # SCD41 sensor as alternative to tvoc, incompatible to battery power
+
+  #deepsleep: !include packages/deepsleep.yaml  # enable this on battery power
+  uptime: !include packages/uptime.yaml  # disable this on battery power
+  mqtt: !include packages/mqtt.yaml  # disable this on battery power
+  influxdb: !include packages/influxdb.yaml
+  #homeassistant: !include packages/homeassistant.yaml  # disable this on battery power
+
+  # these should NOT be enabled in production
+  #ota: !include packages/ota.yaml
+  #webserver: !include packages/webserver.yaml

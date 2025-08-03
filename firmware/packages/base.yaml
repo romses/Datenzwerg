@@ -4,32 +4,40 @@ substitutions:
 
 esphome:
   name: "datenzwerg-${name}"
-  platform: ESP8266
+
+esp8266:
   board: d1_mini
+  framework:
+    version: recommended
+
+http_request:
+  verify_ssl: false
 
 external_components:
-  - source: github://JeroenvdV/esphome-influxdb2
-    components: [ influxdb2 ]
-  - source: github://RoboMagus/esphome-gitref-sensor
-    components: [ git_ref ]
   - source:
       type: local
       path: components
-    components: [ peak_to_peak ]
+    components: [ git_ref, influxdb2 ]
 
 logger:
 
 wifi:
   networks:
-#    - ssid: GPN-Open
-#    - ssid: 37C3
-#      eap:
-#        username: 37C3
-#        password: 37C3
-#    - ssid: 37C3-open
-#    - ssid: Camp2023-open
+    - ssid: WHY2025
+      eap:
+        username: outboundonly
+        password: outboundonly
+#    - ssid: WHY2025-open
+
+    # fallback from secrets
     - ssid: !secret wifi_ssid
       password: !secret wifi_psk
+
+  on_connect:
+    - delay: 1s
+    - lambda: |-
+        id(esphome_version_sensor).publish_state(id(esphome_version_sensor).state);
+        id(git_ref_sensor).publish_state(id(git_ref_sensor).state);
 
 mdns:
   disabled: true
@@ -51,7 +59,7 @@ sensor:
     name: "WiFi Signal"
     update_interval: ${update_interval}
 
-  - platform: bme280
+  - platform: bme280_i2c
     temperature:
       name: "Temperature"
       oversampling: 16x
@@ -144,28 +152,6 @@ sensor:
     filters:
     - multiply: 3.3
 
-  - platform: peak_to_peak
-    sensor: sound_voltage
-    name: "Sound Voltage Peak to Peak"
-    id: sound_voltage_peak_to_peak
-    update_interval: ${update_interval}
-    accuracy_decimals: 6
-    sample_duration: 1s
-    filters:
-    - multiply: 3.3 # 1.0V to 3.3V
-    - multiply: 0.7071 # Peak to Peak to RMS
-
-  - platform: template
-    name: "Sound Pressure"
-    lambda: |-
-      const float reference = 94;
-      const float amp_gain = 20 * log10(25);
-      const float mic_sensitivity = -44;
-      return log10(id(sound_voltage_peak_to_peak).state) * 20 + reference - amp_gain - mic_sensitivity;
-    unit_of_measurement: "dB"
-    accuracy_decimals: 6
-    update_interval: ${update_interval}
-
 text_sensor:
   - platform: version
     hide_timestamp: true
@@ -186,15 +172,4 @@ text_sensor:
     all: true
     dirty: "-dirty"
     id: git_ref_sensor
-
-# manually force updating the static text sensors once wifi is connected
-interval:
-  - interval: ${update_interval}
-    then:
-      - if:
-          condition: wifi.connected
-          then:
-            - lambda: |-
-                id(esphome_version_sensor).publish_state(id(esphome_version_sensor).state);
-                id(git_ref_sensor).publish_state(id(git_ref_sensor).state);
 
