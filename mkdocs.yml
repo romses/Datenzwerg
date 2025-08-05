@@ -38,33 +38,33 @@ extra:
     environment:
       - name: Temperature
         panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=3
-      - name: Humidity
-        panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=2
       - name: Air pressure
         panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=4
-      - name: CO2
-        panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=21
-      - name: TVOC
-        panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=22
-      #- name: UV index
-      #  panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=18
-      - name: Sound pressure
-        panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=17
-      - name: Dew point
-        panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=14
+      - name: Relative Humidity
+        panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=2
       - name: Absolute humidity
         panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=15
+      - name: Dew point
+        panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=14
+      - name: CO2
+        panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=21
+      #- name: TVOC
+      #  panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=22
+      - name: UV index
+        panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=13
+      - name: Sound
+        panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=17
     internal:
-      #- name: Battery voltage
-      #  panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=1
+      - name: Battery voltage
+        panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=1
       - name: Wifi signal
         panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=5
-      - name: Uptime
-        panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=31
+      #- name: Uptime
+      #  panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=31
       - name: UV sensor voltage
         panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=6
-      - name: Sound sensor RMS voltage
-        panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=16
+      #- name: Sound sensor RMS voltage
+      #  panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=16
       - name: Metadata
         panel: f17a6449-84ed-4733-b982-21c0d480c42a/?orgId=1&panelId=26
 
