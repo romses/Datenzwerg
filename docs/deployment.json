@@ -1,12 +1,12 @@
 [
     {"key": "Bashful", "value": "Not deployed"},
-    {"key": "Dopey", "value": "Not deployed"},
-    {"key": "Grumpy", "value": "Not deployed"},
-    {"key": "Happy", "value": "Not deployed"},
-    {"key": "Hefty", "value": "Not deployed"},
+    {"key": "Dopey", "value": "Supermarket"},
+    {"key": "Grumpy", "value": "Milliways"},
+    {"key": "Happy", "value": "Partybar"},
+    {"key": "Hefty", "value": "Chaospost"},
     {"key": "Moopsy", "value": "Not deployed"},
     {"key": "Kinky", "value": "CCCHH"},
-    {"key": "Nerdy", "value": "Not deployed"},
-    {"key": "Sleepy", "value": "Not deployed"},
-    {"key": "Sneezy", "value": "Not deployed"}
+    {"key": "Nerdy", "value": "Entrance"},
+    {"key": "Sleepy", "value": "Mysteryhack"},
+    {"key": "Sneezy", "value": "Mainbar"}
 ]
