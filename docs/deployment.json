@@ -1,12 +1,12 @@
 [
-    {"key": "Bashful", "value": "Track Delphinus"},
-    {"key": "Dopey", "value": "Supermarket"},
-    {"key": "Grumpy", "value": "Milliways"},
-    {"key": "Happy", "value": "Partybar"},
-    {"key": "Hefty", "value": "Chaospost"},
-    {"key": "Moopsy", "value": "Arcade"},
-    {"key": "Kinky", "value": "CCCHH"},
-    {"key": "Nerdy", "value": "Entrance"},
-    {"key": "Sleepy", "value": "Mysteryhack"},
-    {"key": "Sneezy", "value": "Mainbar"}
+    {"key": "Bashful", "value": "Not Deployed"},
+    {"key": "Dopey", "value": "Not Deployed"},
+    {"key": "Grumpy", "value": "Not Deployed"},
+    {"key": "Happy", "value": "Not Deployed"},
+    {"key": "Hefty", "value": "Not Deployed"},
+    {"key": "Moopsy", "value": "Not Deployed"},
+    {"key": "Kinky", "value": "Not Deployed"},
+    {"key": "Nerdy", "value": "Not Deployed"},
+    {"key": "Sleepy", "value": "Not Deployed"},
+    {"key": "Sneezy", "value": "Not Deployed"}
 ]
