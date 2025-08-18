@@ -6,6 +6,7 @@ description: "The Datenzwerg is a garden gnome with a mission: To collect enviro
 
 ![Datenzwerg logo](assets/images/logo.png){: class="logo" :}
 
+<!--
 !!! tip "Datenzwerg @ WHY2025"
 
     You are at WHY2025 and came across one of the Datenzwerge? Awesome! Here's some quick links for you:
@@ -28,6 +29,7 @@ description: "The Datenzwerg is a garden gnome with a mission: To collect enviro
     | [Nerdy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Nerdy&theme=dark)  | Entrance | Not Deployed |
     | [Sleepy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sleepy&theme=dark) | Mysteryhack | Not Deployed |
     | [Sneezy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sneezy&theme=dark) | Mainbar | Not Deployed |
+-->
 
 ## What is the Datenzwerg?
 
