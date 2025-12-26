@@ -1,12 +1,12 @@
 [
-    {"key": "Bashful", "value": "Not Deployed"},
-    {"key": "Dopey", "value": "Not Deployed"},
-    {"key": "Grumpy", "value": "Not Deployed"},
+    {"key": "Bashful", "value": "Kidspace"},
+    {"key": "Dopey", "value": "Food Hacking Area"},
+    {"key": "Grumpy", "value": "Memleak Bar"},
     {"key": "Happy", "value": "C3cat Assembly"},
     {"key": "Hefty", "value": "Chaos West"},
     {"key": "Moopsy", "value": "Chaospost"},
-    {"key": "Kinky", "value": "Not Deployed"},
-    {"key": "Nerdy", "value": "Not Deployed"},
+    {"key": "Kinky", "value": "House of Tea"},
+    {"key": "Nerdy", "value": "Kidspace"},
     {"key": "Sleepy", "value": "Saal 4 Chillout"},
     {"key": "Sneezy", "value": "Hardware Hacking"}
 ]
