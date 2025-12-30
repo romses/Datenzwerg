@@ -6,8 +6,9 @@ description: "The Datenzwerg is a garden gnome with a mission: To collect enviro
 
 ![Datenzwerg logo](assets/images/logo.png){: class="logo" :}
 
-**Next planned deployment**: 39C3
+**Next planned deployment**: tbd
 
+<!--
 !!! tip "Datenzwerg @ 39C3"
 
     You are at 39C3 and came across one of the Datenzwerge? Awesome! Here's some quick links for you:
@@ -30,6 +31,7 @@ description: "The Datenzwerg is a garden gnome with a mission: To collect enviro
     | [Nerdy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Nerdy&theme=dark)  | Kidspace |
     | [Sleepy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sleepy&theme=dark) | Saal 4 Chillout |
     | [Sneezy](https://grafana.datagnome.de/d/f17a6449-84ed-4733-b982-21c0d480c42a/overview?orgId=1&refresh=15m&var-zwerg=Sneezy&theme=dark) | Hardware Hacking |
+-->
 
 ## What is the Datenzwerg?
 
